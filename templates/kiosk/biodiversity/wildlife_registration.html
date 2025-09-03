@@ -1,0 +1,363 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📝 Certificate of Wildlife Registration | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-services-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'biodiversity:biodiversity' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="container" style="max-height: 94vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>📝 Certificate of Wildlife Registration</h1>
+
+    <section class="info card">
+      <h2>📘 What are Certificate of Wildlife Registration?</h2>
+      <p>
+        A Certificate of Wildlife Registration (CWR) is an official document issued by the Department of Environment and Natural Resources (DENR) to individuals or entities in possession of wildlife species, whether acquired legally through breeding, rescue, or importation. 
+        <br><br>
+        This certificate ensures that wildlife in captivity is accounted for, monitored, and maintained in accordance with Republic Act No. 9147, also known as the Wildlife Resources Conservation and Protection Act.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Example</h2>
+      <ul>
+        <li>Private individual registering wildlife species such as exotic birds or reptiles for legal possession.</li>
+        <li>Wildlife rescue centers documenting rescued and rehabilitated animals in their care.</li>
+        <li>Research institutions keeping wildlife for scientific and educational purposes.</li>
+      </ul>
+    </section>
+
+
+
+    <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+    </div>
+
+    <div class="content" id="chartContent" >
+      <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-B-01. CERTIFICATE OF WILDLIFE REGISTRATION</h2>
+
+
+      <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse;        margin-top: 10px;">
+        <tr>
+          <th style="background-color: #c2e1f8; text-align: left;">Office or Division</th>
+          <td>Licenses Patents and Deeds Division, DENR Regional Office VIII, Tacloban City</td>
+        </tr>
+        <tr>
+          <th style="background-color: #c2e1f8; text-align: left;">Classification</th>
+          <td>Highly Technical</td>
+        </tr>
+        <tr>
+          <th style="background-color: #c2e1f8; text-align: left;">Type of Transaction</th>
+          <td>
+            G2C – Government to Citizen<br>
+            G2G – Government to Government
+          </td>
+        </tr>
+        <tr>
+          <th style="background-color: #c2e1f8; text-align: left;">Who may avail</th>
+          <td>
+            <strong>Internal:</strong> Permanent Employees of DENR Central, Regional, PENR and CENR Offices, Bureaus (including Regional and Central Offices), attached Agencies<br><br>
+            <strong>External:</strong> External Clientele who are authorized party or representative
+          </td>
+        </tr>
+      </table>
+
+      <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+        <thead style="background-color: #c2e1f8;">
+          <tr>
+            <th>Checklist of Requirements</th>
+            <th>Where to Secure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Duly accomplished application form (to be secured at the DENR Regional Office)</td>
+            <td>Requesting party</td>
+          </tr>
+          <tr>
+            <td>2. Documentary stamp (to be affixed on the Certificate of Wildlife Registration)</td>
+            <td>Requesting party</td>
+          </tr>
+          <tr>
+            <td>3. Inventory List of Wildlife</td>
+            <td>Concerned CENRO</td>
+          </tr>
+          <tr>
+            <td>4. Registration fee</td>
+            <td>Requesting party</td>
+          </tr>
+          <tr>
+            <td>5. Proof for the legal acquisition of wildlife</td>
+            <td>Requesting party</td>
+          </tr>
+          <tr>
+            <td>6. Inspection Report (inspection of facility and inventory of wildlife using the prescribed form)</td>
+            <td>Regional Office (Joint inspection of RO, PENRO and CENRO Representative)</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+        <thead>
+          <tr style="background-color: #c2e1f8;">
+            <th>Client Steps</th>
+            <th>Agency Actions</th>
+            <th>Fees to be Paid</th>
+            <th>Processing Time</th>
+            <th>Person Responsible</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1. Submission of requirements and forward to the receiving /releasing clerk
+            </td>
+            <td>
+              Received the submitted requirements, stamp the date and time on documents and forward all documents to CENRO
+            </td>
+            <td>None</td>
+            <td>30 mins</td>
+            <td>CENRO Receiving Clerks</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Referral of Application, together with its documents to RPS
+            </td>
+            <td></td>
+            <td>None</td>
+            <td>RPS, Chief Wildlife permitting Se</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Forward Memorandum Endorsement of Application including with its supporting documents to PENRO
+            </td>
+            <td></td>
+            <td>15 mins</td>
+            <td>CENR Officer / CENRO Releasing Clerk</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Receive by PENRO Receiving Clerk
+            </td>
+            <td></td>
+            <td>15 mins</td>
+            <td>PENRO Receiving Clerk</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Referral of Application, together with its documents to TS
+            </td>
+            <td></td>
+            <td>30 mins</td>
+            <td>PENRO Office</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Evaluate / Review Documents conducted by PENRO
+            </td>
+            <td></td>
+            <td>3 days</td>
+            <td>PENRO Technical Service Division Chief</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              Forward Memorandum Endorsement of the Application including supporting documents to the Regional Office
+            </td>
+            <td></td>
+            <td>30 mins</td>
+            <td>PENRO and CENRO Releasing Clerk</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Receives the submitted requirements, stamp the date and time on documents and forward all documents to LPDD Chief</td>
+            <td>None</td>
+            <td>30 min</td>
+            <td>Receiving Clerk<br>Licenses Patents and Deeds Division</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Refers the documents to WRPS for processing</td>
+            <td>None</td>
+            <td>30 min</td>
+            <td>Chief, LPDD Licenses<br>Patents and Deeds Division</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              Evaluates the documents. If in order, prepares CWR, endorsement to the RED and PENRO, and letter to the permittee
+            </td>
+            <td></td>
+            <td>2 days, 4 hours & 45 minutes</td>
+            <td>
+              DMO II / Action Officer<br>
+              Wildlife Resources and Permitting Section (WRPS)<br>
+              Chief, Wildlife Resources and Permitting Section (WRPS)<br>
+              Licenses Patents and Deeds Division
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Conduct inspection of the facility and inventory of wildlife species for registration</td>
+            <td></td>
+            <td>5 days, 7 hours & 30 min</td>
+            <td>WRPS, PENRO & CENRO Representative</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Receive payment of Permit Fees</td>
+            <td>P 50.00</td>
+            <td>15 min</td>
+            <td>Regional Office Cashier</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              Reviews and initials the endorsement and CWR for the signature of the ARD for Technical Services
+            </td>
+            <td></td>
+            <td>7 hours</td>
+            <td>
+              Chief, LPDD<br>
+              Licenses Patents and Deeds Division
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              Reviews and initial the endorsement, and CWR for the signature of the Regional Executive Director
+            </td>
+            <td></td>
+            <td>5 hours & 30 min</td>
+            <td>
+              ARD for Technical Services<br>
+              Office of the ARD for Technical Services
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Signs the Endorsements and CWR and receive by client and indorse to client</td>
+            <td></td>
+            <td>5 hours & 30 min</td>
+            <td>
+              Regional Executive Director<br>
+              Office of the Regional Executive Director
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="background-color: #c2e1f8; text-align: end;"><strong>TOTAL:</strong></td>
+            <td style="background-color: #c2e1f8;"><strong></strong></td>
+            <td colspan="2" style="background-color: #c2e1f8; text-align: center;"><strong>14 days</strong></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <div style="margin-top: 20px;">
+        <p><strong>Note:</strong><br>
+        This service is under the following laws:</p>
+        <ul style="padding-left: 20px;">
+          <li>R.A. No. 9147</li>
+          <li>DAO No. 2004-15</li>
+          <li>Joint DENR-DA-PCSD AD #01, s. 2004, May 18, 2004</li>
+          <li>DAO 2004-58, August 31, 2004</li>
+          <li>DAO 2004-60, September 27, 2004</li>
+          <li>DAO 2004-62, October 12, 2004</li>
+          <li>TB No. 2013-04, May 21, 2013</li>
+        </ul>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="content" id="formContent" style="display: none;">
+        <form action="#" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          
+
+          <button type="submit">📤 Submit Request</button>
+        </form>
+    </div>
+
+    <div class="content" id="statusContent" style="display: none;">
+      <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">📊 CWR Application Status</h2>
+      <p>Below is the list of submitted Certificate of Wildlife Registration applications and their current status.</p>
+
+      <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+       <tr>
+          <th>Reference No.</th>
+          <th>Applicant Name</th>
+          <th>Type of Wildlife</th>
+          <th>Status</th>
+          <th>Remarks</th>
+        </tr>
+        {% for reg in registrations %}
+        <tr>
+          <td>WR-{{ reg.id|stringformat:"03d" }}</td>
+          <td>{{ reg.full_name }}</td>
+          <td>{{ reg.cultural_type }}</td>
+          <td>{{ reg.status }}</td>
+          <td>{{ reg.remarks }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5">No registrations yet.</td></tr>
+        {% endfor %}
+      </table>
+
+
+    </div>
+
+  </div>
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = {
+      chart: document.getElementById('chartContent'),
+      form: document.getElementById('formContent'),
+      status: document.getElementById('statusContent')
+    };
+
+    // Remove active sa lahat ng tabs
+    tabs.forEach(tab => tab.classList.remove('active'));
+    // Hide lahat ng content sections
+    for (let key in contents) {
+      contents[key].style.display = 'none';
+    }
+
+    // Activate tab at show content base sa type
+    if (type === 'chart') tabs[0].classList.add('active');
+    if (type === 'form') tabs[1].classList.add('active');
+    if (type === 'status') tabs[2].classList.add('active');
+
+    contents[type].style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

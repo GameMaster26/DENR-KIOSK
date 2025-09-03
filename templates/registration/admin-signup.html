@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Admin Account | PENRO</title>
+  <link rel="stylesheet" href="static/css/login-style.css" />
+</head>
+<body>
+  <a href="index.html" class="back-button" title="Back">&#8592; Back</a>
+
+  <main class="login-container">
+    <section class="login-box">
+      <img src="static/img/logo.png" alt="PENRO Logo" class="login-logo" />
+      <h1>Create Admin Account</h1>
+      <p class="login-subtext">Sign up to manage PENRO records, permits, and service submissions.</p>
+
+      <form id="adminForm" action="admin.html" method="get" autocomplete="on">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. Juan Dela Cruz" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="e.g. juan@penro.gov.ph" required />
+        </div>
+
+        <div class="form-group">
+          <label for="username">Admin ID</label>
+          <div class="id-group">
+            <input type="text" id="username" name="username" placeholder="Click generate to auto-fill" required readonly />
+            <button type="button" class="generate-button" onclick="generateAdminID()">Generate</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter a secure password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat your password" required />
+        </div>
+
+        <button type="button" class="login-button" onclick="openConfirmationModal()">Sign Up</button>
+
+        <p class="signup-link">
+          Already have an admin account?
+          <a href="admin-login.html">Login here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="confirmModal" class="modal-overlay">
+    <div class="modal-box">
+      <h3>Confirm Account Creation</h3>
+      <p>Are you sure you want to create this account?</p>
+      <div class="modal-actions">
+        <button type="button" class="confirm-btn" onclick="submitForm()">Yes, Confirm</button>
+        <button type="button" class="cancel-btn" onclick="closeConfirmationModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/generate-id.js"></script>
+  <script src="static/js/admin-signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | PENRO</title>
+  <link rel="stylesheet" href="static/css/login-style.css" />
+</head>
+<body>
+  <a href="index.html" class="back-button" title="Return to Home">&#8592; Back</a>
+
+  <main class="login-container">
+    <section class="login-box">
+      <!-- Logo -->
+      <img src="static/img/logo.png" alt="PENRO Logo" class="login-logo" />
+
+      <h1>PENRO Admin Login</h1>
+      <p class="login-subtext">Access the PENRO administrative dashboard and manage submissions.</p>
+
+      <form action="admin.html" method="get" autocomplete="on">
+        <div class="form-group">
+          <label for="admin-username">User ID or Email</label>
+          <input type="text" id="admin-username" name="admin-username" placeholder="e.g. admin@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" name="admin-password" placeholder="Enter your password" required />
+        </div>
+
+        <button type="submit" class="login-button">Login</button>
+
+        <p class="signup-link">
+          Don't have an admin account?
+          <a href="admin-signup.html">Sign Up Here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

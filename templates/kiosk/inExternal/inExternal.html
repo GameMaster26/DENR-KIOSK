@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrative and Finance(Internal and External Services) | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-style.css' %}"/>
+  
+</head>
+<body>
+  <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Administrative and Finance(Internal and External Services)</h1>
+    <div class="service-list">
+
+      <a href="{% url 'inExternal:noRecords' %}" class="service-card">
+        <h3>📝 Certificate of No Records/Appeal/Motion of Reconsideration</h3>
+        <p> Issued to prospective bidders of certain goods or services</p>
+      </a>
+
+      <a href="{% url 'inExternal:authentication' %}" class="service-card">
+        <h3>📝 Authentication of Record/s</h3>
+        <p> Issued to prospective bidders of certain goods or services</p>
+      </a>
+
+      <a href="{% url 'inExternal:payment' %}" class="service-card">
+        <h3>📝 Processing of Payment of Claims</h3>
+        <p> Issued to prospective bidders of certain goods or services</p>
+      </a>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

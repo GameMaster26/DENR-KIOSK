@@ -1,0 +1,49 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Land Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/land-style.css' %}" />
+</head>
+<body>
+ <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Land Services</h1>
+    <div class="service-list">
+
+      <a href="{% url 'land:landStatus' %}" class="service-card">
+        <h3>🗂️ Certification of Land Classification Status</h3>
+        <p>Issuance of Certification of Land Classification Status.</p>
+      </a>
+
+      <a href="{% url 'land:surveyAuthority' %}" class="service-card">
+        <h3>📏 Survey Authority</h3>
+        <p>Issuance of Survey Authority.</p>
+      </a>
+
+      <a href="{% url 'land:free_patent_agricultural' %}" class="service-card">
+        <h3>🌾 Free Patent Application (Agricultural)</h3>
+        <p>Application for Free Patent (Agricultural).</p>
+      </a>
+
+      <a href="{% url 'land:free_patent_residential' %}" class="service-card">
+        <h3>🏘️ Free Patent Application (Residential)</h3>
+        <p>Application for Free Patent (Residential).</p>
+      </a>
+
+      <a href="{% url 'land:survey_plan_approval' %}" class="service-card">
+        <h3>🗺️ Survey Plan Approval via LAMS</h3>
+        <p>Procedure for Approval of Survey Plan Through Lams Philippines System Application.</p>
+      </a>
+
+    
+    </div>
+  </div>
+</body>
+</html>

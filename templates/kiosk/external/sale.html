@@ -1,0 +1,298 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sale of Bidding Documents | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/sale.css' %}" />
+
+
+</head>
+<body>
+  <a href="{% url 'external:external' %}" class="back-button" title="Back to Urban Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 89vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1> Sale of Bidding Documents</h1>
+
+    <section class="overview card">
+      <h2>📘 Overview</h2>
+      <p>
+        The Sale of Bidding Documents is part of the procurement process wherein prospective bidders are issued the official bidding documents for goods or services offered by the agency. These documents contain the necessary instructions, forms, terms, and conditions required for participation in the bidding process.
+      </p>
+      <p>
+        In accordance with Republic Act No. 9184 and its 2016 Revised Implementing Rules and Regulations (IRR), the Bids and Awards Committee (BAC) issues the bidding documents to interested bidders upon payment of the corresponding fees. The fees are intended to cover the cost of preparation and development of the documents.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Requirements</h2>
+      <ul>
+        <li>One (1) valid Company Identification Card of the prospective bidder</li>
+        <li>Official Receipt (1 original) issued by the Cashier Unit/Section of DENR PENRO or Regional Office</li>
+      </ul>
+    </section>
+
+
+
+    <div class="container" >
+      <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">
+            CITIZEN’S CHARTER NO. R8-AF-03. SALE OF BIDDING DOCUMENTS
+          </h2>
+          
+          <h5> 
+            The Sale of Bidding Documents are documents issued to prospective bidders of certain goods or services. The Bidders may be asked to pay a fee to recover the cost for the preparation and development of the Bidding Documents pursuant to the Guidelines on the Sale of the Bidding Documents. The BAC shall issue the bidding documents to the prospective bidders upon payment of the corresponding cost thereof.
+          </h5>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <td style="background-color: #c2e1f8;">Office or Division</td>
+              <td>Bids and Awards Committee (BAC) Secretariat, Procurement Section/Unit,<br>DENR PENR and Regional Offices</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Classification</td>
+              <td>Simple</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Type of Transaction</td>
+              <td>G2B - Government to Business</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Who may avail</td>
+              <td>Prospective Bidder/s</td>
+            </tr>
+          </table>
+
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1.Present One (1) Valid Company Identification Card </td>
+              <td>Prospective Bidder Company</td>
+            </tr>
+            <tr>
+              <td>2. Official Receipt (1 original) </td>
+              <td>Cashier Unit/Section, DENR PENR or Regional Office</td>
+            </tr>
+
+          </table>
+
+        
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  1. Submit copy of Official Receipt as proof of payment as
+                  indicated in the invitation to bid (ITB) for
+                </td>
+                <td>
+                  1. Receive copy of Official Receipt and issue copy of
+                  the Bidding Documents.
+                </td>
+                <td>
+                  Please refer to the table of fees below.
+                </td>
+                <td>15 minutes</td>
+                <td>
+                  BAC Secretariat <br>
+                  Procurement Section/Unit
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  2. Receive copy of Bidding Documents, register in the
+                  logbook and acknowledge receipt of Bidding Documents.
+                </td>
+                <td>
+                  2. Release Bidding Documents and maintain registry of
+                  Bidders who purchased the Bidding Documents.
+                </td>
+                <td>None</td>
+                <td>15 minutes</td>
+                <td>
+                  BAC Secretariat <br>
+                  Procurement Section/Unit
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align: center;">
+                  <strong>TOTAL:</strong>
+                </td>
+                <td>
+                  Please refer to the table of fees below.
+                </td>
+                <td colspan="2" style="text-align: center;">
+                  <strong>30 minutes</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+          
+          <!-- Notes outside the table -->
+          <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; margin-top: 10px;">
+            <p><em>
+              *Fees of Bidding Documents based on Section 5.0, Appendix 8 of the 2016 Revised Implementing Rules and Regulations (IRR) of Republic Act (RA) No. 9184.
+            </em></p>
+          </div>
+
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th><strong>Approved Budget for the Contract (Php)</strong></th>
+                <th><strong>Maximum Cost of Bidding Documents (Php)</strong></th>
+              </tr>
+            </thead>
+            
+            <tbody class="left-side">
+              <tr >
+                <td>500, 000 and below</td>
+                <td>500.00</td>
+              </tr>
+              <tr >
+                <td>More than 500,000 up to 1 Million</td>
+                <td>1,000.00</td>
+              </tr>
+              <tr >
+                <td>More than 1 Million up to 5 Million</td>
+                <td>5,000.00</td>
+              </tr>
+              <tr >
+                <td>More than 5 Million up to 10 Million </td>
+                <td>10,000.00</td>
+              </tr>
+              <tr >
+                <td>More than 10 Million up to 50 Million</td>
+                <td>25,000.00</td>
+              </tr>
+              <tr >
+                <td>More than 50 Million up to 500 Million</td>
+                <td>50,000.00</td>
+              </tr>
+              <tr >
+                <td>More than 500 Million </td>
+                <td>75,000.00</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST" enctype="multipart/form-data" class="application-form">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 20px;" type="submit" class="submit-btn">📤 Submit Application</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="status-title">📊 Construction Application Status</h2>
+          <p class="status-description">
+              Below is the list of submitted applications and their current status.
+          </p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Owner Name</th>
+                      <th>Project Name</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.owner_name }}</td>
+                      <td>{{ app.project_name }}</td>
+                      <td>{{ app.get_construction_type_display }}</td>
+                      <td class="status-{{ app.status|lower }}">
+                          {{ app.get_status_display }}
+                      </td>
+                      <td>{{ app.remarks|default:"—" }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6" style="text-align:center;">No applications yet.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
+<script>
+
+  function showContent(type) {
+    const chartTab = document.querySelectorAll('.option')[0];
+    const formTab = document.querySelectorAll('.option')[1];
+    const statusTab = document.querySelectorAll('.option')[2];
+    const chartContent = document.getElementById('chartContent');
+    const formContent = document.getElementById('formContent');
+    const statusContent = document.getElementById('statusContent');
+
+    if (type === 'chart') {
+      chartTab.classList.add('active');
+      formTab.classList.remove('active');
+      statusTab.classList.remove('active');
+      chartContent.style.display = 'block';
+      formContent.style.display = 'none';
+      statusContent.style.display = 'none';
+    } else if (type === 'form') {
+      formTab.classList.add('active');
+      chartTab.classList.remove('active');
+      statusTab.classList.remove('active');
+      formContent.style.display = 'block';
+      chartContent.style.display = 'none';
+      statusContent.style.display = 'none';
+    } else if (type === 'status') {
+      statusTab.classList.add('active');
+      chartTab.classList.remove('active');
+      formTab.classList.remove('active');
+      statusContent.style.display = 'block';
+      chartContent.style.display = 'none';
+      formContent.style.display = 'none';
+    }
+  }
+
+</script>
+
+</body>
+</html>

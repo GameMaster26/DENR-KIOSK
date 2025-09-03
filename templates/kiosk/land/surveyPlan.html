@@ -1,0 +1,386 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APPROVAL OF SURVEY PLANS THROUGH LAMS PHILIPPINES SYSTEM | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/surveyPlan.css' %}" />
+
+
+
+</head>
+<body>
+  <a href="{% url 'land:land' %}" class="back-button" title="Back to Urban Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 89vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🗺️ APPROVAL OF SURVEY PLANS THROUGH LAMS PHILIPPINES SYSTEM</h1>
+
+    <section class="overview card">
+      <h2>🗺️ About the Program</h2>
+      <p>
+        📌 The <strong>Approval of Survey Plans through the LAMS Philippines</strong> is a digital platform by the DENR that simplifies the submission and evaluation of land survey plans. It caters to Geodetic Engineers and landowners needing plan approvals for titling and land registration.
+      </p>
+      <p>
+        🖥️ With LAMS, users can submit documents online, monitor application status, and receive notifications on progress — reducing physical transactions and ensuring transparency.
+      </p>
+      <p>
+        🏢 The <strong>PENRO</strong> and its <strong>CENRO</strong> offices serve as frontline processors for the approval workflow. This initiative supports government efforts in digitalization and effective land resource management.
+      </p>
+    </section>
+
+    <div class="container" >
+
+
+      
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-L-05. PROCEDURE FOR APPROVAL OF SURVEY PLANS THROUGH LAMS PHILIPPINES SYSTEM APPLICATION.</h2>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>Office or Division</strong></td>
+              <td>Surveys and Mapping Division – Original and Other Surveys Section, DENR Regional Office VIII</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>Classification</strong></td>
+              <td>Simple</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>Type of Transaction</strong></td>
+              <td>
+                G2B – Government to Business<br>
+                G2C – Government to Citizen<br>
+                G2G – Government to Government
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>Who May Avail</strong></td>
+              <td>
+                Banks, corporations, private associations such as surveying firms, realtors' and developers' corporations, land owners, LGUs, DPWH, Philippine Port Authority, Department of Tourism, DepEd, and other stakeholders.
+              </td>
+            </tr>
+          </table>
+
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1. Transmittal of Survey Returns</td>
+              <td>Land Records Section (Front Desk)</td>
+            </tr>
+            <tr>
+              <td>2. Digital Lodgment Survey Data (DLSD)</td>
+              <td>Data Server – LAMS PHILIPPINES application</td>
+            </tr>
+            <tr>
+              <td>3. Survey Plan (Original)</td>
+              <td>Assessor’s Office & ROD</td>
+            </tr>
+            <tr>
+              <td>4. Field Notes Cover duly notarized with CTC No., date, and place of issue</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5. Traverse Computation / Setting of Corners</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6. Boundary Computation</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7. Lot Data Computation</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>8. Certified true copy of TCT/OCT from ROD (6 months validity)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>9. Latest Tax Declaration (Certified copy from Assessor or by G.E) (6 months)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>10. Deed of Sale or any forms of conveyance (if any)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11. Certified blueprint copy of previous survey (if any) & photocopy of LDC of the mother lot</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>12. SPA of authorized representative who signed for conformity on plan</td>
+              <td></td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>No.</th>
+                <th>CUSTOMER ACTIVITY</th>
+                <th>DENR ACTION </th>
+                <th>AMOUNT OF FEES</th>
+                <th>DURATION</th>
+                <th>PERSPM RESPONSIBLE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  Submit survey returns for verification and approval<br><br>
+                  Upload Digital Land Survey Data (DLSD) in the Kiosk using Geodetic Engineer’s license code
+                </td>
+                <td>
+                  Receive and encode marginal information<br><br>
+                  Complete survey returns and prepare Order of Payment
+                </td>
+                <td>₱20.00 minimum<br>Depends on the number of lots & corners</td>
+                <td>15 minutes</td>
+                <td>Engineering Aide / Engineer II</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pay corresponding fee</td>
+                <td>Receive payment and issue Official Receipt (OR)</td>
+                <td>₱20.00 minimum<br>Depends on the number of lots & corners</td>
+                <td>15 minutes</td>
+                <td>Collection Officer</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Present OR</td>
+                <td>Annotate OR number on plan, verify and approve survey returns</td>
+                <td>None</td>
+                <td>3 days</td>
+                <td>Chief, Surveys and Mapping Division / Engineer II / Engineering Aide</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Receive approved survey returns</td>
+                <td>Release approved survey returns</td>
+                <td>None</td>
+                <td>15 minutes</td>
+                <td>Engineer II / Administrative Aide</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Official receipt</td>
+                <td>Record official receipt no., amount paid and date issued on the survey envelope. Forward the survey envelope to the preliminary screening.</td>
+                <td></td>
+                <td>5 minutes</td>
+                <td>Engineering Aide</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Research & Encode lot reference of survey returns</td>
+                <td>● If lot has no record on file, return said SR to Front Desk/Data Encoder.</td>
+                <td></td>
+                <td>10 minutes</td>
+                <td>Math Aide I</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Request for Certification of No Record / Pending Survey Returns / Envelope</td>
+                <td>Sends SMS to Client/GE that said lot has no record on file and inform them to request for Certification of No Record.</td>
+                <td></td>
+                <td>10 minutes</td>
+                <td>Office Support Staff</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Project and verify to LC Map determine if within A&D or Timberland; with previously approved survey or encroached with adjoining lots</td>
+                <td>● If found not in order, said Survey Returns shall be forwarded to Front Desk/Data Encoder</td>
+                <td></td>
+                <td>30 minutes</td>
+                <td>Cartographer II, Cartographer I, Math Aide II, EMS I</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Lot Data Computation, Verification</td>
+                <td>Verification to be forwarded to Final Verification, Depends on the number of lots contained in SR</td>
+                <td></td>
+                <td>50 minutes</td>
+                <td>Cartographer IV, Math Aide II, Cartographer I</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Withdraw Survey Returns / Effect corrections / Submits deficiencies as noted.</td>
+                <td>Sends SMS to Geodetic Engineer/Clientele as to the status of their submittal. Pending Survey Returns / Survey Envelope</td>
+                <td></td>
+                <td>10 minutes</td>
+                <td>Office Support Staff, Computer Operator I</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Final checking / review / countersign of survey returns and referred to the Chief, Original & Other Surveys Section for Recommending verification.</td>
+                <td>If there are still noted deficiencies, forward the same to the Front Desk, otherwise, it will be transmitted to the Chief, Original and Other Surveys Section for initial.</td>
+                <td></td>
+                <td>30 minutes</td>
+                <td>Engineer II</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Recommending Approval of Survey Returns</td>
+                <td>Referred to the Chief Surveys and Mapping Division for recommending approval</td>
+                <td></td>
+                <td>20 minutes</td>
+                <td>Engr. III / Chief, OOSS</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Release of SRs to the Chief Surveys & Mapping Division</td>
+                <td>If found with deficiencies, forward the same to the Front Desk for GE’s compliance.</td>
+                <td></td>
+                <td>5 minutes</td>
+                <td>Clerk II, Office Support Staff</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Signs and recommends for approval of the survey returns</td>
+                <td>If pending, forward the same to the Front Desk/Data Encoder for GE’s compliance.</td>
+                <td></td>
+                <td>20 minutes</td>
+                <td>Asst. Chief SMD / DMO IV</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Release of SRs to the Office of the SMD for approval</td>
+                <td></td>
+                <td></td>
+                <td>5 minutes</td>
+                <td>Clerk II, Office Support Staff</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Sign and approve the survey plan</td>
+                <td></td>
+                <td></td>
+                <td>20 minutes</td>
+                <td>Chief, SMD</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Send SMS to Clienteles/Geodetic Engineers</td>
+                <td>System-generated SMS informing if the survey plan has been approved or pending for compliance.</td>
+                <td></td>
+                <td>Instantaneous</td>
+                <td>SYSTEM GENERATED</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Assignment of Survey Number of the approved Survey Plan</td>
+                <td>Final lettering & corrections of plans & forwarded to Front Desk</td>
+                <td></td>
+                <td>10 minutes</td>
+                <td>Office Support Staff, EMS I</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>
+                  Request or secure Sepia and Blueprint copies of Approved Survey Plan<br>
+                  Submit Special Power of Attorney (if applicable)<br>
+                  Memorandum and List of approved survey plan<br>
+                  Release of approved survey plan
+                </td>
+                <td>
+                  Transmit the Complete Survey Records / Survey Returns of the approved survey plan to the Land Records Section for filing and safekeeping.
+                </td>
+                <td></td>
+                <td>10 minutes</td>
+                <td>Office Support Staff, Computer Operator I</td>
+              </tr>
+              <tr>
+                <td style="align-items: end;" colspan="3"><strong>TOTAL</strong></td>
+                <td><strong>P20.00 minimum</strong></td>
+                <td colspan="3"><strong>2 hours 65 mins.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">🌱 Join the Program</button>
+          </form>
+      </div>
+
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">APPLICATION STATUS</h2>
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+              <thead style="background-color: #c2e1f8;">
+                  <tr>
+                      <th>Applicant Name</th>
+                      <th>Application Type</th>
+                      <th>Date Submitted</th>
+                      <th>Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.fullname }}</td>
+                      <td>{{ app.get_role_display }}</td>
+                      <td>{{ app.date_submitted|date:"M d, Y" }}</td>
+                      <td>
+                          {% if app.status == 'approved' %}
+                              <span style=" color: #155724; border-radius: 3px;"><strong>{{ app.get_status_display }}</strong></span>
+                          {% elif app.status == 'pending' %}
+                              <span style="color: #856404; border-radius: 3px;"><strong>{{ app.get_status_display }}</strong></span>
+                          {% elif app.status == 'for_compliance' %}
+                              <span style=" color: #721c24; border-radius: 3px;"><strong>{{ app.get_status_display }}</strong></span>
+                          {% endif %}
+                      </td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="4" style="text-align:center; color: #888;">No applications yet.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = document.querySelectorAll('.content');
+
+    // alisin active sa lahat ng tab at itago lahat ng content
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.style.display = 'none');
+
+    // i-activate lang yung pinili
+    document.querySelector(`.option[onclick="showContent('${type}')"]`).classList.add('active');
+    document.getElementById(type + 'Content').style.display = 'block';
+  }
+</script>
+
+
+</body>
+</html>

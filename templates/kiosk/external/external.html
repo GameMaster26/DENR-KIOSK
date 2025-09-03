@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrative and Finance(External Service) Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-style.css' %}"/>
+  
+</head>
+<body>
+  <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Administrative and Finance(External Service)</h1>
+    <div class="service-list">
+
+      <a href="{% url 'external:sale' %}" class="service-card">
+        <h3>📝 Sale of Bidding Documents</h3>
+        <p> Issued to prospective bidders of certain goods or services</p>
+      </a>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

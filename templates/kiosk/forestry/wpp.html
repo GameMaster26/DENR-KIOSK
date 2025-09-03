@@ -1,0 +1,474 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Wood Processing Plant (WPP) Permit Processing| PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+
+
+
+
+
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪵 New Wood Processing Plant (WPP) Permit Processing</h1>
+
+
+    <section class="card">
+        <h2>📘 What is a New Wood Processing Plant (WPP) Permit Processing</h2>
+        <p>
+            The New Wood Processing Plant (WPP) Permit Processing refers to the procedure for securing official authorization 
+            from the Department of Environment and Natural Resources (DENR) to establish and operate a facility engaged in 
+            the mechanical processing of wood and forest-based raw materials. This includes activities such as cutting, 
+            sawing, slicing, chipping, and other forms of wood conversion.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>📄 Purpose of the New Wood Processing Plant (WPP) Permit Processing</h2>
+        <ul>
+            <li>To regulate the establishment and operation of wood processing facilities in accordance with environmental and forestry laws.</li>
+            <li>To ensure sustainable and legal sourcing of raw materials for wood processing operations.</li>
+            <li>To promote the development of the wood industry while protecting forest resources and biodiversity.</li>
+        </ul>
+    </section>
+
+
+
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">📊 Status</div>
+      </div>
+
+      <div class="content" id="chartContent">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN'S CHARTER NO. R8-F-12. PROCESSING AND ENDORSEMENT OF WOOD PROCESSING PLANT (WPP) PERMIT (NEW)</h2>
+        <h4>Wood Processing Plant (WPP) Permit is the permit to operate Wood Processing Plant and other wood industry establishments.</h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <td style="width: 30%; background-color: #c2e1f8;">Office or Division:</td>
+            <td>DENR CENRO to Regional Office</td>
+          </tr>
+          <tr>
+            <td style="background-color: #c2e1f8;">Classification:</td>
+            <td>Highly Technical</td>
+          </tr>
+          <tr>
+            <td style="background-color: #c2e1f8;">Type of Transaction:</td>
+            <td>G2B - Government to Business<br>G2C - Government to Citizen</td>
+          </tr>
+          <tr>
+            <td style="background-color: #c2e1f8;">Who may avail:</td>
+            <td>WPP permit holders</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td style="text-align: center;">CHECKLIST OF REQUIREMENTS</td>
+            <td style="text-align: center;">WHERE TO SECURE</td>
+          </tr>
+          <tr>
+            <td>1. Duly accomplished application form</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>2. Application permit/permit fee (Official receipt as proof of payment)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>3. Copy of Certificate of Registration, Articles of Incorporation, Partnership or Corporation, as the case may be</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>4. Authorization issued by the Corporation, Partnership or Association in favor of the person signing the application</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>5. Feasibility Study/Business Plan</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>6. Business Permit issued by the Municipal/City Mayor</td>
+            <td>C/MLGU</td>
+          </tr>
+          <tr>
+            <td>7. Copy of the Environmental Compliance Certificate (ECC) issued by the Environmental Management Bureau (EMB) and all pertinent permits and requirements stipulated therein</td>
+            <td>EMB</td>
+          </tr>
+          <tr>
+            <td>8. Proof of sustainable sources of legally cut logs for a period of at least 5 years, supported by the following:</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>8.1 At least 5% Tree Inventory of the forest/private tree plantation that includes under oath, narrative report, tally sheets, stand and stock table, geotagged photographs, and map of the area</td>
+            <td>Requesting Party / CENRO / Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>8.2 Electronic Copy of the inventory data in MS Excel format</td>
+            <td>Requesting Party / CENRO / Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>8.3 Under Oath validation report of the PENRO/RO as to the availability and sustainability of the volume of raw materials covered by a Log Supply Contract duly approved by the Regional Executive Director (RED)</td>
+            <td>PENRO / RO</td>
+          </tr>
+          <tr>
+            <td>8.4 In case the source of raw materials is coming from the forest plantations, a copy of tenure instrument (i.e. IFMA, CBFMA, etc.) and a copy of harvesting permit</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>8.5 In case the source of raw materials is coming from private tree plantations, a copy of Certificate of Tree Plantation Ownership (CTPO) or Private Tree Plantation Registration (PTPR) and corresponding map of the area</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>8.6 Monthly Production and Disposition Report duly attested by the CENRO</td>
+            <td>Requesting Party / CENRO / Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>8.7 For Imported Wood Materials: Certificate of Registration as Log/Veneer/Lumber Importer</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>8.8 Original copy of Log/Veneer/Lumber Supply Contract duly approved by the concerned Regional Executive Director</td>
+            <td>Requesting Party / RO</td>
+          </tr>
+          <tr>
+            <td>9. For individual persons, documents reflecting proof of Filipino Citizenship such as Birth Certificate or Naturalization</td>
+            <td>PSA</td>
+          </tr>
+          <tr>
+            <td>10. Evidence of ownership of machineries</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>11. GIS-generated map with corresponding geotagged photos showing the location of WPP</td>
+            <td>Requesting Party / CENRO / Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>12. Certification from the Regional Office that the WPP is not within the illegal hotspot area</td>
+            <td>DENR-RO</td>
+          </tr>
+        </table>
+
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>Client Steps</th>
+              <th>Agency Action</th>
+              <th>Fees to be Paid</th>
+              <th>Processing Time</th>
+              <th>Persons Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: #c2e1f8;">
+              <td style="text-align: center;"><strong>CENRO</strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1. Submit application form and supporting documents</td>
+              <td>1. Check completeness of application and supporting documents, receive and forward the application to Deputy CENR Officer/CENR Officer</td>
+              <td>None</td>
+              <td>1 hour and 30 minutes</td>
+              <td>Receiving/Releasing Clerk / OD</td>
+            </tr>
+            
+            <tr>
+              <td>2. Receive Order of Payment and pay the required fees</td>
+              <td>
+                1. Prepare Order of Payment<br><br><br>
+                2. Accept payment and issue Official Receipt (OR)
+              </td>
+              <td>None<br><br>
+                Php 600.00 - Application fee<br>
+                Php 36.00 - Oath fee<br>
+                Php 720.00/cu.m but not less than 6,000 (if cash) - Performance bond<br>
+                Annual License/Permit Fees:<br>
+                - Php 900.00 (DRC below 24 cu.m.)<br>
+                - Php 1,080.00 (DRC 24-27 cu.m.)<br>
+                - Php 1,200.00 (DRC above 47 cu.m.)
+              </td>
+              <td>20 minutes<br><br><br>1 hour</td>
+              <td>RPS Technical Staff <br><br><br> Credit Officer</td>
+            </tr>
+
+            <tr>
+              <td>3. Receive OR</td>
+              <td>3. Receive, review and refer the application to Chief, RPS</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Deputy CENR Officer / CENR Officer</td>
+            </tr>
+
+            <tr>
+              <td>4. Review and refer the application documents to the action man</td>
+              <td>Receive and review the application and assign technical personnel to conduct the inspection</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, RPS</td>
+            </tr>
+
+            <tr>
+              <td>5. Guide/Accompany the technical staff to the plant</td>
+              <td>
+                5. Conduct inspection of the establishment (Wood Processing Plant subject for renewal) and prepare report with attachments (map, geotagged photos and inventory of stock balance with tally sheet and stand and stock table) and endorse to PENRO, forward to Chief, RPS
+              </td>
+              <td>None</td>
+              <td>8 days</td>
+              <td>Technical Staff, Regulation and Permitting Section (RPS)</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.1 Review the inspection report and submit recommendation to CENRO</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, RPS</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.2 Receive and review the application documents and inspection report. Approve the recommendation. Sign the endorsement to PENRO</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>CENR Officer</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.3 Record and release the application supporting documents and endorsement to PENR Office</td>
+              <td>None</td>
+              <td>2 days</td>
+              <td>Receiving/Releasing Clerk, CENRO Records Unit</td>
+            </tr>
+            
+            <tr>
+              <td style="text-align: center;"><strong>PENRO</strong></td>
+              <td>5.4 Receive documents and forward to Chief, Technical Services Division (TSD)</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing PENRO Records Section</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.5 Review, evaluate application and prepare memorandum endorsement to Regional Office thru Chief, TSD for countersigning</td>
+              <td>None</td>
+              <td>5 hours</td>
+              <td>Chief/Staff <br><br>Concerned Unit/Section <br><br>Chief TSD</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.6 Review and sign the memorandum endorsement for the Regional Executive Director</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>PENR Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.7 Record and release the application and supporting documents</td>
+              <td>None</td>
+              <td>3 days</td>
+              <td>Receiving/Releasing Clerk PENRO Records Section</td>
+            </tr>
+
+            <!-- REGIONAL OFFICE -->
+            <tr>
+              <td style="text-align: center;"><strong>REGIONAL OFFICE</strong></td>
+              <td>5.8 Receive and record application documents and forward to Regional Executive Director</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Regional Office Records Section</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.9 Refer the application documents to Office of the Assistant Regional Director for Technical Services</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Office of the Regional Executive Director</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.10 Receive and forward application documents to Licenses Patents and Deeds Division</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.11 Receive, review and refer application documents to Forest Utilization Section</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.12 Receive and record application documents and forward to Chief, FUS</td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk/FUS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.13 Evaluate the completeness and correctness of the submitted requirements based on the checklist</td>
+              <td>None</td>
+              <td>5 hours</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.14 Recommends for the conduct of field verification/inspection and prepares report of inspection, CSW and memorandum endorsement for the SEC thru USEC and Attention FMB Director, submit the same to Chief, LPDD</td>
+              <td>None</td>
+              <td>5 days</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.15 Review the report and other supporting documents and affix his/her initial on the Memorandum endorsement</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.16 Review/initial the memorandum endorsement and forward for RED’s signature</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.17 Sign/approve the Memorandum Endorsement for SEC and forward to Records</td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>Office of the Regional Executive Director</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td>5.18 Record and release the memorandum endorsement for FMB</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Receiving/Releasing Regional Office Records Section</td>
+            </tr>
+
+            <!-- Subtotals -->
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>CENRO SUB-TOTAL</strong></td>
+              <td style="text-align: center;"><strong>Php 2,116.00</strong></td>
+              <td colspan="2" style="text-align: center;"><strong>10 days, 9 hours & 50 minutes</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>PENRO SUB-TOTAL</strong></td>
+              <td style="text-align: center;"><strong>None</strong></td>
+              <td colspan="2" style="text-align: center;"><strong>3 days & 8 hours</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>REGIONAL OFFICE SUB-TOTAL</strong></td>
+              <td style="text-align: center;"><strong>None</strong></td>
+              <td colspan="2" style="text-align: center;"><strong>6 days, 16 hours & 30 minutes</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>TOTAL</strong></td>
+              <td style="text-align: center;"><strong>Php 2,116.00</strong></td>
+              <td colspan="2" style="text-align: center;"><strong>20 days, 10 hours & 20 minutes</strong></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:wpp_permit' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit WPP Permit Application</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 New WPP Permit Application Status</h2>
+          <p>Below is the list of submitted New WPP permit applications and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant / Company</th>
+                      <th>Location</th>
+                      <th>Capacity (m³/year)</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for permit in permits %}
+                  <tr>
+                      <td>{{ permit.reference_no }}</td>
+                      <td>{{ permit.applicant }}</td>
+                      <td>{{ permit.location }}</td>
+                      <td>{{ permit.capacity }}</td>
+                      <td class="status-{{ permit.status|lower }}">{{ permit.get_status_display }}</td>
+                      <td>{{ permit.remarks }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6">No WPP permit applications found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+<script>
+function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = document.querySelectorAll('.content');
+
+  tabs.forEach(tab => tab.classList.remove('active'));
+  contents.forEach(content => content.style.display = 'none');
+
+  if (type === 'chart') tabs[0].classList.add('active');
+  if (type === 'form') tabs[1].classList.add('active');
+  if (type === 'status') tabs[2].classList.add('active');
+
+  document.getElementById(type + 'Content').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service</title>
+  <style>
+
+
+    /* .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    } */
+
+    .header {
+      background: rgba(40, 167, 69, 1);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .options {
+      display: flex;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .option {
+      flex: 1;
+      text-align: center;
+      padding: 15px;
+      cursor: pointer;
+      background: #f9f9f9;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .option:hover {
+      background: #e0e0e0;
+    }
+
+    .option.active {
+      background: #ffffff;
+      border-bottom: 3px solid rgba(40, 167, 69, 1);
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    /* Simple Form Styling */
+    
+    /* Form Styling */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #66bb6a;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+      font-family: inherit;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0; /* top: 20px, auto horizontal, no bottom margin */
+      padding: 12px 30px;
+      background: rgba(40, 167, 69, 1);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+
+    button:hover {
+      background: rgba(40, 167, 69, 1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <!-- <div class="header">Service</div> -->
+
+    <div class="options">
+      <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+      <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+    </div>
+
+    <div class="content" id="chartContent" >
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">Citizen’s Charter No. R8-F-04</h2>
+        <h3>Application for Chainsaw Registration</h3>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+          <tr style="background: #f1f1f1;">
+            <th colspan="2" style="text-align: left; padding: 10px; border: 1px solid #ccc;">General Information</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Office or Division</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Regulation and Permitting Section, DENR Implementing PENR/CENR Office</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Classification</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Simple</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Type of Transaction</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">G2B – Government to Business<br>G2C – Government to Citizen<br>G2G – Government to Government</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Who may avail</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li>Tenurial instrument holders (e.g. TLA, CBFMA, IFMA)</li>
+                <li>Orchard/tree/industrial tree farmers</li>
+                <li>Licensed wood processors using chainsaws legally</li>
+                <li>Anyone with legal proof of chainsaw use</li>
+                <li>Gov’t agencies/GOCCs (except Palawan – PCSD)</li>
+                <li>CTPO/PTPR holders</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <h3 style="margin-top: 30px;">Checklist of Requirements</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr style="background: #f1f1f1;">
+            <th style="border: 1px solid #ccc; padding: 8px;">Requirement</th>
+            <th style="border: 1px solid #ccc; padding: 8px;">Where to Secure</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Duly accomplished Application Form</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Implementing PENR/CENR Office</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Official Receipt or Affidavit of Ownership</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Requesting Party, Store or Dealer</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">SPA (if not the owner)</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Requesting Party</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Detailed Chainsaw Specifications</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Requesting Party, Store or Dealer</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Notarized Deed of Absolute Sale (if applicable)</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Private Lawyer or Notary Public</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ccc; padding: 8px;">Actual Chainsaw</td>
+            <td style="border: 1px solid #ccc; padding: 8px;">Requesting Party</td>
+          </tr>
+        </table>
+
+        <h3 style="margin-top: 30px;">Client Steps and Agency Actions</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #f1f1f1;">
+              <th style="border: 1px solid #ccc; padding: 8px;">Client Steps</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Agency Actions</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Fees</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Processing Time</th>
+              <th style="border: 1px solid #ccc; padding: 8px;">Person Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;" rowspan="2">1. Submit complete documents</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Receive and review application, forward to Technical Staff, prepare Order of Payment</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">30 mins</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Chief RPS (CENRO)/Chief TSD (PENRO)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Approve Order of Payment</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">30 mins</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">CENR Officer/Accountant</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">2. Pay Registration Fee</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Receive payment and issue OR</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Php 500.00</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">30 mins</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Bill Collector / Cashier</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;" rowspan="3">3. Submit Official Receipt</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Verify documents, inspect chainsaw, prepare Certification</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">1 day</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Technical Staff (RPS/TSD)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Review application, forward to Officer</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">2 hours</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Chief RPS/CENRO or Chief TSD</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">Approve Certificate of Registration</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">1 day</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">PENR/CENR Officer</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ccc; padding: 8px;">4. Receive Certificate</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Record, assign control number, release Certificate</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">None</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">30 mins</td>
+              <td style="border: 1px solid #ccc; padding: 8px;">Records Clerk (CENRO/PENRO)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 20px;"><strong>Total Fee:</strong> Php 500.00<br>
+        <strong>Total Processing Time:</strong> 2 days, 4 hours, and 30 minutes</p>
+    </div>
+
+    <div class="content" id="formContent" style="display: none;">
+      <form>
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="affiliation">Affiliated LGU / Organization:</label>
+          <input type="text" id="affiliation" name="affiliation" placeholder="e.g., LGU Biliran or DENR PENRO" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Target Area / Municipality:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Caibiran, Biliran" required>
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose of Request:</label>
+          <textarea id="purpose" name="purpose" rows="4" placeholder="e.g., For FLUP preparation, land use policy support, local development planning..." required></textarea>
+        </div>
+
+        <button type="submit">📤 Submit Request</button>
+      </form>
+    </div>
+</div>
+
+<script>
+  function showContent(type) {
+    const chartTab = document.querySelectorAll('.option')[0];
+    const formTab = document.querySelectorAll('.option')[1];
+    const chartContent = document.getElementById('chartContent');
+    const formContent = document.getElementById('formContent');
+
+    if (type === 'chart') {
+      chartTab.classList.add('active');
+      formTab.classList.remove('active');
+      chartContent.style.display = 'block';
+      formContent.style.display = 'none';
+    } else {
+      formTab.classList.add('active');
+      chartTab.classList.remove('active');
+      formContent.style.display = 'block';
+      chartContent.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

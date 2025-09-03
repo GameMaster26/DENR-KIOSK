@@ -1,0 +1,286 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CERTIFICATION OF LAND CLASSIFICATION STATUS | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/landStatus.css' %}" />
+  
+
+</head>
+<body>
+  <a href="{% url 'land:land' %}" class="back-button" title="Back to Urban Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 89vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🗂️ CERTIFICATION OF LAND CLASSIFICATION STATUS</h1>
+
+    <section class="guidelines card">
+      <h2>📘 Permit Guidelines</h2>
+      <ul>
+        <li>The applicant must ensure that all documentary requirements are complete and accurate before submission.</li>
+        <li>Only individuals or entities with legal proof of ownership or authority to use the equipment or property may apply.</li>
+        <li>All permits issued are subject to periodic inspection and compliance with DENR rules and regulations.</li>
+      </ul>
+    </section>
+
+
+  
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-L-01. ISSUANCE OF CERTIFICATION OF LAND CLASSIFICATION STATUS*</h2>
+        <h3>This Certification is being issued based from the land records/status and projection in the land classification map for alienability
+        or disposability of the land being applied for. This Certification does not construe ownership and is for reference only.</h3>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+
+          <tr>
+            <td  style="background-color: #c2e1f8;">Office or Division</td>
+            <td >Regulation and Permitting Section, DENR Implementing PENR/CENR Office</td>
+          </tr>
+          <tr>
+            <td  style="background-color: #c2e1f8;">Classification</td>
+            <td >Highly Technical</td>
+          </tr>
+          <tr>
+            <td  style="background-color: #c2e1f8;">Type of Transaction</td>
+            <td >
+              G2B – Government to Business<br>
+              G2C – Government to Citizen<br>
+              G2G – Government to Government
+            </td>
+          </tr>
+          <tr>
+            <td  style="background-color: #c2e1f8;">Who may avail</td>
+            <td >
+              Banks, Corporations, Private Associations (e.g. Surveying Firms), Realtors’/Developers’ Corporations, Land Owners, LGUs, DPWH, Philippine Port Authority, Department of Tourism, DepEd, and other stakeholders
+            </td>
+          </tr>
+        </table>
+
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <tr style="background-color: #c2e1f8;">
+            <th >Checklist of Requirements</th>
+            <th >Where to Secure</th>
+          </tr>
+          <tr>
+            <td >
+              1. Request Form (1 original, 1 duplicate copy)
+            </td>
+            <td>Implementing PENRO/CENRO Records Office or Public Assistance Desk</td>
+          </tr>
+          <tr>
+            <td >
+              2. Any document showing the identity of the lot (1 photocopy)
+            </td>
+            <td>End-user or Assessor’s Office</td>
+          </tr>
+          <tr>
+            <td >
+              3. Sketch Plan with Complete Technical Description (1 original)
+            </td>
+            <td>Geodetic Engineer</td>
+          </tr>
+        </table>
+
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>Client Steps</th>
+              <th>Agency Action</th>
+              <th>Fees to be Paid</th>
+              <th>Processing Time</th>
+              <th>Persons Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. File application with complete supporting documents to the Implementing PENRO/CENRO Receiving Area/Records Unit.</td>
+              <td>Check completeness of application and supporting documents and receive the request, record in logbook and/or Document Tracking System, and forward to RPS.</td>
+              <td>None</td>
+              <td>30 min</td>
+              <td>Receiving/Releasing Clerk – Implementing PENRO/CENRO Records Unit</td>
+            </tr>
+            <tr>
+              <td>1.1 None</td>
+              <td>Receive request and prepare Order of Payment</td>
+              <td>None</td>
+              <td>30 min</td>
+              <td>Technical Staff – Regulation and Permitting Section (RPS)</td>
+            </tr>
+            <tr>
+              <td>1.2 None</td>
+              <td>Approve Order of Payment and forward the same to client</td>
+              <td>None</td>
+              <td>10 min</td>
+              <td>Accountant (Implementing PENRO), CENRO or Designated Representative</td>
+            </tr>
+            <tr>
+              <td>2. Receive Order of Payment and pay corresponding fee.</td>
+              <td>Receive payment and issue and photocopy Official Receipt</td>
+              <td>Php 25.00</td>
+              <td>30 min</td>
+              <td>Bill Collector / Cashier</td>
+            </tr>
+            <tr>
+              <td>3. Receive Official Receipt and forward the same to Technical Staff, RPS.</td>
+              <td>Receive copy of official receipt. Verify and project the lot, and prepare and sign the Certification. Forward the Certification and supporting documents, if any, to Chief, RPS/TSD.</td>
+              <td>None</td>
+              <td>4 days</td>
+              <td>Technical Staff – RPS</td>
+            </tr>
+            <tr>
+              <td>3.1</td>
+              <td>Receive, review and sign the Certification and forward to PENR/CENR Officer</td>
+              <td>None</td>
+              <td>30 min</td>
+              <td>Chief – RPS/TSD</td>
+            </tr>
+            <tr>
+              <td>3.2</td>
+              <td>Receive, review, sign and approve the Certification</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>PENR/CENR Officer</td>
+            </tr>
+            <tr>
+              <td>4. Receive the Certification.</td>
+              <td>Record and release documents</td>
+              <td>None</td>
+              <td>15 min</td>
+              <td>Receiving/Releasing Clerk – PENRO/CENRO Records Unit</td>
+            </tr>
+            <tr style="background-color: #f1f1f1;">
+              <td colspan="2"><strong>TOTAL</strong></td>
+              <td><strong>Php 25.00</strong></td>
+              <td colspan="2"><strong>4 days, 3 hours & 25 min</strong></td>
+            </tr>
+          </tbody>
+        </table>
+          <p>* Except judicial titling</p>
+          <p>** Sec 9.b.1 of R.A. 11032</p>
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label for="id_full_name">Full Name:</label>
+            <input type="text" name="full_name" id="id_full_name" value="{{ form.full_name.value|default:'' }}" required>
+
+            <label for="id_address">Address:</label>
+            <input type="text" name="address" id="id_address" value="{{ form.address.value|default:'' }}" required>
+
+            <label for="id_number_of_trees">Number of Trees:</label>
+            <input type="number" name="number_of_trees" id="id_number_of_trees" value="{{ form.number_of_trees.value|default:'' }}" required>
+
+            <label for="id_reason_for_cutting">Reason for Cutting:</label>
+            <textarea name="reason_for_cutting" id="id_reason_for_cutting" required>{{ form.reason_for_cutting.value|default:'' }}</textarea>
+
+            <label for="id_documents">Documents:</label>
+            <input type="file" name="documents" id="id_documents" multiple required>
+
+            <button type="submit">📤 Submit Application</button>
+          </form>
+        </div>
+
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 style="color: #28a745; margin-bottom: 10px; font-size: 1.5rem; font-weight: bold;">
+              📋 Application Status – Certification of Land Classification Status
+          </h2>
+          <p style="margin-bottom: 15px; color: #555; font-size: 0.95rem;">
+              Check the current status of your application for the issuance of Certification of Land Classification Status.
+          </p>
+
+          <table style="
+              width: 100%;
+              border-collapse: collapse;
+              background: #fff;
+              border-radius: 8px;
+              overflow: hidden;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+          ">
+              <thead style="background: #7eb4ec; color: white;">
+                  <tr>
+                      <th style="padding: 10px; text-align: left;">Reference No.</th>
+                      <th style="padding: 10px; text-align: left;">Applicant Name</th>
+                      <th style="padding: 10px; text-align: left;">Status</th>
+                      <th style="padding: 10px; text-align: left;">Remarks</th>
+                      <th style="padding: 10px; text-align: left;">Last Updated</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr style="border-bottom: 1px solid #ddd;">
+                      <td style="padding: 8px;">LC-{{ app.id|stringformat:"04d" }}</td>
+                      <td style="padding: 8px;">{{ app.full_name }}</td>
+                      <td style="padding: 8px;">
+                          {% if app.status == 'approved' %}
+                              <span style="color: green; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% elif app.status == 'under_verification' %}
+                              <span style="color: orange; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% else %}
+                              <span style="color: red; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% endif %}
+                      </td>
+                      <td style="padding: 8px;">{{ app.remarks }}</td>
+                      <td style="padding: 8px;">{{ app.last_updated|date:"M d, Y" }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="5" style="text-align: center; padding: 12px; color: #888;">
+                          No applications yet.
+                      </td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+          
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.style.display = 'none');
+
+    if (type === 'chart') {
+      tabs[0].classList.add('active');
+      document.getElementById('chartContent').style.display = 'block';
+    } else if (type === 'form') {
+      tabs[1].classList.add('active');
+      document.getElementById('formContent').style.display = 'block';
+    } else if (type === 'status') {
+      tabs[2].classList.add('active');
+      document.getElementById('statusContent').style.display = 'block';
+    }
+  }
+</script>
+
+<script src="{% static 'js/land-script.js' %}" defer></script>
+
+
+</body>
+</html>

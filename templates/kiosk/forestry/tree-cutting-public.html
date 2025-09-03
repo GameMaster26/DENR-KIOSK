@@ -1,0 +1,189 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tree Cutting Public| PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+  
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪵 Tree Cutting Public</h1>
+
+
+    <section class="card">
+        <h2>📘 What is a Tree Cutting Public</h2>
+        <p>
+            The Certificate of Lumber Origin (CLO) is issued by the DENR for the transport of processed logs/lumber from a Wood Processing Plant (WPP) to another WPP or desired destination. This ensures the legality and traceability of forest products during transport.
+        </p>
+    </section>
+
+
+    <section class="card">
+        <h2>📄 Purpose of the Tree Cutting Puclic</h2>
+        <ul>
+            <li>Verifies the legal source of processed logs or lumber</li>
+            <li>Supports DENR enforcement and monitoring</li>
+            <li>Facilitates inter-WPP transport and lumber trade</li>
+        </ul>
+    </section>
+
+
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-F-06. ISSUANCE OF TREE CUTTING PERMIT FOR PLANTED TREES AND NATURALLY GROWING TREES FOUND WITHIN PUBLIC PLACES (PLAZA, PUBLIC PARKS, SCHOOL PREMISES OR POLITICAL SUBDIVISIONS) FOR PURPOSES     OF  PUBLIC SAFETY
+        </h2>
+        <h4>This Permit serves as proof of authorization for the removal/cutting of trees in public places (Plaza, Public Parks, School
+          Premises or Political Subdivisions for purposes of public safety).
+        </h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <th style="width: 30%; background-color: #c2e1f8;">Office or Division:</th>
+            <td>Regulation and Permitting Section, Implementing PENR/CENR Office</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Classification:</th>
+            <td>Highly Technical</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Type of Transaction:</th>
+            <td>G2C - Government to Citizen<br>G2G - Government to Government<br>G2B - Government to Business</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Who may avail:</th>
+            <td>Any Filipino citizen, Local Government Units (LGUs), Schools, Homeowners</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <th style="text-align: center;">CHECKLIST OF REQUIREMENTS</th>
+            <th style="text-align: center;">WHERE TO SECURE</th>
+          </tr>
+          <tr>
+            <td>1. Application Letter (1 original)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>2. LGU Endorsement/Certification of No Objection/Resolution (1 original)</td>
+            <td>Concerned LGU (City/Municipal/Barangay)</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>3. Additional Requirements</strong></td>
+            <td></td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>if within Subdivisions</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Homeowner's Resolution (1 original/1 Certified True Copy)</td>
+            <td>Homeowner's Association</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>if School/Organization</strong></td>
+            <td></td>
+          </tr> 
+          <tr>
+            <td>PTA Resolution or Resolution from any organized group of No Objection and Reason for Cutting (1 original)</td>
+            <td>Requesting Party, School PTA, or Organization</td>
+          </tr>
+        </table>
+
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:treecutting_public' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit Verification Request</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 Tree Cutting Application Status</h2>
+          <p>Below is the list of submitted Tree Cutting Permit applications and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant Name</th>
+                      <th>Tree Species</th>
+                      <th>Volume (m³)</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.fullname }}</td>
+                      <td>{{ app.species }}</td>
+                      <td>{{ app.volume }}</td>
+                      <td class="status-{{ app.status|lower }}">{{ app.get_status_display }}</td>
+                      <td>{{ app.remarks }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6">No applications found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = {
+      chart: document.getElementById('chartContent'),
+      form: document.getElementById('formContent'),
+      status: document.getElementById('statusContent')
+    };
+
+    // remove active sa lahat
+    tabs.forEach(tab => tab.classList.remove('active'));
+    // hide lahat ng content
+    Object.values(contents).forEach(content => content.style.display = 'none');
+
+    // activate yung pinili
+    if (type === 'chart') {
+      tabs[0].classList.add('active');
+      contents.chart.style.display = 'block';
+    } else if (type === 'form') {
+      tabs[1].classList.add('active');
+      contents.form.style.display = 'block';
+    } else if (type === 'status') {
+      tabs[2].classList.add('active');
+      contents.status.style.display = 'block';
+    }
+  }
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Map-Based Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-style.css' %}" />
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Map-Based Services</h1>
+
+    <!-- Google Maps Icon and Link -->
+    <div class="map-icon-wrapper">
+      <a
+        href="https://www.google.com/maps/place/Biliran/@11.5656747,124.3972322,12z"
+        target="_blank"
+        title="View Biliran Island on Google Maps"
+      >
+        <!-- <img src="static/img/google-maps-logo-2-1.png" alt="Google Maps Icon" class="map-icon" /> -->
+      </a>
+      <p class="map-label">Click the icon to open Biliran Island on Google Maps</p>
+    </div>
+
+    <!-- Embedded Google Map -->
+    <div class="map-iframe-wrapper">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125572.71289910203!2d124.41222436034317!3d11.547466889671196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3309a2bc0eaa42cd%3A0x8e497e355ab3ad97!2sBiliran!5e0!3m2!1sen!2sph!4v1719732719929!5m2!1sen!2sph" 
+        width="100%" 
+        height="400" 
+        style="border:1px solid #ccc; border-radius:10px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Embedded Map of Biliran Island">
+      </iframe>
+    </div>
+
+    <!-- Map-Based Service Cards -->
+    <div class="service-list">
+      <a href="{% url 'map:landUse' %}" class="service-card">
+        <h3>📍 Land Use & Classification Maps</h3>
+        <p>Shows forest lands, alienable and disposable lands, and protected areas.</p>
+      </a>
+
+      <a href="{% url 'map:forestManagement' %}" class="service-card">
+        <h3>🌲 Forest Management Maps</h3>
+        <p>Monitor reforestation, logging permits, and forest cover trends.</p>
+      </a>
+
+      <a href="{% url 'map:protectedAreas' %}" class="service-card">
+        <h3>🦅Protected Area Maps</h3>
+        <p>Displays national parks, wildlife sanctuaries, and conservation zones.</p>
+      </a>
+
+      <a href="{% url 'map:miningZone' %}" class="service-card">
+        <h3>⛏️Mining & EIA Compliance Maps</h3>
+        <p>Locate mining tenements and environmental impact areas.</p>
+      </a>
+
+      <a href="{% url 'map:gisServices' %}" class="service-card">
+        <h3>🧭 GIS & Mapping Services</h3>
+        <p>Access GIS tools for land and resource planning purposes.</p>
+      </a>
+
+      <a href="{% url 'map:hazardRisk' %}" class="service-card">
+        <h3>⚠️ Hazard & Risk Maps</h3>
+        <p>Visualize disaster-prone areas for planning and safety measures.</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

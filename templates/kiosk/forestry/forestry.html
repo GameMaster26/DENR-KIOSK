@@ -1,0 +1,102 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forestry Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Forestry Services</h1>
+
+    <div class="service-list">
+
+      <a href="{% url 'forestry:ptpr' %}" class="service-card">
+        <h3>🌲 Private Tree Plantation Registration (PTPR)</h3>
+        <p>Issuance of Private Tree Plantation Registration (PTPR).</p>
+      </a>
+
+      <a href="{% url 'forestry:cov' %}" class="service-card">
+        <h3>📜 Transport Clearance for Planted Trees & Non-Timber Products (Except Rattan/Bamboo)</h3>
+        <p>Issuance of Certificate of Verification (COV) for the
+        Transport of Planted Trees within Private Land, Nontimber Forest Products Except Rattan and Bamboo
+        </p>
+      </a>
+
+      <a href="{% url 'forestry:clo' %}" class="service-card">
+        <h3>📦 Certificate of Lumber Origin (CLO) for Processed Logs</h3>
+        <p>Issuance of Certificate of Lumber Origin (CLO) Processed
+        Logs/Lumber from Wood Processing Plant (WPP) to other
+        WPP or Desired Destination/s
+        </p>
+      </a>
+
+      <a href="{% url 'forestry:chainsaw' %}" class="service-card">
+        <h3>🪚 Chainsaw Registration Application</h3>
+        <p>Application for Chainsaw Registration</p>
+      </a>
+
+      <a href="{% url 'forestry:treecutting_gov' %}" class="service-card">
+        <h3>✂️ Tree Cutting/Earth Balling Permit for Government Projects</h3>
+        <p>Issuance of Tree Cutting and/or Earth Balling Permit for
+        Trees Affected by Projects of National Government
+        Agencies (DPWH, DOTr, DepEd, DA, DOH, CHED, DOE, and
+        NIA)
+        </p>
+      </a>
+
+      <a href="{% url 'forestry:treecutting_public' %}" class="service-card">
+        <h3>🏞️ Tree Cutting Permit in Public Areas for Safety Purposes</h3>
+        <p>Issuance of Tree Cutting Permit for Planted Trees and
+          Naturally Growing Trees Found within Public Places (Plaza,
+          Public Parks, School Premises or Political Subdivisions) for
+          purposes of Public Safety</p>
+      </a>
+
+      <a href="{% url 'forestry:pltp' %}" class="service-card">
+        <h3>🪵 Timber Permit for Trees on Private Lands (PLTP/SPLTP)</h3>
+        <p>Issuance of Private Land Timber Permit (PLTP) for Nonpremium Species, or Special PLTP (SPLTP) for
+            Premium/Naturally-grown Trees within Private/Titled
+            Lands</p>
+      </a>
+
+      <a href="{% url 'forestry:slup' %}" class="service-card">
+        <h3>📄 Special Land Use Permit (SLUP) Application</h3>
+        <p> Issuance of Special Land Use Permit (SLUP) </p>
+      </a>
+
+      <a href="{% url 'forestry:flag' %}" class="service-card">
+        <h3>📘 Forest Land Use Agreement (FLAg) Issuance</h3>
+        <p>Issuance of Forest Land Use Agreement (FLAg).</p>
+      </a>
+
+      <a href="{% url 'forestry:lumber_dealer' %}" class="service-card">
+        <h3>🪵 Lumber Dealer Registration Certificate</h3>
+        <p>Issuance of Certificate of Registration as Lumber Dealer </p>
+      </a>
+
+      <a href="{% url 'forestry:seedling_assist' %}" class="service-card">
+        <h3>🌿 Seedling Request & Technical Assistance</h3>
+        <p>Provision for Technical Assistance in Relation to Seedling
+          Request
+          </p>
+      </a>
+
+      <a href="{% url 'forestry:wpp_permit' %}" class="service-card">
+        <h3>🏭 New Wood Processing Plant (WPP) Permit Processing</h3>
+        <p>Processing and Endorsement of Wood Processing Plant
+          (WPP) Permit (New)</p>
+      </a>
+
+    </div>
+
+  </div>
+</body>
+</html>

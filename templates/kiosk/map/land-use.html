@@ -1,0 +1,85 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Land Use & Classification Map | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-form-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'map:map' %}" class="back-button" title="Back to Map Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>🗺️ Land Use & Classification Map</h1>
+
+    <section class="info card">
+      <h2>📘 What is a Land Use & Classification Map?</h2>
+      <p>
+        This map distinguishes between Forestlands, Alienable and Disposable Lands, and Protected Areas. It is essential for land planning, development permits, academic research, and legal documentation.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Requirements</h2>
+      <ul>
+        <li>Valid Reason or Project Description</li>
+        <li>Target Municipality or Site</li>
+        <li>Preferred Map Format (e.g., PDF, Shapefile)</li>
+        <li>Endorsement Letter (if applicable)</li>
+      </ul>
+    </section>
+
+    <section class="form card">
+      <h2>📝 Submit Map Request</h2>
+      <form>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="requesterName">Full Name:</label>
+          <input type="text" id="requesterName" name="requesterName" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="organization">Organization / Institution:</label>
+          <input type="text" id="organization" name="organization" placeholder="e.g., Kawakwakan sa BiPSU" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="e.g., juan@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Target Area / Municipality:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Naval, Biliran" required>
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose of Request:</label>
+          <textarea id="purpose" name="purpose" rows="4" placeholder="e.g., Research, Planning, Legal Documentation" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred Data Format:</label>
+          <select id="format" name="format" required>
+            <option value="">-- Select Format --</option>
+            <option value="pdf">PDF</option>
+            <option value="shapefile">GIS Shapefile</option>
+            <option value="image">High-Resolution Image</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date-needed">Date Needed:</label>
+          <input type="date" id="date-needed" name="date-needed" required>
+        </div>
+
+        <button type="submit">📤 Submit Request</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

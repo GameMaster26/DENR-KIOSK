@@ -1,0 +1,135 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/img/green.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+/* body {
+  background: #f5f9f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+ */
+/* Container */
+.feedback-container {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feedback-container h1 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.feedback-container p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Form */
+.feedback-form .form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.feedback-form label span {
+  color: #d32f2f;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 4px rgba(46, 125, 50, 0.3);
+}
+
+/* Buttons */
+.submit-btn {
+  background: #2e7d32;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #1b5e20;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: green;
+  background-color: #e8f5e9;
+  padding: 10px 20px;
+  border: 1px solid #a5d6a7;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #c8e6c9;
+  transform: translateX(-3px);
+}

@@ -1,0 +1,75 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mining & Environmental Compliance | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-form-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'map:map' %}" class="back-button" title="Back to Map Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>⛏️ Mining & Environmental Compliance Maps</h1>
+
+    <section class="card">
+      <h2>📘 Overview</h2>
+      <p>
+        These maps show locations of mining tenements, exploration permits, mineral production sharing agreements (MPSAs), and areas monitored for environmental compliance. They support responsible resource extraction and policy enforcement.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📍 Coverage Areas</h2>
+      <ul>
+        <li>Active and Inactive Mining Sites</li>
+        <li>Mineral Exploration Zones</li>
+        <li>Environmental Monitoring Stations</li>
+        <li>Compliance Risk Zones</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>📝 Request a Mining Zone Map</h2>
+      <form>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Requester Name:</label>
+          <input type="text" id="name" name="name" placeholder="e.g., Engineer Juan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="agency">Agency / Company:</label>
+          <input type="text" id="agency" name="agency" placeholder="e.g., Mines and Geosciences Bureau, XYZ Mining Corp." required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Project Location or Site:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Brgy. Villaconsuelo, Almeria" required>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Additional Details or Map Scope:</label>
+          <textarea id="details" name="details" rows="4" placeholder="e.g., Requesting environmental buffer zones, tenement overlays..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred File Format:</label>
+          <select id="format" name="format" required>
+            <option value="">-- Select Format --</option>
+            <option value="pdf">PDF</option>
+            <option value="shapefile">GIS Shapefile</option>
+            <option value="image">High-Resolution Image</option>
+          </select>
+        </div>
+
+        <button type="submit">📤 Submit Request</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

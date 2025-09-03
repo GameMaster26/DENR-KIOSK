@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Required Documents</title>
+  <link rel="stylesheet" href="static/css/penro2-style.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <a href="user.html" class="back-button" title="Go Back">&#8592; Back</a>
+  <div class="panel">
+    <h2><i class="fas fa-file-upload"></i> Submit Required Documents</h2>
+
+    <form class="status-form" enctype="multipart/form-data">
+      <label for="applicantName">👤 Applicant Name</label>
+      <input type="text" id="applicantName" name="applicantName" placeholder="e.g., Juan Dela Cruz" required />
+
+      <label for="documentType">📑 Document Type</label>
+      <select id="documentType" name="documentType" required>
+        <option value="">-- Select Document --</option>
+        <option value="validID">Valid ID</option>
+        <option value="applicationForm">Application Form</option>
+        <option value="supportingDocs">Supporting Documents</option>
+      </select>
+
+      <label for="upload">📎 Upload File</label>
+      <input type="file" id="upload" name="upload" required />
+
+      <button class="btn" type="submit"><i class="fas fa-upload"></i> Submit Document</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protected Area Maps | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-form-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'map:map' %}" class="back-button" title="Back to Map Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>🌳 Protected Area Mapping</h1>
+
+    <section class="card">
+      <h2>📘 Overview</h2>
+      <p>
+        Protected Area Maps display critical conservation zones such as national parks, wildlife sanctuaries, and ecologically significant areas in Biliran. These maps help in managing biodiversity, enforcing environmental laws, and planning sustainable use.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📍 What Areas are Included?</h2>
+      <ul>
+        <li>National Integrated Protected Areas (NIPAS)</li>
+        <li>Wildlife Habitats and Biodiversity Hotspots</li>
+        <li>Ecotourism Sites</li>
+        <li>Buffer Zones and Protected Forests</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>📝 Request Protected Area Map</h2>
+      <form>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="requesterName">Your Name:</label>
+          <input type="text" id="requesterName" name="requesterName" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="institution">Organization/Institution:</label>
+          <input type="text" id="institution" name="institution" placeholder="e.g., PENRO, LGU, School" required>
+        </div>
+
+        <div class="form-group">
+          <label for="areaOfInterest">Protected Area of Interest:</label>
+          <input type="text" id="areaOfInterest" name="areaOfInterest" placeholder="e.g., Mt. Panamao, Naval" required>
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose of Request:</label>
+          <textarea id="purpose" name="purpose" rows="4" placeholder="e.g., Environmental research, community planning, ecotourism..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred Map Format:</label>
+          <select id="format" name="format" required>
+            <option value="">-- Select Format --</option>
+            <option value="pdf">PDF</option>
+            <option value="shapefile">GIS Shapefile</option>
+            <option value="image">High-Resolution Image</option>
+          </select>
+        </div>
+
+        <button type="submit">📤 Submit Request</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

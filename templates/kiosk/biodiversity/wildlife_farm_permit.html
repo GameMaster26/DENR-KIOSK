@@ -1,0 +1,353 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐾 Wildlife Farm Permit (WFP) | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-services-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'biodiversity:biodiversity' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="container" style="max-height: 94vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🐾 Wildlife Farm Permit (WFP)</h1>
+
+    <section class="info card">
+      <h2>📘 What are Wildlife Farm Permits (WFP)?</h2>
+      <p>
+        A Wildlife Farm Permit (WFP) is a legal authorization issued by the Department of Environment and Natural Resources (DENR)
+        allowing individuals or entities to engage in the breeding, rearing, or raising of wildlife species in captivity for
+        conservation, trade, or scientific purposes. The permit ensures that wildlife farming is done in a manner that supports biodiversity,
+        adheres to ethical standards, and complies with environmental laws such as R.A. No. 9147 or the Wildlife Resources Conservation and Protection Act.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Example Requests</h2>
+      <ul style="padding-left: 20px;">
+        <li>Application for breeding of exotic birds for conservation and trade</li>
+        <li>Establishment of a private wildlife rescue and rehabilitation facility</li>
+        <li>Captive breeding and farming of reptiles or amphibians for scientific research</li>
+      </ul>
+    </section>
+
+
+    <div class="container">
+    <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-B-02. WILDLIFE FARM PERMIT</h2>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8; ">Office or Division</th>
+              <td>Licenses Patents and Deeds Division, DENR Regional Office VIII, Tacloban City</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8; ">Classification</th>
+              <td>Highly Technical</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8; ">Type of Transaction</th>
+              <td>
+                G2C – Government to Citizen<br>
+                G2G – Government to Government
+              </td>
+            </tr>
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8; ">Who may avail</th>
+              <td>
+                <strong>Internal:</strong> Permanent Employees of DENR Central, Regional, PENR and CENR Offices, Bureaus (including Regional and Central Offices), attached Agencies<br>
+                <strong>External:</strong> External Clientele who are authorized party or representative
+              </td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1. Duly accomplished application form (to be secured at the DENR Regional office)</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>2. Documentary stamp (to be affixed on the Wildlife Farm Permit)</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>3. Inventory List of Wildlife</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>4. Copy of Certificate of Registration from appropriate Government Agencies such as the Security of Exchange Commission (SEC), Cooperative Development Authority (CDA), etc.</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>5. Proof of Scientific expertise (list of qualification and manpower)</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>6. Financial plan showing the financial capability to go into breeding</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>7. Proposed facility design</td>
+              <td>Requesting party</td>
+            </tr>
+            <tr>
+              <td>8. Prior Clearance from the affected communities, i.e. concerned LGU</td>
+              <td>Concerned LGU</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  1. Submission of requirements and forward to the receiving/releasing clerk
+                </td>
+                <td>
+                  Received the submitted requirements, stamp the date and time on documents and forward all documents to CENRO
+                </td>
+                <td>None</td>
+                <td>30 mins</td>
+                <td>CENRO Receiving Clerks</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Referral of Application, together with its documents to RPS
+                </td>
+                <td></td>
+                <td>30 mins</td>
+                <td>RPS, Chief Wildlife Permitting Section of CENRO</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Forward Memorandum Endorsement of Application including supporting documents
+                </td>
+                <td></td>
+                <td>15 mins</td>
+                <td>CENR Officer / CENRO Releasing Clerk</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Received by PENRO Receiving Clerk
+                </td>
+                <td></td>
+                <td>15 mins</td>
+                <td>PENRO Receiving Clerk</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Referral of Application, together with its documents to TS
+                </td>
+                <td></td>
+                <td>30 mins</td>
+                <td>PENRO Office</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Evaluate/Review Documents conducted by PENRO
+                </td>
+                <td></td>
+                <td>3 days</td>
+                <td>PENRO Technical Service Division Chief</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  Forward Memorandum Endorsement of the Application including supporting documents to the Regional Office
+                </td>
+                <td></td>
+                <td>30 mins</td>
+                <td>PENRO and CENRO Releasing Clerk</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Receives the submitted requirements, Stamp the date and time on documents and forward all documents to LPDD Chief</td>
+                <td>None</td>
+                <td>30 min</td>
+                <td>Receiving Clerk, Licenses Patents and Deeds Division</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Refers the documents to WRPS for processing</td>
+                <td>None</td>
+                <td>30 min</td>
+                <td>Chief, LPDD Licenses Patents and Deeds Division</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Evaluates the documents. If in order, prepares CWR, endorsement to RED, PENRO, and letter to the permittee</td>
+                <td>None</td>
+                <td>2 days, 4 hours & 45 minutes</td>
+                <td>
+                  DMO II / Action Officer, WRPS<br>
+                  Chief, WRPS<br>
+                  Licenses Patents and Deeds Division
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Conduct inspection of the facility and inventory of wildlife species for registration</td>
+                <td>None</td>
+                <td>6 days, 7 hours & 30 minutes</td>
+                <td>WRPS, PENRO & CENRO Representative</td>
+              </tr>
+              <tr>
+                <td>Payment of Fees</td>
+                <td>Receive payment of Permit Fee and Processing Fee</td>
+                <td>P 2,500.00 (Permit Fee)<br>P 500.00 (Processing Fee)</td>
+                <td>15 min</td>
+                <td>Regional Office Cashier</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Reviews and initials the endorsement and WFP for signature of ARD for Technical Services</td>
+                <td>None</td>
+                <td>7 hours</td>
+                <td>Chief, LPDD Licenses Patents and Deeds Division</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Reviews and initials the endorsement and WFP for signature of the RED</td>
+                <td>None</td>
+                <td>7 hours & 30 min</td>
+                <td>ARD for Technical Services</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Signs the Endorsements and WFP, then forwards to client</td>
+                <td>None</td>
+                <td>5 hours & 30 min</td>
+                <td>Regional Executive Director</td>
+              </tr >
+              <tr style="background-color: #c2e1f8;">
+                <td colspan="2" style="text-align: end;"><strong>TOTAL:</strong></td>
+                <td></td>
+                <td colspan="2" style="text-align: start;"><strong>15 days, 2hours</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div style="margin-top: 20px;">
+            <p style="margin-top: 30px;"><strong>Note:</strong><br>
+              This service is under the following laws:</p>
+              <ul style="padding-left: 20px;">
+                <li>R.A. No. 9147</li>
+                <li>DAO No. 2004-15</li>
+                <li>Joint DENR-DA-PCSD AD #01, s. 2004, May 18, 2004</li>
+                <li>DAO 2004-58, August 31, 2004</li>
+                <li>DAO 2004-60, September 27, 2004</li>
+                <li>DAO 2004-62, October 12, 2004</li>
+                <li>TB No. 2013-04, May 21, 2013</li>
+              </ul>
+          </div>
+          
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+        <form action="#" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+
+          <button type="submit">📤 Submit Request</button>
+        </form>
+      </div>
+
+
+      <div class="content" id="statusContent" style="display: none;">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">📊 Wildlife Farm Permit Status</h2>
+        <p>Check the progress of submitted applications below.</p>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+          <tr>
+          <th>Reference No.</th>
+          <th>Applicant Name</th>
+          <th>Purpose</th>
+          <th>Status</th>
+          <th>Remarks</th>
+        </tr>
+        {% for permit in permits %}
+        <tr>
+          <td>WFP-{{ permit.id|stringformat:"03d" }}</td>
+          <td>{{ permit.full_name }}</td>
+          <td>{{ permit.purpose }}</td>
+          <td>{{ permit.status }}</td>
+          <td>{{ permit.remarks }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5">No permits submitted yet.</td></tr>
+        {% endfor %}
+        </table>
+
+        
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // Remove active from all tabs
+  tabs.forEach(tab => tab.classList.remove('active'));
+  // Hide all contents
+  for (let key in contents) {
+    contents[key].style.display = 'none';
+  }
+
+  // Activate selected tab
+  if (type === 'chart') tabs[0].classList.add('active');
+  if (type === 'form') tabs[1].classList.add('active');
+  if (type === 'status') tabs[2].classList.add('active');
+
+  // Show relevant content
+  contents[type].style.display = 'block';
+}
+
+</script>
+</body>
+</html>

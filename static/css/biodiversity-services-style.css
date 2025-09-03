@@ -1,0 +1,271 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/img/forest.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Container */
+.container {
+  background: rgba(255, 255, 255, 0.96);
+  max-width: 1500px;
+  margin: 30px auto;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 35px;
+  font-size: 30px;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-size: 22px;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Header & Tabs */
+.header {
+  background: rgba(40, 167, 69, 1);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.option {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  background: #f9f9f9;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: #e0e0e0;
+}
+
+.option.active {
+  background: #ffffff;
+  border-bottom: 3px solid rgba(40, 167, 69, 1);
+}
+
+.content {
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background-color: #f8fef8;
+  padding: 25px 30px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #66bb6a;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Buttons */
+button {
+  margin-top: 25px;
+  padding: 14px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: green;
+  background-color: #e8f5e9;
+  padding: 10px 20px;
+  border: 1px solid #a5d6a7;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #c8e6c9;
+  transform: translateX(-3px);
+}
+
+/* Status Table */
+.status-table-container {
+  background: #f8fdf8;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #c8e6c9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.status-table-container h2 {
+  margin-bottom: 15px;
+}
+
+.status-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #a5d6a7;
+}
+
+.status-table-container table thead {
+  background: linear-gradient(90deg, #43a047, #2e7d32);
+  color: blue;
+}
+
+.status-table-container table th,
+.status-table-container table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.status-table-container table tr:nth-child(even) {
+  background-color: #f1f8f1;
+}
+
+.status-table-container table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.status-table-container table tr:hover {
+  background-color: #e0f2e0;
+  transition: background-color 0.3s ease;
+}
+
+.status-table-container table th {
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #81c784;
+}
+
+.status-table-container .status-pending {
+  background: #fff3cd;
+  color: #856404;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #ffeeba;
+  display: inline-block;
+}
+
+.status-table-container .status-approved {
+  background: #d4edda;
+  color: #155724;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #c3e6cb;
+  display: inline-block;
+}
+
+.status-table-container .status-denied {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #f5c6cb;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

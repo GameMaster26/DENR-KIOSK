@@ -1,0 +1,446 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumber Dealer Registration Certificate | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪵 Lumber Dealer Registration Certificate</h1>
+
+    <section class="card">
+        <h2>📘 What is a Lumber Dealer Registration Certificate?</h2>
+        <p>
+            A Lumber Dealer Registration Certificate is an official document issued by the Department of Environment and Natural Resources (DENR) that authorizes individuals, corporations, partnerships, or associations to legally engage in the sale, trade, or distribution of lumber and other wood-based forest products. This registration is essential for ensuring that all forest products in the market are sourced, handled, and sold in compliance with existing forestry laws and environmental regulations.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>📄 Purpose of the Lumber Dealer Registration Certificate</h2>
+        <ul>
+            <li>✔️ To regulate and monitor the lawful trade and distribution of lumber and wood products in the country.</li>
+            <li>✔️ To ensure that lumber dealers comply with sustainable forest management practices and avoid illegal logging activities.</li>
+            <li>✔️ To support the government's efforts in environmental protection and the promotion of responsible forestry-based business operations.</li>
+        </ul>
+    </section>
+
+
+
+
+    <div class="container" >
+    <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Application Status</div>
+      </div>
+
+      <div class="content" id="chartContent">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN'S CHARTER NO. R8-F-10. ISSUANCE OF CERTIFICATE OF REGISTRATION AS LUMBER DEALER</h2>
+        <h4>This Permit serves as Certificate of registration as Lumber Dealer to applicants engaged in the trade of lumber sawn products.</h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <th style="width: 30%; background-color: #c2e1f8;">Office or Division:</th>
+            <td>DENR CENRO to Regional Office</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Classification:</th>
+            <td>Highly Technical (Multi-Stage Processing)</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Type of Transaction:</th>
+            <td>
+              G2B - Government to Business<br>
+              G2C - Government to Citizen<br>
+              G2G - Government to Government
+            </td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Who may avail:</th>
+            <td>
+              • Any Filipino Citizen<br>
+              • Private Corporations, Partnership or Association
+            </td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <th>CHECKLIST OF REQUIREMENTS</th>
+            <th>WHERE TO SECURE</th>
+          </tr>
+          <tr>
+            <td>1. Duly accomplished application form (1 original)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>2. Lumber Supply Contract entered into by the applicant with a registered sawmill/mini-sawmill operators/lumber dealers (1 original)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>3. Business Plan</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>4. Updated Mayor’s Permit or Business Permit with certification from city/municipal treasurer stating no ordinance is violated</td>
+            <td>LGU concerned</td>
+          </tr>
+          <tr>
+            <td>5. Income Tax Return for the last two (2) years (if for renewal)</td>
+            <td>BIR</td>
+          </tr>
+          <tr>
+            <td>6. Monthly Report on Lumber Purchases and Disposal (export/local) duly attested by CENRO (if renewal)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>7. Pictures of Business Establishment including Lumber Yard</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>8. Articles of Incorporation/Partnership duly certified by the SEC (if applicant is a Corporation/Partnership/Association)</td>
+            <td>SEC</td>
+          </tr>
+          <tr>
+            <td>9. Certificate of Registration (CR) from DTI (if applicant is Single Proprietorship)</td>
+            <td>DTI</td>
+          </tr>
+          <tr>
+            <td>10. Authorization/Board Resolution issued in favor of the person signing the application</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>11. Approved WPP Permit (if holder of WPP/Regular Mini-Sawmill Permit)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>12. Proof of payment for registration fee, permit fee, oath fee (DAO 18, Series of 1993) and forestry bond (cash or surety)</td>
+            <td>DENR</td>
+          </tr>
+          <tr>
+            <td>13. Authenticated copy of import documents covering the imported commodities</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>14. Certification of adequate cash deposit from bank and affidavit stating deposit use for intended business</td>
+            <td>Bank / Requesting Party</td>
+          </tr>
+        </table>
+
+
+
+        <table border="1" cellpadding="5" cellspacing="0"  style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>Client Steps</th>
+              <th>Agency Action</th>
+              <th>Fees to be Paid</th>
+              <th>Processing Time</th>
+              <th>Persons Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: #c2e1f8; text-align: center;">
+              <td><strong>CENRO</strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1. Submit application form and supporting documents</td>
+              <td>1. Check completeness of application and supporting documents, receive and forward the application to Deputy CENR Officer/CENR Officer. <br><br>Prepare Order of Payment</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk / OD <br><br>Technical Staff Regulation and Permitting Section (RPS)</td>
+            </tr>
+            <tr>
+              <td>2. Pay application, registration, oath fee and cash bond (DAO 2004-16)</td>
+              <td>2. Accept payment and issue Official Receipt (OR)</td>
+              <td>
+                Php 1,116.00 (Regulatory fees):<br><br>
+                - Php 600.00 Application Fee<br><br>
+                - Php 480.00 Registration Fee<br><br>
+                - Php 36.00 Oath Fee<br><br>
+                Php 1,000.00 Cash Bond
+              </td>
+              <td>1 hour</td>
+              <td>Credit Officer</td>
+            </tr>
+            <tr>
+              <td>3. Receive OR</td>
+              <td>3. Receive, review and refer the application to Chief, RPS</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Deputy CENR Officer / CENR Officer</td>
+            </tr>
+            <tr>
+              <td>4. Review and refer the application documents to the action man</td>
+              <td>4. Receive and review the application and assign technical personnel to conduct the inspection</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, RPS</td>
+            </tr>
+            <tr>
+              <td>5. Guide/Accompany the technical staff to the site</td>
+              <td>5. Conduct inspection of the area and prepare report with attachments (map, geotagged photos), and endorse to PENRO, forward to Chief, RPS</td>
+              <td>None</td>
+              <td>8 days</td>
+              <td>Technical Staff<br><br> Regulation and Permitting Section (RPS)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.1 Review the inspection report and submit recommendation to CENRO</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, RPS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.2 Receive and review the application documents and inspection report. Approve the recommendation. Sign the endorsement to PENRO</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>CENR Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.3 Record and release the application supporting documents and endorsement to PENRO Office</td>
+              <td>None</td>
+              <td>2 days</td>
+              <td>Receiving/Releasing Clerk, CENRO Records Unit</td>
+            </tr>
+            <tr style="background-color: #c2e1f8; text-align: center;">
+              <td>PENRO</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.4 Receive documents and forward to Chief, Technical Services Division (TSD)</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk<br>PENRO Records Section</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.5 Review, evaluate application and prepare memorandum endorsement to Regional Office thru Chief, TSD for countersigning</td>
+              <td>None</td>
+              <td>5 hours</td>
+              <td>Chief/Staff Concerned Unit/Section<br>Chief, TSD</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.6 Review and sign the memorandum endorsement for the Regional Executive Director</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>PENR Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.7 Record and release the application and supporting documents</td>
+              <td>None</td>
+              <td>3 days</td>
+              <td>Receiving/Releasing Clerk<br>PENRO Records Section</td>
+            </tr>
+            <tr style="background-color: #c2e1f8; text-align: center;">
+              <td>REGIONAL OFFICE</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.8 Receive and record application documents and forward to Regional Executive Director</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk<br>Regional Office Records Section</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.9 Refer the application documents to Office of the Assistant Regional Director for Technical Services</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Office of the Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.10 Receive and forward application documents to Licenses Patents and Deeds Division</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.11 Receive, review and refer application documents to Forest Utilization Section</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.12 Receive and record application documents and forward to Chief, FUS</td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk<br>Forest Utilization Section</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.13 Evaluate the completeness and correctness of the submitted requirements based on the checklist</td>
+              <td>None</td>
+              <td>5 hours</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.14 Recommends for the conduct of field verification/inspection and prepares report of inspection, Certificate of Registration as Lumber Dealer, and memorandum recommending the approval and submit the same to Chief, LPDD</td>
+              <td>None</td>
+              <td>5 days</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.15 Review the report and other supporting documents and affix initial on the Certificate of Registration as Lumber Dealer</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.16 Approve the memorandum endorsement, initial the COR as Lumber Dealer and forward for RED’s signature</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.17 Sign/approve the Certificate of Registration as Lumber Dealer (new or renewal) and forward to Records</td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>Office of the Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5.18 Record and release the approved permit to the proponent by mail/pick-up, copy furnished to PENRO and CENRO</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Receiving/Releasing Clerk<br>Regional Office Records Section</td>
+            </tr>
+
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>CENRO SUB-TOTAL</strong></td>
+              <td><strong>Php 2,116.00</strong></td>
+              <td colspan="2"><strong>10 days & 9 hours</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>PENRO SUB-TOTAL</strong></td>
+              <td><strong>None</strong></td>
+              <td colspan="2"><strong>3 days & 8 hours</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>REGIONAL OFFICE SUB-TOTAL</strong></td>
+              <td><strong>None</strong></td>
+              <td colspan="2"><strong>6 days, 16 hours & 30 minutes</strong></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2" style="text-align: end;"><strong>TOTAL</strong></td>
+              <td><strong>Php 2,116.00</strong></td>
+              <td colspan="2"><strong>20 days, 9 hours & 30 minutes</strong></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:lumber_dealer' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit Verification Request</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 Lumber Dealer Registration Certificate - Application Status</h2>
+          <p>Below is the list of submitted Lumber Dealer Registration Certificate applications and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant Name</th>
+                      <th>Source of Lumber</th>
+                      <th>Species of Timber</th>
+                      <th>Volume (m³)</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.fullname }}</td>
+                      <td>{{ app.plantation }}</td>
+                      <td>{{ app.species }}</td>
+                      <td>{{ app.volume }}</td>
+                      <td class="status-{{ app.status|lower }}">{{ app.get_status_display }}</td>
+                      <td>{{ app.remarks }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="7">No applications found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+      
+    </div>
+
+
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = {
+      chart: document.getElementById('chartContent'),
+      form: document.getElementById('formContent'),
+      status: document.getElementById('statusContent')
+    };
+
+    // Remove active from all tabs
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Hide all contents
+    for (const key in contents) {
+      contents[key].style.display = 'none';
+    }
+
+    // Show selected content
+    contents[type].style.display = 'block';
+    if (type === 'chart') tabs[0].classList.add('active');
+    if (type === 'form') tabs[1].classList.add('active');
+    if (type === 'status') tabs[2].classList.add('active');
+  }
+</script>
+
+
+</body>
+</html>

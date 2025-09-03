@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biodiversity Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-style.css' %}"/>
+  
+</head>
+<body>
+  <a href="{% url 'kiosk:indexx' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="services-container">
+    <h1>Biodiversity Service</h1>
+    <div class="service-list">
+
+      <a href="{% url 'biodiversity:wildlife_registration' %}" class="service-card">
+        <h3>📝 Certificate of Wildlife Registration</h3>
+        <p>Issuance of Certificate of Wildlife Registration</p>
+      </a>
+
+      <a href="{% url 'biodiversity:wildlife_farm_permit' %}" class="service-card">
+        <h3>🐾 Wildlife Farm Permit (WFP)</h3>
+        <p>Issuance of Wildlife Farm Permit (WFP)</p>
+      </a>
+
+      <a href="{% url 'biodiversity:local_transport_permit' %}" class="service-card">
+        <h3>🚚 Local Transport Permit</h3>
+        <p>Issuance of Local Transport Permit (Wildlife)</p>
+      </a>
+
+      <a href="{% url 'biodiversity:gratuitous_permit' %}" class="service-card">
+        <h3>📄 Gratuitous Permit & MOA</h3>
+        <p>Affidavit of Undertaking (AU), Memorandum of Agreement (MOA) with the DENR and Issuance of Gratuitous Permit (GP)</p>
+      </a>
+
+      <a href="{% url 'biodiversity:special_local_transport_permit' %}" class="service-card">
+        <h3>🚛 Special Local Transport Permit(SLTP)</h3>
+        <p>Issuance of Special Local Transport Permit (SLTP) (Wildlife)</p>
+      </a>
+
+      <a href="{% url 'biodiversity:marine_research_clearance' %}" class="service-card">
+        <h3>🔬 Research Clearance (Marine)</h3>
+        <p>Request for PAMB Clearance for Conduct of Research on Marine Ecosystem/Species Density/Sighting From Regional Office to PENR Office/s</p>
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>

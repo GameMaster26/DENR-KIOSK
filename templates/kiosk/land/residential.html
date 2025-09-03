@@ -1,0 +1,502 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APPLICATION FOR FREE PATENT (RESIDENTIAL) | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/residential.css' %}" />
+
+  
+</head>
+<body>
+  <a href="{% url 'land:land' %}" class="back-button" title="Back to Urban Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 90vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🏘️ APPLICATION FOR FREE PATENT (RESIDENTIAL)</h1>
+
+    <section class="info card">
+      <h2>📘 What is Residential Free Patent?</h2>
+      <p>
+        The Residential Free Patent Application (RFPA) is a legal process under <strong>Republic Act No. 10023</strong> that allows qualified Filipinos to apply for land titles over residential lands they have been occupying. This program simplifies land titling by authorizing the DENR to issue free patents over untitled, alienable and disposable residential lands.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Requirements</h2>
+      <ul>
+        <li>Duly accomplished application form for Residential Free Patent</li>
+        <li>Proof of actual occupation and possession of the land (e.g., tax declarations, affidavits, barangay certification)</li>
+        <li>Sketch plan or lot data computation prepared by a licensed geodetic engineer</li>
+        <li>Proof of Filipino citizenship (e.g., birth certificate, valid ID)</li>
+        <li>Certification from CENRO that the land is alienable and disposable</li>
+      </ul>
+    </section>
+
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-L-04. APPLICATION FOR FREE PATENT (RESIDENTIAL)</h2>
+          <h3>Free Patent Application is a mode of acquiring ownership of a certain parcel of alienable and disposable land.</h3>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <th style="background-color: #c2e1f8; text-align: left;">Office or Division</th>
+              <td>Regulation and Permitting Section, DENR CENRO to PENRO</td>
+            </tr>
+            <tr>
+              <th style="background-color: #c2e1f8; text-align: left;">Classification</th>
+              <td>Highly Technical (Multi-Stage Processing)</td>
+            </tr>
+            <tr>
+              <th style="background-color: #c2e1f8; text-align: left;">Type of Transaction</th>
+              <td>G2C – Government to Citizen</td>
+            </tr>
+            <tr>
+              <th style="background-color: #c2e1f8; text-align: left;">Who may avail</th>
+              <td>All natural born and naturalized Filipino</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;" >
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1. Duly accomplished Free Patent Application and prescribed forms (1 original)</td>
+              <td>Concerned CENR/Implementing PENR Offices</td>
+            </tr>
+            <tr>
+              <td>2. Any of the following documents showing identity of land and claims of ownership:</td>
+              <td>Land Owner/LGU</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;Tax declaration if applicable (1 certified copy)</td>
+              <td>Assessor's Office</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;Deed of Sale / Donation / Transfer (1 photocopy, present original copy) *if applicable</td>
+              <td>Land Owner, Notary Public, or LGU</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;Extra Judicial Settlement (1 photocopy) *if applicable</td>
+              <td>Land Owner, Notary Public, or LGU</td>
+            </tr>
+            <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;Waiver of Rights / Barangay certification (1 photocopy) *if applicable</td>
+              <td>Land Owner, Notary Public, or LGU</td>
+            </tr>
+            <tr>
+              <td>3. Affidavit of at least two (2) disinterested persons residing in the area</td>
+              <td>Land Owner, Notary Public, or LGU</td>
+            </tr>
+            <tr>
+              <td>4. Certification from the Municipal Circuit/Regional Trial Court (MCTC/RTC) that there is no pending land registration case (1 original, 1 photocopy)</td>
+              <td>Land Owner, or MCTC/RTC having Jurisdiction</td>
+            </tr>
+            <tr>
+              <td>5. Approved Survey Plan with Technical Description/Form V37 (if covered with isolated survey) (1 certified copy)</td>
+              <td>Concerned CENR/Implementing PENR Offices</td>
+            </tr>
+            <tr>
+              <td>6. Certification of status of land from LRA, if the municipality is under cadastral proceedings or if there is an old survey (1 photocopy)</td>
+              <td>Land Registration Authority (LRA), Central Office, Quezon City</td>
+            </tr>
+            <tr>
+              <td>7. Certification that the land applied for is alienable and disposable (1 original, 1 photocopy)</td>
+              <td>Concerned CENR/Implementing PENR Offices</td>
+            </tr>
+            <tr>
+              <td>8. Documentary Stamp (4 pieces: 2-Affidavits, 1-Application Form, 1-Notice of Posting)</td>
+              <td>BIR or Post Office</td>
+            </tr>
+            <tr>
+              <td>9. Certification from LGU that the area applied for is zoned as Residential (1 original), or approved CLUP if applicable (1 photocopy)</td>
+              <td>LGU</td>
+            </tr>
+            <tr>
+              <td>10. Latest photograph of land and house (preferably geo-tagged)</td>
+              <td>Land Owner</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="background-color: #b5e6b7;" colspan="5"><strong>CENRO</strong></td>
+              </tr>
+              <tr>
+                <td>
+  1. Submit
+  accomplished
+  Application Form
+  to the CENR Office
+  with complete
+  supporting
+  requirements Applicant may also
+  submit the
+  application through
+  email or courier,
+  where, applicable,
+  the applicant may
+  also apply online
+  or through
+  LMI/SI/DPLI.
+  </td>
+                <td>1. Check completeness of
+  application. If found in order,
+  register, allocate, index and
+  assign application number.
+  Scan, encode and upload
+  records in LAMS.</td>
+                <td>None</td>
+                <td>1 Day</td>
+                <td>LMO/RPS <br><br> Staff CENRO Records Unit</td>
+              </tr>
+
+              <tr>
+                <td>1.1. None</td>
+                <td>1.1. Prepare Order of Payment</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Staff CENRO Records Unit</td>
+              </tr>
+
+              <tr>
+                <td>1.2. None </td>
+                <td>1.2. Approve Order of
+  Payment and forward the
+  same to client.
+  </td>
+  <td>None </td>
+                <td>2 hrs.</td>
+                <td>CENRO or Designated
+  Representative
+  </td>
+              </tr>
+              <tr>
+                <td>2. Receive Order of Payment and pay corresponding fees</td>
+                <td>2. Accept payment, issue Official Receipt (OR) to the applicant</td>
+                <td>Php 50.00 Application Fee</td>
+                <td>2 hrs.</td>
+                <td>Bill Collector / Cashier</td>
+              </tr>
+              <tr>
+                <td>3. Receive (OR) and forward the same to Records Unit/Section</td>
+                <td>3. Accept OR, indicate OR number, amount paid, and date in the application form and forward the application to Chief, RPS</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Staff CENRO Records Unit</td>
+              </tr>
+              <tr>
+                <td>3.1. None</td>
+                <td>3.1. Review application. Assign Land Management Inspector (LMI)/Deputized Public Land Inspector (DPLI) for inspection/investigation</td>
+                <td>None</td>
+                <td>1 day</td>
+                <td>Chief, RPS</td>
+              </tr>
+              <tr>
+                <td>3.2. None</td>
+                <td>3.2. Prepare posting of notices at the barangay, municipal, or provincial hall where the property is situated</td>
+                <td>None</td>
+                <td>1 day</td>
+                <td>LMI/DPLI, CENR Officer, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.3. None</td>
+                <td>3.3. Travel to the barangay, municipality or province</td>
+                <td>None</td>
+                <td>2 days</td>
+                <td>LMI/DPLI, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.4. None</td>
+                <td>3.4. Posting of Notices in the Barangay Hall and take geo-tagged photo</td>
+                <td>None</td>
+                <td>15 days (per DAO 2010-12)</td>
+                <td>LMI/DPLI, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.5. None</td>
+                <td>3.5. Prepare Certification for the proof of posting and forward to the CENR Officer for approval</td>
+                <td>None</td>
+                <td>2 days</td>
+                <td>DPLI/LMI, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.6. None</td>
+                <td>3.6. Approve Certification of proof of posting</td>
+                <td>None</td>
+                <td>1 day</td>
+                <td>CENR Officer</td>
+              </tr>
+              <tr>
+                <td>3.7. None</td>
+                <td>3.7. Conduct investigation on the land being applied for. Prepare, sign and submit investigation report, and forward to LMO I.</td>
+                <td>None</td>
+                <td>30 days</td>
+                <td>LMI/DPLI, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.8. None</td>
+                <td>3.8. Screen the carpeta and prepare V37/certified lot data computation, Order of Award, and Judicial Form, and forward to Geodetic Engineer (GE)</td>
+                <td>None</td>
+                <td>21 days</td>
+                <td>LMO I / Cartographer / Encoder / RPS (whoever is available)</td>
+              </tr>
+              <tr>
+                <td>3.9. None</td>
+                <td>3.9. Verify and certify the correctness of the Technical Description and forward to Chief, RPS</td>
+                <td>None</td>
+                <td>15 days</td>
+                <td>Geodetic Engineer, RPS</td>
+              </tr>
+              <tr>
+                <td>3.10. None</td>
+                <td>3.10. Do final screening of carpeta and forward to CENRO for recommendation</td>
+                <td>None</td>
+                <td>10 days</td>
+                <td>Chief, RPS</td>
+              </tr>
+              <tr>
+                <td>3.11. None</td>
+                <td>3.11. Review and affix initial on file copy of Patent and sign Indorsement to PENRO for approval</td>
+                <td>None</td>
+                <td>15 days</td>
+                <td>CENR Officer, CENRO</td>
+              </tr>
+              <tr>
+                <td>3.12. None</td>
+                <td>3.12. Transmit carpeta to PENRO</td>
+                <td>None</td>
+                <td>5 days</td>
+                <td>Records Officer, CENRO Records Unit</td>
+              </tr>
+              <tr style="background-color: #b5e6b7;" >
+                <td colspan="5"><strong>PENRO</strong></td>
+              </tr>
+              <tr>
+                <td>3.13. None</td>
+                <td>3.13. Receive the carpeta and forward to Chief, RPS. Update data in LAMS, if applicable.</td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>Records Officer, PENRO Records Section</td>
+              </tr>
+              <tr>
+                <td>3.14. None</td>
+                <td>3.14. Receive and review the carpeta, and forward to Chief, Technical Services Division (TSD)</td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>Chief, RPS</td>
+              </tr>
+              <tr>
+                <td>3.15. None</td>
+                <td>3.15. Do the final review of carpeta, initial file copy of Free Patent, and forward to PENRO for approval of application and issuance of Patent</td>
+                <td>None</td>
+                <td>2 days</td>
+                <td>Chief, TSD</td>
+              </tr>
+              <tr>
+                <td>3.16. None</td>
+                <td>3.16. Review and sign Order of Approval and Free Patent. Forward to PENRO Records for numbering</td>
+                <td>None</td>
+                <td>2 days</td>
+                <td>PENR Officer</td>
+              </tr>
+              <tr>
+                <td>3.17. None</td>
+                <td>3.17. Assign Patent Number / Indexing, prepare transmittal letter and forward to PENRO for signature</td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>Records Officer/Staff, PENRO Records Section</td>
+              </tr>
+              <tr>
+                <td>3.18. None</td>
+                <td>3.18. Sign transmittal letter and forward to PENRO records for transmittal to Registry of Deeds (ROD)</td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>PENR Officer</td>
+              </tr>
+              <tr>
+                <td>3.19. None</td>
+                <td>3.19. Scan the Order of Approval, signed Free Patent, and transmittal letter. Upload to Land Administration and Management System (LAMS) Transmit documents to
+  ROD, and copy furnish
+  the client</td>
+                <td>None</td>
+                <td>5 days</td>
+                <td>Liaison Officer, PENRO Records Section</td>
+              </tr>
+              <tr style="background-color: #d9edf7;">
+                  <td colspan="5" style="padding: 10px 20px; font-family: Arial, sans-serif; font-size: 14px;">
+                    <strong>If the approving authority is the PENRO</strong><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;– Processing of Patent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120 calendar days<br>
+
+                    &nbsp;&nbsp;&nbsp;– Review, Approval/Disapproval of patent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 working days<br>
+
+                  &nbsp;&nbsp;&nbsp;– Transmittal to ROD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 working days
+                  </td>
+                </tr>
+                    
+            </tbody>
+          </table>
+          
+          <div style="margin-top: 40px; font-family: Arial, sans-serif;">
+
+            <h3><strong>For Implementing PENRO</strong></h3>
+            <p>
+              They shall absorb the function of the CENRO.<br>
+              This service is under the following law:
+            </p>
+
+            <ul>
+              <li><strong>Republic Act No. 10023</strong> – “An Act Authorizing the Issuance of Free Patents to Residential Lands” (2009)</li>
+            </ul>
+
+            <p><strong>If the approving authority is the PENRO:</strong></p>
+            <ul>
+              <li>Processing of Patent – <strong>120 calendar days</strong></li>
+              <li>Review, Approval/Disapproval of Patent – <strong>5 working days</strong></li>
+              <li>Transmittal to ROD – <strong>5 working days</strong></li>
+            </ul>
+
+            <h4><strong>Notes:</strong></h4>
+            <ul>
+              <li>One (1) application per applicant for Residential Free Patent.</li>
+              <li>The maximum area for the application of Residential Free Patent is:
+                <ul>
+                  <li>200 sq. m. for highly urbanized cities</li>
+                  <li>500 sq. m. for other cities</li>
+                  <li>750 sq. m. for first to second class municipalities</li>
+                  <li>1,000 sq. m. for third class and below / all others</li>
+                </ul>
+              </li>
+              <li>Per RA No. 10023, the CENR Office is allowed a maximum of <strong>120 calendar days</strong> to process the RFPA application, while the PENR Officer is allowed a maximum of <strong>5 working days</strong>.</li>
+            </ul>
+
+          </div>
+
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">📤 Submit Request</button>
+          </form>
+      </div>
+        
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 style="color: rgba(40, 167, 69, 1);">📋 Application Status – Residential Free Patent</h2>
+          <p>Check the current status of your Residential Free Patent application.</p>
+
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;" border="1">
+              <thead style="background-color: #c2e1f8;">
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant Name</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                      <th>Last Updated</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>RFP-{{ app.id|stringformat:"04d" }}</td>
+                      <td>{{ app.proponent_name }}</td>
+                      <td>
+                          {% if app.status == 'approved' %}
+                              <span style="color: green; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% elif app.status == 'under_verification' %}
+                              <span style="color: orange; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% elif app.status == 'returned' %}
+                              <span style="color: red; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% elif app.status == 'for_inspection' %}
+                              <span style="color: blue; font-weight: bold;">{{ app.get_status_display }}</span>
+                          {% else %}
+                              <span>{{ app.get_status_display }}</span>
+                          {% endif %}
+                      </td>
+                      <td>{{ app.remarks }}</td>
+                      <td>{{ app.last_updated|date:"M d, Y" }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="5" style="text-align:center; color: #888;">No applications yet.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+
+    </div>
+
+
+  </div>
+<script>
+  function showContent(type) {
+    const chartTab = document.querySelectorAll('.option')[0];
+    const formTab = document.querySelectorAll('.option')[1];
+    const statusTab = document.querySelectorAll('.option')[2];
+
+    const chartContent = document.getElementById('chartContent');
+    const formContent = document.getElementById('formContent');
+    const statusContent = document.getElementById('statusContent');
+
+    chartTab.classList.remove('active');
+    formTab.classList.remove('active');
+    statusTab.classList.remove('active');
+
+    chartContent.style.display = 'none';
+    formContent.style.display = 'none';
+    statusContent.style.display = 'none';
+
+    if (type === 'chart') {
+      chartTab.classList.add('active');
+      chartContent.style.display = 'block';
+    } else if (type === 'form') {
+      formTab.classList.add('active');
+      formContent.style.display = 'block';
+    } else if (type === 'status') {
+      statusTab.classList.add('active');
+      statusContent.style.display = 'block';
+    }
+  }
+</script>
+
+
+<script>
+  function showQR() {
+    document.getElementById("qrContainer").style.display = "block";
+  }
+</script>
+
+        
+</body>
+</html>

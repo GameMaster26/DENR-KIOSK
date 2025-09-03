@@ -1,0 +1,84 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GIS and Mapping Services | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-form-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'map:map' %}" class="back-button" title="Back to Map Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>🗺️ GIS and Mapping Services</h1>
+a
+    <section class="card">
+      <h2>📌 Available GIS Services</h2>
+      <ul>
+        <li>Customized GIS Map Layers</li>
+        <li>Shapefile and GeoJSON Data Exports</li>
+        <li>Land Use and Land Cover Analysis</li>
+        <li>Map Digitization and Georeferencing</li>
+      </ul>
+      <p>
+        These services assist in spatial data analysis, environmental monitoring, and policy planning for LGUs, researchers, and development projects.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📝 Request GIS Data or Services</h2>
+      <form>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="requesterName">Full Name:</label>
+          <input type="text" id="requesterName" name="requesterName" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="institution">Organization / Agency:</label>
+          <input type="text" id="institution" name="institution" placeholder="e.g., DENR, LGU, Biliran Province State University" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Target Area / Location:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Naval, Biliran" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Type of GIS Service:</label>
+          <select id="service" name="service" required>
+            <option value="">-- Select Service --</option>
+            <option value="custom-layers">Customized GIS Map Layers</option>
+            <option value="shapefile-export">Shapefile/GeoJSON Export</option>
+            <option value="land-cover">Land Use / Land Cover Analysis</option>
+            <option value="digitizing">Map Digitization / Georeferencing</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred File Format:</label>
+          <select id="format" name="format" required>
+            <option value="">-- Select Format --</option>
+            <option value="shp">Shapefile (.shp)</option>
+            <option value="geojson">GeoJSON (.geojson)</option>
+            <option value="kml">KML (.kml)</option>
+            <option value="image">High-Res Image (.jpg/.png)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Notes or Purpose:</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Briefly describe your intended use of the data..." required></textarea>
+        </div>
+
+        <button type="submit">📤 Submit GIS Request</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

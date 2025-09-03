@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/img/forestry.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.services-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 40px 50px 40px;
+  border-radius: 24px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  width: 95%;
+  text-align: center;
+  opacity: 0.9;
+}
+
+h1 {
+  color: #2e7d32;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #4b635a;
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+  border-left: 6px solid #66bb6a;
+  padding: 24px 20px;
+  border-radius: 14px;
+  text-align: left;
+  width: 100%;
+  max-width: 260px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: #1b5e20;
+  font-size: 18px;
+}
+
+.service-card p {
+  color: black;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+.service-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  color: #1b5e20;
+  background-color: #e8f5e9;
+  padding: 10px 22px;
+  border: 1px solid #a5d6a7;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #c8e6c9;
+  transform: translateX(-3px);
+}
+
+/* Medium screen: 2 columns */
+@media (max-width: 1024px) {
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small screen: 1 column */
+@media (max-width: 600px) {
+  .services-container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,367 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📄 Gratuitous Permit & MOA | PENRO</title>
+   <link rel="stylesheet" href="{% static 'css/biodiversity-services-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'biodiversity:biodiversity' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="container" style="max-height: 94vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>📄 Gratuitous Permit & MOA</h1>
+
+    <section class="info card">
+      <h2>📘 What Gratuitous Permit & MOA?</h2>
+      <p>
+        A <strong>Gratuitous Permit (GP)</strong> is a special authorization issued by the Department of Environment and Natural Resources (DENR) that allows an individual or institution to collect, study, or transport wildlife and/or its derivatives for scientific, educational, or conservation purposes—without any commercial intent. It is issued alongside a <strong>Memorandum of Agreement (MOA)</strong>, which outlines the roles, responsibilities, and conditions governing the activity.
+      </p>
+      <p>
+        The GP and MOA are essential for ensuring that any use of wildlife resources for non-commercial purposes is aligned with the policies of the Wildlife Resources Conservation and Protection Act (RA 9147). These permits help regulate access and ensure conservation efforts are upheld.
+      </p>
+    </section>
+
+  <section class="requirements card">
+    <h2>📋 Example Requests</h2>
+    <ul>
+      <li>Collection of specimens for academic research on biodiversity</li>
+      <li>Transport of rescued or injured wildlife for rehabilitation</li>
+      <li>Breeding and propagation of wildlife for conservation purposes</li>
+    </ul>
+  </section>
+
+
+    <div class="container">
+    <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-B-04. AFFIDAVIT OF UNDERTAKING (AU), MEMORANDUM OF AGREEMENT
+          (MOA) WITH THE DENR AND ISSUANCE OF GRATUITOUS PERMIT (GP)</h2>
+          <h5>Gratuitous Permit is a privilege given to an individual, academe, research institution, or organization to capture/harvest and
+          transport wildlife species from the natural habitat for scientific and other authorized purposes.
+          </h5>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <td style="background-color: #c2e1f8;">Office or Division</td>
+              <td>Regulation and Permitting Section, DENR Implementing PENR/CENR Office</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Classification</td>
+              <td>Simple</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Type of Transaction</td>
+              <td>G2B – Government to Business<br>G2C – Government to Citizen<br>G2G – Government to Government</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Who may avail</td>
+              <td>
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li>Tenurial instrument holders (e.g. TLA, CBFMA, IFMA)</li>
+                  <li>Orchard/tree/industrial tree farmers</li>
+                  <li>Licensed wood processors using chainsaws legally</li>
+                  <li>Anyone with legal proof of chainsaw use</li>
+                  <li>Gov’t agencies/GOCCs (except Palawan – PCSD)</li>
+                  <li>CTPO/PTPR holders</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1. Research Project Proposal</td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+            <tr>
+              <td>2. Institution’s Profile, if applicable</td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+            <tr>
+              <td>
+                3. Endorsement Letter<br>
+                – If Institution: Head of the Institution<br>
+                – If Individual Researcher: From a recognized expert or a research institution or conservation organization<br>
+                – If Student Applicant: From concerned Dean
+              </td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+            <tr>
+              <td>4. Payment of application and processing fees</td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+            <tr>
+              <td>
+                5. In case collection of wildlife is necessary – prior clearance from the affected neighborhood/communities, i.e. concerned LGUs, recognized head of the indigenous people in accordance with RA 8371, or Protected Area Management Board
+              </td>
+              <td>LGU, NCIP / PAMB</td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td><strong>Additional Requirements for Conservation Breeding or Propagation Activities, and other Wildlife Conservation/Research Projects</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1. Affidavit of Undertaking by the applicant shall be submitted to the RED concerned</td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+            <tr>
+              <td>
+                2. Habitat rehabilitation, protection and management plan for reintroduction and restocking of captive-bred/propagated individuals (for conservation breeding projects only)
+              </td>
+              <td>Applicant / Requesting Party</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th colspan="2">Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Submit the request/application with complete supporting documents directly to Regional Office or thru PENRO/CENRO</td>
+                <td colspan="2">
+                  1.1 Receive the application/documents, stamp the date, assign control number and log the same in the Division’s Tracking System.<br>
+                  1.2 Forward the application/documents to the Chief, LPDD
+                </td>
+                <td>None</td>
+                <td>5 min</td>
+                <td>Receiving/Releasing Clerk, Licenses Patents and Deeds Division (LPDD)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">2. Review and refer the application to Chief, WRPS</td>
+                <td>None</td>
+                <td>5 min</td>
+                <td>Chief, LPDD, Licenses Patents and Deeds Division</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">3. Receive, review, schedule inspection and assign to personnel concerned the application/documents for processing</td>
+                <td>None</td>
+                <td>5 min</td>
+                <td>Chief, Wildlife Resources and Permitting Section, Licenses Patents and Deeds Division</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">Evaluation of the completeness of the submitted requirements</td>
+                <td>None</td>
+                <td>1 day</td>
+                <td>DMO II / Action Officer, Wildlife Resources and Permitting Section</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  If the applicant documents are found in order, prepare and approve order of payment and forward the same to the requesting party
+                </td>
+                <td >
+                  In case the requirements are not complete, the application shall be returned immediately informing the applicant of the deficiencies
+                </td>
+                <td>None</td>
+                <td>5 min</td>
+                <td>
+                  DMO II / Action Officer, Wildlife Resources and Permitting Section<br>
+                  Chief, Wildlife Resources and Permitting Section, Licenses Patents and Deeds Division<br>
+                  Chief, LPDD, Licenses Patents and Deeds Division
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">Accept payment and issue official receipt</td>
+                <td>GP - Php 100.00</td>
+                <td>5 min</td>
+                <td>Credit Officer, Cashiering Section</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">Process document / Prepare the GP/MOA and endorsement for review of the Chief, LPDD</td>
+                <td>None</td>
+                <td>3 days</td>
+                <td>DMO II / Action Officer, Wildlife Resources and Permitting Section</td>
+              </tr>
+                <td></td>
+                <td colspan="2">
+                  Reviews and initial the endorsement, and MOA/GP for the signature of the ARD for Technical Services
+                </td>
+                <td>None</td>
+                <td>30 min</td>
+                <td>
+                  Chief, Wildlife Resources and Permitting Section, Licenses Patents and Deeds Division<br>
+                  Chief, LPDD, Licenses Patents and Deeds Division
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  Reviews and initial the endorsement and MOA/GP for the signature of the Regional Executive Director
+                </td>
+                <td>None</td>
+                <td>10 min</td>
+                <td>
+                  ARD for Technical Services,<br>
+                  Office of the ARD for Technical Services
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="2">
+                  Signs the Endorsement and MOA/GP
+                </td>
+                <td>None</td>
+                <td>5 min</td>
+                <td>
+                  Regional Executive Director,<br>
+                  Office of the Regional Executive Director
+                </td>
+                <tr>
+                  <td colspan="3" style="background-color: #c2e1f8; text-align: end;"><strong>TOTAL:</strong></td>
+                  <td style="background-color: #c2e1f8;"><strong>Php100.00</strong></td>
+                  <td colspan="2" style="background-color: #c2e1f8; text-align: center;"><strong>4 days, 1 hour & 10 min.</strong></td>
+                </tr>
+            </tbody>
+          </table>
+
+
+          
+      </div>
+
+      <div class="content" id="formContent" style="display: block;">
+        <form method="post">
+          {% csrf_token %}
+          {% if form.errors %}
+            <div style="color: red;">
+              Please fix the errors below.
+            </div>
+          {% endif %}
+
+          <div class="form-group">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" value="{{ form.full_name.value|default_if_none:'' }}" required>
+            {{ form.full_name.errors }}
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" value="{{ form.address.value|default_if_none:'' }}" required>
+            {{ form.address.errors }}
+          </div>
+
+          <div class="form-group">
+            <label for="contact_number">Contact Number:</label>
+            <input type="text" id="contact_number" name="contact_number" value="{{ form.contact_number.value|default_if_none:'' }}" required>
+            {{ form.contact_number.errors }}
+          </div>
+
+          <div class="form-group">
+            <label for="regulation_type">Type of Regulating Service:</label>
+            <select id="regulation_type" name="regulation_type" required>
+              <option value="" disabled {% if not form.regulation_type.value %}selected{% endif %}>Select a service</option>
+              {% for val, label in form.regulation_type.field.choices %}
+                {% if val %}
+                  <option value="{{ val }}" {% if form.regulation_type.value == val %}selected{% endif %}>{{ label }}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+            {{ form.regulation_type.errors }}
+          </div>
+
+          <!-- <div class="form-group">
+            <h3>📱 Scan this QR to upload from your phone</h3>
+            <img src="" alt="QR Code" style="width:200px; height:200px;">
+
+          </div> -->
+
+          
+
+          <button type="submit">📤 Submit Request</button>
+        </form>
+      </div>
+
+
+      <div class="content status-table-container" id="statusContent" style="display: block;">
+        <h2>📊 Client Request Status</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reference No.</th>
+              <th>Client Name</th>
+              <th>Request Type</th>
+              <th>Status</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for req in requests_list %}
+            <tr>
+              <td>{{ req.id }}</td>
+              <td>{{ req.full_name }}</td>
+              <td>{{ req.get_regulation_type_display }}</td>
+              <td class="status-{{ req.status|lower }}">{{ req.get_status_display }}</td>
+              <td>{{ req.remarks|default:"-" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="5" style="text-align:center;">No requests found</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+<script>
+  
+function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // Remove active sa lahat ng tabs at itago lahat ng content
+  tabs.forEach(tab => tab.classList.remove('active'));
+  for (let key in contents) {
+    contents[key].style.display = 'none';
+  }
+
+  // Ipakita lang yung napiling tab at content
+  if (type === 'chart') tabs[0].classList.add('active');
+  if (type === 'form') tabs[1].classList.add('active');
+  if (type === 'status') tabs[2].classList.add('active');
+
+  contents[type].style.display = 'block';
+}
+
+
+</script>
+</body>
+</html>

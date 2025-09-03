@@ -1,0 +1,370 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Private Tree Plantation Registration | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+ 
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🌳 Private Tree Plantation Registration</h1>
+
+    <section class="card">
+      <h2>📘 Overview</h2>
+      <p>
+        This service allows private individuals, organizations, or communities to register their tree plantations such as timber, bamboo, or fruit-bearing species. Upon registration, a Certificate of Tree Plantation Ownership (CTPO) may be issued, enabling legal harvesting and transport of forest products.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🌱 What You Can Register</h2>
+      <ul>
+        <li>Timber Plantations (e.g., Mahogany, Gmelina)</li>
+        <li>Bamboo Farms</li>
+        <li>Fruit-Bearing Trees in Agroforestry Settings</li>
+        <li>Mixed Forest Plantations on Private Lands</li>
+      </ul>
+    </section>
+    
+    <div class="container" >
+      <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">Citizen’s Charter No. R8-F-01. ISSUANCE OF PRIVATE TREE PLANTATION REGISTRATION
+            (PTPR)
+        </h2>
+        <h4>This Certificate shows the ownership of plantations or planted trees within private, titled lands or tax declared alienable
+              and disposable lands. The issuance of PTPR requires inventory and ocular inspection in the area. Tree inventory for permits
+              (e.g. TCP or PLTP) is a process conducted separately from the inspection for PTPR per existing DENR policies, rules and
+              regulations.
+        </h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">  
+          <tr>
+            <th style="width: 30%; background-color:  #c2e1f8;;">Office/Division:</th>
+            <td>Regulation and Permitting Section, DENR Implementing PENR/CENR Office</td>
+          </tr>
+          <tr >
+            <th style="background-color: #c2e1f8;">Classification:</th>
+            <td>Highly Technical</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Type of Transaction:</th>
+            <td>G2B - Government to Business<br>G2C - Government to Citizen</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Who may avail:</th>
+            <td>
+              Filipino Citizen/ Individual or Sole Proprietorship; Private Corporation duly registered with the Securities and Exchange Commission (SEC); Partnership or Association duly registered with SEC; Owners and operators of existing wood processing plants, provided however, that they shall file individual applications for wood processing plants which are independently operated in separate locations; within Alienable and Disposable Lands (A&D)
+            </td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <th style="text-align: center;">CHECKLIST OF REQUIREMENTS</th>
+            <th style="text-align: center;">WHERE TO SECURE</th>
+          </tr>
+          <tr>
+            <td>1. Letter of Application (1 original, 1 photocopy)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>2. OCT, TCT, Judicial Title, CLOA, Tax Declared Alienable and Disposable Lands (1 certified true copy)</td>
+            <td>Requesting Party, Assessor’s Office, Registry of Deeds (ROD), NCIP, DAR</td>
+          </tr>
+          <tr>
+            <td>3. Data on the number of seedlings planted, species and area planted</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td style="background-color: #c2e1f8;" colspan="2"><strong>4. Additional Requirement<br>if the applicant is a representative</strong></td>
+          </tr>
+          <tr>
+            <td>Special Power of Attorney (SPA) (1 original)</td>
+            <td>Requesting Party, Private Lawyer, or Notary Public</td>
+          </tr>
+        </table>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>Client Steps</th>
+              <th>Agency Actions</th>
+              <th>Fees</th>
+              <th>Processing Time</th>
+              <th>Person Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Check completeness of
+                  application and supporting
+                  documents, and receive,
+                  record (including scanning)
+                  and forward the application to
+                  Deputy CENR / CENR Officer.
+                  Provide Requesting Party an
+                  acknowledgement receipt of the documents.
+              </td>
+              <td>Receive, record, and forward application to CENR Officer; issue acknowledgment receipt</td>
+              <td>None</td>
+              <td>50 minutes</td>
+              <td>Chief/Technical Staff
+                  Regulation and Permitting Section(RPS) Receiving/Releasing Clerk, CENRO Records Unit
+              </td>
+            </tr>
+            <tr>
+              <td>1.1. None</td>
+              <td>1.1. Receive and review the
+                application, and assign
+                inspection team to conduct site
+                inspection.
+              </td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Chief RPS</td>
+            </tr>
+            <tr>
+              <td>2. Guide/accompany the inventory team to the site</td>
+              <td>2. Conduct inspection of the area (100% inventory of trees) and prepare report with attachments (map, geo-tagged photos and tally sheets). Forward to Chief, RPS.</td>
+              <td>None</td>
+              <td>15 working days</td>
+              <td>Inspection Team RPS</td>
+            </tr>
+
+            <tr>
+              <td>2.1. None</td>
+              <td>2.1. Evaluate and review the application. And forward to Forest Utilization Unit (FUU)/RPS.</td>
+              <td>None</td>
+              <td>4 hours</td>
+              <td>Chief RPS (CENRO)/ Chief TSD (Implementing PENRO)</td>
+            </tr>
+
+            <tr>
+              <td>2.2. None </td>
+              <td>2.2. Receive and review application. Prepare two (2) copies of PTPR and affix initial on the file copy, and forward to Chief, RPS.</td>
+              <td>None</td>
+              <td>4 hours</td>
+              <td>Chief FUU(CENRO) Chief RPS (Implementing PENRO)
+              </td>
+            </tr>
+
+            <tr>
+              <td>2.3. None</td>
+              <td>2.3. Receive and review the application and inspection report and submit recommendation to CENRO/Implementing PENRO</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Chief RPS/TSD Implementing PENRO</td>
+            </tr>
+
+            <tr>
+              <td>2.4. None</td>
+              <td>2.4. Receive and review application. Approve and sign PTPR. </td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>CENR Officer CENRO / Implementing PENRO</td>
+            </tr>
+
+            <tr>
+              <td>3. Receive approved PTPR</td>
+              <td>4. Record and release approved PTPR to applicant </td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk CENRO Records Unit</td>
+            </tr>
+
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2">TOTAL:</td>
+              <td>None</td>
+              <td colspan="2">16 days, 3 hours and 50 min.</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST" enctype="multipart/form-data" ><!-- onsubmit="return confirm('Are you sure you want to submit this application?');" -->
+              {% csrf_token %}  
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit">Submit</button>
+          </form>
+      </div>
+
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">📊 PTPR Applications</h2>
+          <p>Below is the list of submitted Private Tree Plantation Registration applications.</p>
+          <!-- Search Form -->
+          <form method="get" style="margin-bottom: 15px; text-align: right; display: flex; justify-content: flex-end; align-items: center; gap: 5px;">
+              <input type="hidden" name="tab" value="status">
+              <input type="text" name="search" placeholder="Search by name"
+                    value="{{ search_query }}"
+                    style="flex: 7; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+              <button type="submit" style="flex: 3; padding: 6px 12px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                  Search
+              </button>
+          </form>
+
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+              <tr style="background-color: #c2e1f8; text-align: center;">
+                  <th>Applicant Name</th>
+                  <th>Date Submitted</th>
+                  <th>Letter Request</th>
+                  <th>Brgy. Certificate</th>
+                  <th>Land Title / Tax Declaration</th>
+                  <th>SPA Document</th>
+                  <th>Valid ID</th>
+              </tr>
+              {% for app in applications %}
+              <tr style="text-align: center;">
+                  <td>{{ app.fullname }}</td>
+                  <td>{{ app.date_submitted|date:"Y-m-d H:i" }}</td>
+                  <td>
+                      {% if app.letter_request %}
+                          <a href="{{ app.letter_request.url }}" target="_blank">View</a>
+                      {% else %}
+                          <span style="color: #888;">No file</span>
+                      {% endif %}
+                  </td>
+                  <td>
+                      {% if app.brgy_certificate %}
+                          <a href="{{ app.brgy_certificate.url }}" target="_blank">View</a>
+                      {% else %}
+                          <span style="color: #888;">No file</span>
+                      {% endif %}
+                  </td>
+                  <td>
+                      {% if app.land_title_or_tax_declaration %}
+                          <a href="{{ app.land_title_or_tax_declaration.url }}" target="_blank">View</a>
+                      {% else %}
+                          <span style="color: #888;">No file</span>
+                      {% endif %}
+                  </td>
+                  <td>
+                      {% if app.spa_document %}
+                          <a href="{{ app.spa_document.url }}" target="_blank">View</a>
+                      {% else %}
+                          <span style="color: #888;">No file</span>
+                      {% endif %}
+                  </td>
+                  <td>
+                      {% if app.valid_id_with_signature %}
+                          <a href="{{app.valid_id_with_signature.url}}" target="_blank">View</a>
+                      {% else %}
+                          <span style="color: #888;">No file</span>
+                      {% endif %}
+                  </td>
+              </tr>
+              {% empty %}
+              <tr>
+                  <td colspan="7" style="text-align:center; color: #888;">No applications yet.</td>
+              </tr>
+              {% endfor %}
+          </table>
+      </div>
+
+
+    </div>
+
+
+  </div>
+      {% if messages %}
+        <div id="flash-message" style="
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 999;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+            transition: opacity 1s ease;
+        ">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+
+        <script>
+            setTimeout(() => {
+                const msg = document.getElementById('flash-message');
+                if (msg) {
+                    msg.style.opacity = '0';
+                    setTimeout(() => msg.remove(), 2000); // tanggal after fade
+                }
+            }, 1000); // delay bago mag-fade
+        </script>
+      {% endif %}
+<script>
+function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // Remove active from all tabs
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  // Add active to clicked tab
+  document.querySelector(`.option[onclick="showContent('${type}')"]`).classList.add('active');
+
+  // Hide all content
+  Object.values(contents).forEach(content => content.style.display = 'none');
+
+  // Show selected content
+  contents[type].style.display = 'block';
+}
+
+// Run when page loads
+document.addEventListener("DOMContentLoaded", function() {
+  const params = new URLSearchParams(window.location.search);
+  const tab = params.get('tab');
+
+  if (tab && ['chart', 'form', 'status'].includes(tab)) {
+    showContent(tab);
+  } else {
+    showContent('chart'); // default
+  }
+
+  // Auto hide success message after 1s
+  const messageBox = document.querySelector('.message-box');
+  if (messageBox) {
+    setTimeout(() => {
+      messageBox.style.opacity = '0';
+      setTimeout(() => messageBox.remove(), 500);
+    }, 1000);
+  }
+});
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,436 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Special Land Use Permit (SLUP) Application | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪵 Special Land Use Permit (SLUP) Application</h1>
+
+
+    <section class="card">
+      <h2>📘 What is a Tree Cutting/Earth Balling Permit for Government Projects Special Land Use Permit (SLUP) Application</h2>
+      <p>
+        A Tree Cutting/Earth Balling Permit for Government Projects under a Special Land Use Permit (SLUP) is a formal authorization issued by the Department of Environment and Natural Resources (DENR) allowing the temporary use of forestland for government infrastructure projects. This includes activities such as road construction, flood control, power transmission, or other public utilities where trees within the project area may be affected. The permit ensures that environmental safeguards are met, appropriate compensation or mitigation is implemented, and legal requirements are followed.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📄 Purpose of the Special Land Use Permit (SLUP) Application</h2>
+      <ul>
+        <li>To regulate and formalize the temporary use of forestland areas for government infrastructure and development projects.</li>
+        <li>To ensure that tree cutting and/or earth balling is conducted legally, with proper assessment and mitigation measures in place.</li>
+        <li>To safeguard the ecological integrity of the affected area while balancing the development needs of government projects.</li>
+      </ul>
+    </section>
+
+
+
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN'S CHARTER NO. R8-F-08. ISSUANCE OF SPECIAL LAND USE PERMIT (SLUP)</h2>
+        <h4>This 3-year permit (non-renewable) serves as an authorization to temporarily occupy, possess and manage any public forestland for a specific use or purpose.</h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <th style="width: 30%; background-color: #c2e1f8;">Office or Division:</th>
+            <td>DENR CENRO or Implementing PENRO to Regional Office</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Classification:</th>
+            <td>Highly Technical (Multi-Stage Processing)</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Type of Transaction:</th>
+            <td>G2C - Government to Citizen <br>G2B - Government to Business<br>G2G - Government to Government</td>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Who may avail:</th>
+            <td>• Any Filipino Citizen <br>• Private Corporations, Partnership or association </td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <th style="text-align: center;">CHECKLIST OF REQUIREMENTS</th>
+            <th style="text-align: center;">WHERE TO SECURE</th>
+          </tr>
+          <tr>
+            <td>1. Duly Accomplished Application Form (1 original)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>2. Geotagged photos and Map of the area applied for with technical description, coordinates and tie point from the nearest landmark</td>
+            <td>CENR Office/Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>
+              3. Pertinent documents showing proof that the applicant is a legitimate entity qualified to be a holder of a forestland tenurial instrument or agreement, as follows:
+              <ul>
+                <li>For an individual applicant: certified copy of birth certificate or, if naturalized, Certificate of Naturalization</li>
+                <li>For an association, corporation, cooperative or partnership: certified copy of SEC/CDA Registration Certificate and Articles of Incorporation/Partnership, and a Board Resolution designating the authorized representative</li>
+              </ul>
+            </td>
+            <td>Requesting Party<br>PSA<br>SEC/CDA</td>
+          </tr>
+          <tr>
+            <td>4. Income Tax Return (ITR) for the last two (2) years</td>
+            <td>BIR</td>
+          </tr>
+          <tr>
+            <td>5. Proof of Financial Capability to manage and develop the area applied for</td>
+            <td>Bank</td>
+          </tr>
+          <tr>
+            <td>6. Indicative Management Plan using the prescribed format</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>7. Application fee of Php 500.00</td>
+            <td>CENR Office/Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>8. Performance Bond</td>
+            <td>CENR Office/Implementing PENRO</td>
+          </tr>
+          <tr>
+            <td>9. Free and Prior Informed Consent / NCIP Certification / CNO</td>
+            <td>NCIP</td>
+          </tr>
+          <tr>
+            <td>10. BIR Certification of Zonal Valuation of the nearest commercial zone of the municipality</td>
+            <td>BIR</td>
+          </tr>
+          <tr>
+            <td>11. ECC / IEE / CNC</td>
+            <td>EMB</td>
+          </tr>
+          <tr>
+            <td>12. LGU Endorsement</td>
+            <td>B/MLGU</td>
+          </tr>
+          <tr>
+            <td>13. Government share/rental/user’s fee shall be paid within 30 days upon issuance of SLUP</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>14. Endorsement from CENRO and PENRO</td>
+            <td>CENRO / PENRO</td>
+          </tr>
+        </table>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>CLIENT STEPS</th>
+              <th>AGENCY ACTION</th>
+              <th>FEES TO BE PAID</th>
+              <th>PROCESSING TIME</th>
+              <th>PERSONS RESPONSIBLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Submit application form with attached supporting documents</td>
+              <td>1. Check completeness of application and supporting documents, receive and forward the application to Deputy CENR Officer/CENR Officer</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving Clerk</td>
+            </tr>
+            <tr>
+              <td>2. Receive Order of Payment and pay the required fees</td>
+              <td>
+                2. Prepare Order of Payment<br>
+                2.1 Accept payment and issue Official Receipt
+              </td>
+              <td>Php 500.00 / Application Fee</td>
+              <td>
+                20 minutes<br>
+                20 minutes
+              </td>
+              <td>
+                Receiving/Releasing/RPS Technical staff<br>
+                Credit Officer
+              </td>
+            </tr>
+            <tr>
+              <td>3. Receive OR</td>
+              <td>3. Receive, review and refer the application to Chief, RPS</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Deputy CENR Officer/CENR Officer</td>
+            </tr>
+            <tr>
+              <td>3.1 Receive and review the application and assign technical personnel to conduct the inspection/verification of SLUP site</td>
+              <td>—</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Chief, RPS/Chief FUU</td>
+            </tr>
+            <tr>
+              <td>4. Guide/Accompany the inspection team to the site</td>
+              <td>4. Conduct biophysical assessment of the applied area by the DENR composite team (CENRO/PENRO/RO reps)</td>
+              <td>None</td>
+              <td>6 days</td>
+              <td>Inspection Team</td>
+            </tr>
+            <tr>
+              <td>4.1 —</td>
+              <td>Prepare biophysical assessment report with attachments (map/location), geotagged photos, land status certification/inventory of affected trees</td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>Inspection Team</td>
+            </tr>
+            <tr>
+              <td>4.2 —</td>
+              <td>Review the inspection report, prepare endorsement to PENRO with categorical recommendation and submit to CENRO</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Chief, RPS</td>
+            </tr>
+            <tr>
+              <td>4.3 —</td>
+              <td>Receive and review the application documents and inspection report. Approve the recommendation. Sign the endorsement to PENRO</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>CENR Officer</td>
+            </tr>
+            <tr>
+              <td>4.4 —</td>
+              <td>Record and release the application supporting documents and endorsement to PENR Office</td>
+              <td>None</td>
+              <td>2 days</td>
+              <td>Releasing Clerk<br>CENRO Records Unit</td>
+            </tr>
+            <tr>
+              <td>4.5 —</td>
+              <td>Receive documents and forward to Chief, Technical Services Division (TSD)</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing PENRO Records Unit</td>
+            </tr>
+            <tr>
+              <td>4.6 —</td>
+              <td>Review, evaluate application and prepare memorandum endorsement to Regional Office thru Chief, TSD for countersigning</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief/Staff Concerned Unit/Section<br>Chief, TSD</td>
+            </tr>
+            <tr>
+              <td>4.7 —</td>
+              <td>Review and sign the memorandum endorsement for the Regional Executive Director</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>PENR Officer</td>
+            </tr>
+            <tr>
+              <td>4.8 —</td>
+              <td>Record and release the application and supporting documents</td>
+              <td>None</td>
+              <td>2 days</td>
+              <td>Receiving/Releasing Clerk<br>PENRO</td>
+            </tr>
+            <tr>
+              <td>4.9 —</td>
+              <td>Receive and record application documents and forward to Regional Executive Director</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing, Regional Office Records Section</td>
+            </tr>
+            <tr>
+              <td>4.10 —</td>
+              <td>Refer the application documents to Office of the Assistant Regional Director for Technical Services</td>
+              <td>None</td>
+              <td>4 hours</td>
+              <td>Office of the Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td>4.11 —</td>
+              <td>Receive and forward application documents to Licenses Patents and Deeds Division</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+            <tr>
+              <td>4.12 —</td>
+              <td>Receive, review and refer application documents to Forest Utilization Section</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td>4.13 —</td>
+              <td>Receive and record application documents and forward to Chief, FUS</td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk, FUS</td>
+            </tr>
+            <tr>
+              <td>4.14 —</td>
+              <td>Review/evaluation/field verification of prepared map by SMD as to the actual land status of the area applied</td>
+              <td>None</td>
+              <td>5 days</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+            <tr>
+              <td>4.15 —</td>
+              <td>Prepare report of inspection, Special Land Use Permit (SLUP) and memorandum recommending the approval and submit the same to Chief, LPDD</td>
+              <td>None</td>
+              <td>1 day & 5 hours</td>
+              <td>Chief, Forest Utilization Section / Action Officer</td>
+            </tr>
+            <tr>
+              <td>4.16 —</td>
+              <td>Review the report and other supporting documents and affix his/her initial on the Special Land Use Permit (SLUP)</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief, Licenses Patents and Deeds Division</td>
+            </tr>
+            <tr>
+              <td>4.17 —</td>
+              <td>Review, approve the memorandum endorsement and initial the Permit and forward for RED’s signature</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Assistant Regional Director for Technical Services</td>
+            </tr>
+            <tr>
+              <td>4.18 —</td>
+              <td>Sign/approve the Special Land Use Permit and forward to Records</td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td>4.19 —</td>
+              <td>Record and release the approved permit to the proponent by mail/pick-up, copy furnished to PENRO and CENRO</td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>Receiving/Releasing Clerk, RO Records Section</td>
+            </tr>
+
+            <!-- Subtotals & Total -->
+            <tr style="background-color: #c2e1f8; font-weight: bold;">
+              <td colspan="2">CENRO SUB-TOTAL</td>
+              <td>Php 500.00</td>
+              <td>9 days, 5 hours & 40 minutes</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #c2e1f8; font-weight: bold;">
+              <td colspan="2">PENRO SUB-TOTAL</td>
+              <td>None</td>
+              <td>2 days & 4 hours</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #c2e1f8; font-weight: bold;">
+              <td colspan="2">REGIONAL OFFICE SUB-TOTAL</td>
+              <td>None</td>
+              <td>8 days, 18 hours & 30 minutes</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #a2d9ce; font-weight: bold;">
+              <td colspan="2">TOTAL</td>
+              <td>Php 500.00</td>
+              <td>20 days, 4 hours & 10 minutes</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:slup' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit SLUP Request</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 SLUP Application Status</h2>
+          <p>Below is the list of submitted SLUP applications and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant Name</th>
+                      <th>Location</th>
+                      <th>Project</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.fullname }}</td>
+                      <td>{{ app.location }}</td>
+                      <td>{{ app.project }}</td>
+                      <td class="status-{{ app.status|lower }}">{{ app.get_status_display }}</td>
+                      <td>{{ app.remarks }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6">No applications found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+<script>
+function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // reset lahat ng tabs at contents
+  tabs.forEach(tab => tab.classList.remove('active'));
+  Object.values(contents).forEach(content => content.style.display = 'none');
+
+  // activate yung napiling tab at ipakita yung content
+  if (type === 'chart') {
+    tabs[0].classList.add('active');
+    contents.chart.style.display = 'block';
+  } else if (type === 'form') {
+    tabs[1].classList.add('active');
+    contents.form.style.display = 'block';
+  } else if (type === 'status') {
+    tabs[2].classList.add('active');
+    contents.status.style.display = 'block';
+  }
+}
+
+</script>
+
+
+</body>
+</html>

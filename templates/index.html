@@ -1,0 +1,431 @@
+{% load static %} 
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PENRO Landing Page</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  
+</head>
+<body>
+
+  <!-- AI Assistant Icon -->
+  <div class="ai-icon-container" id="aiIcon">
+    <img src="{% static 'img/ai.webp' %}" alt="AI Assistant" class="ai-icon" id="aiButton" />
+  </div>  
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1 class="title" style="padding-top: 20px;">Welcome to PENRO Kiosk Biliran</h1>
+    <p class="subtitle">Environmental Services | Community Access | Sustainable Future</p>
+
+    <!-- Search Bar (updated) -->
+    <div class="search-bar" style="position: relative;">
+      <input id="searchBox" type="text" placeholder="Search PENRO Services..." autocomplete="off" />
+      <button id="searchBtn" type="button">Search</button>
+      
+      <!-- Dropdown results -->
+      <div id="searchResults">
+      </div>
+    </div>
+
+    <!-- Logo + Icons Cross Layout -->
+    <div class="logo-cross-layout">
+
+      <!-- Top Icon -->
+      <a href="{% url 'biodiversity:biodiversity' %}" class="item top" title="Biodiversity">
+        <img src="{% static 'img/biodiversity.png' %}" class="icon" alt="Biodiversity Icon" />
+      </a>
+
+      <!-- Upper Left -->
+      <a href="{% url 'inExternal:inExternal' %}" class="item upper-left" title="Internal & External Services">
+        <img src="{% static 'img/ExServices.png' %}" class="icon" alt="Internal Services Icon" />
+      </a>
+
+      <!-- Upper Right -->
+      <a href="{% url 'external:external' %}" class="item upper-right" title="External Services">
+        <img src="{% static 'img/ExServices.png' %}" class="icon" alt="External Services Icon" />
+      </a>
+
+      <!-- Center Logo -->
+      <div class="item center">
+        <img src="{% static 'img/logo.png' %}" alt="PENRO Logo" class="logo"/>
+      </div>
+
+      <!-- Lower Left -->
+      <a href="{% url 'land:land' %}" class="item lower-left" title="Land">
+        <img src="{% static 'img/LAND.png' %}" class="icon" alt="Land Icon" />
+      </a>
+
+      <!-- Lower Right -->
+      <a href="{% url 'map:map' %}" class="item lower-right" title="Map">
+        <img src="{% static 'img/MAP.png' %}" class="icon" alt="Map Icon" />
+      </a>
+
+      <!-- Bottom Icon -->
+      <a href="{% url 'forestry:forestry' %}" class="item bottom" title="Forestry">
+        <img src="{% static 'img/forestry.png' %}" class="icon" alt="Forestry Icon" />
+      </a>
+
+    </div>
+
+
+    <!-- Login Buttons -->
+    <div class="buttons">
+      <!-- <a href="admin-login.html" class="btn admin-btn">🛠 PENRO-ADMIN</a>
+      <a href="user-login.html" class="btn user-btn">👥 PENRO-USER</a> -->
+      <a href="{% url 'kiosk:homepage' %}" class="btn user-btn">📄 Feedback</a>
+    </div>
+  </div>
+  <!-- Hidden admin icon -->
+  <a href="/admin/" style="position:fixed; bottom:10px; right:10px; opacity:0.5; font-size:24px;">
+    ⚙️
+  </a>
+
+
+<script>
+
+  
+  const SERVICES = [
+    // BIODIVERSITY – already correct
+    { 
+      name: "Wildlife Registration", 
+      category: "Biodiversity", 
+      link: "/biodiversity/wildlife-registration/",
+      keywords: [
+        "wildlife", "registration", "animal", "species", "endangered", 
+        "permit", "license", "clearance", "certificate", "ownership",
+        "wild animals", "exotic pets",  "legal", "document",
+        "recording", "authorization", "application", "approval", "processing"
+      ]
+    },
+
+    { 
+      name: "Wildlife Farm Permit(WFP)", 
+      category: "Biodiversity", 
+      link: "/biodiversity/wildlife-farm-permit/",
+      keywords: [
+        "wildlife", "farm", "permit", "WFP", "license", 
+        "breeding", "exotic animals", "endangered species", "captive", 
+        "application", "farm registration", "clearance", "approval", "authorization",
+        "animals", "fauna", "zoological", "documentation", "conservation"
+      ]
+    },
+
+    { 
+      name: "Local Transport Permit", 
+      category: "Biodiversity", 
+      link: "/biodiversity/local-transport-permit/",
+      keywords: [
+        "local", "transport", "permit", "LTP", "movement", 
+        "wildlife transport", "legal transport", "transfer", "authorization",
+        "clearance", "certificate", "endangered species", "documents", "regulation",
+        "shipping", "delivery", "relocation", "wildlife movement", "approval"
+      ]
+    },
+    
+    { 
+      name: "Gratuitous Permit & MOA", 
+      category: "Biodiversity", 
+      link: "/biodiversity/gratuitous-permit/",
+      keywords: [
+        "gratuitous permit", "MOA", "memorandum of agreement", "wildlife", "donation", 
+        "non-commercial", "research", "conservation", "clearance",
+        "authorization", "certificate", "legal", "approval", "free permit",
+        "collaboration", "wild animals", "documentation", "environment", "application"
+      ]
+    },
+
+    { 
+      name: "Special Local Transport Permit(SLTP)", 
+      category: "Biodiversity", 
+      link: "/biodiversity/special-local-transport-permit/",
+      keywords: [
+        "special permit", "SLTP", "special local transport", "authorization", "movement",
+        "wildlife",  "clearance", "certificate", "transport approval",
+        "relocation", "transfer", "exotic animals", "endangered species", "fauna",
+        "legal document", "application", "delivery", "environmental", "regulation"
+      ]
+    },
+    
+    { 
+      name: "Research Clearance(Marine)", 
+      category: "Biodiversity", 
+      link: "/biodiversity/marine-research-clearance/",
+      keywords: [
+        "research clearance", "marine",  "ocean", "sea",
+        "marine life", "biodiversity", "permit", "authorization", "certificate",
+        "application", "approval", "study", "investigation", "marine biology",
+        "documentation", "environmental", "wildlife research", "conservation", "license"
+      ]
+    },
+
+
+    
+    // LAND SERVICES – fixed names and links
+    { 
+      name: "Certification of Land Classification Status", 
+      category: "Land Services", 
+      link: "/land/land_classification_status/",
+      keywords: [
+        "land classification", "status certificate", "alienable", "disposable", "forestland",
+        "timberland", "upland", "wetland", "mineral land", "ancestral domain",
+        "public domain", "agro-industrial", "watershed", "reservation", "land zoning",
+        "tenure status", "resource inventory", "official certification", "land use verification", "legal document"
+      ]
+    },
+
+    { 
+      name: "Survey Authority", 
+      category: "Land Services", 
+      link: "/land/survey_authority/",
+      keywords: [
+        "survey authority", "application", "geodetic survey", "boundary approval", "traverse survey",
+        "triangulation", "benchmark", "coordinates", "lot plotting", "mapping authority",
+        "survey warrant", "technical description", "monument setting", "survey directive", "cadastral order",
+        "property demarcation", "measurement permit", "geomatics", "official survey request", "survey authorization"
+      ]
+    },
+
+    { 
+      name: "Free Patent Application (Agricultural)", 
+      category: "Land Services", 
+      link: "/land/free_patent_agricultural/",
+      keywords: [
+        "free patent", "application", "agricultural land", "farmland", "cultivation",
+        "crop production", "tillage", "agrarian reform", "arable land", "farm tenancy",
+        "landholding", "homestead", "farm title", "agribusiness", "farm occupancy",
+        "field parcel", "cultivator rights", "land registration", "agricultural ownership", "rural patent"
+      ]
+    },
+
+    { 
+      name: "Free Patent Application (Residential)", 
+      category: "Land Services", 
+      link: "/land/free_patent_residential/",
+      keywords: [
+        "free patent", "application", "residential land", "house lot", "urban housing",
+        "dwelling rights", "subdivision lot", "residential title", "housing rights", "lot occupancy",
+        "townsite patent", "community lot", "home parcel", "urban title", "residential clearance",
+        "residential zoning", "lot allocation", "neighborhood parcel", "residential ownership", "housing patent"
+      ]
+    },
+
+    { 
+      name: "Survey Plan (LAMS) Approval", 
+      category: "Land Services", 
+      link: "/land/survey_plan_lams_approval/",
+      keywords: [
+        "survey plan", "LAMS", "approval", "cadastral map", "technical survey",
+        "plan validation", "plot approval", "survey returns", "coordinate plotting", "land mapping",
+        "sketch plan", "blueprint", "survey diagram", "land parcel plan", "boundary sketch",
+        "legal survey plan", "property plot", "mapping system", "official survey plan", "survey clearance"
+      ]
+    },
+
+
+    // FORESTRY – with keywords
+    { 
+      name: "Private Tree Plantation Registration", 
+      category: "Forestry", 
+      link: "/forestry/private_tree_plantation/",
+      keywords: [
+        "tree plantation", "registration", "private forest", "timber growing", "silviculture",
+        "forest farming", "tree farming", "woodlot", "planting permit", "seedling establishment",
+        "forest ownership", "tree grower", "sustainable forestry", "plantation approval", "tree title",
+        "forest development", "private land trees", "tree farm license", "documentation", "application"
+      ]
+    },
+
+    { 
+      name: "Certificate of Verification (COV)", 
+      category: "Forestry", 
+      link: "/forestry/cov_certificate/",
+      keywords: [
+        "certificate of verification", "COV", "land validation", "forest boundary check", "survey verification",
+        "land classification check", "legal document", "forest area validation", "ownership verification", "land certification",
+        "title verification", "official certificate", "survey confirmation", "approval", "document verification",
+        "permit requirement", "validation record", "certification process", "forest status", "application"
+      ]
+    },
+
+    { 
+      name: "Certificate of Lumber Origin (CLO)", 
+      category: "Forestry", 
+      link: "/forestry/lumber_origin/",
+      keywords: [
+        "certificate of lumber origin", "CLO", "timber source", "legal lumber", "lumber certification",
+        "wood origin", "logging permit", "forest product validation", "lumber clearance", "sawmill supply",
+        "timber legality", "legal document", "forest product tracking", "verification", "timber approval",
+        "chain of custody", "wood supply origin", "forest certification", "documentation", "application"
+      ]
+    },
+
+    { 
+      name: "Chainsaw Registration", 
+      category: "Forestry", 
+      link: "/forestry/chainsaw/",
+      keywords: [
+        "chainsaw", "registration", "chainsaw permit", "chainsaw license", "power saw",
+        "logging equipment", "timber cutting", "legal possession", "mechanized cutting", "chainsaw certification",
+        "chainsaw clearance", "ownership permit", "forest law compliance", "logging tools", "application",
+        "forest protection", "sawmill use", "deforestation control", "equipment regulation", "approval"
+      ]
+    },
+
+    { 
+      name: "Tree Cutting Permit (Government)", 
+      category: "Forestry", 
+      link: "/forestry/treecutting_gov/",
+      keywords: [
+        "tree cutting permit", "government trees", "public forest", "cutting clearance", "official approval",
+        "legal logging", "timber extraction", "government land trees", "forest clearance", "application",
+        "cutting regulation", "tree felling approval", "logging document", "state-owned trees", "permit request",
+        "forest utilization", "timber rights", "government forest use", "authorization", "documentation"
+      ]
+    },
+
+    { 
+      name: "Tree Cutting Permit (Public/Private)", 
+      category: "Forestry", 
+      link: "/forestry/treecutting_public/",
+      keywords: [
+        "tree cutting permit", "private land", "public land", "timber removal", "cutting clearance",
+        "forest utilization", "logging approval", "tree felling", "wood harvesting", "legal authorization",
+        "cutting regulation", "forest management", "application", "tree clearance", "landowner rights",
+        "property trees", "residential cutting", "permit document", "forest approval", "environmental clearance"
+      ]
+    },
+
+    { 
+      name: "Private Land Timber Permit (PLTP/SPLTP)", 
+      category: "Forestry", 
+      link: "/forestry/private_land_timber/",
+      keywords: [
+        "private land timber permit", "PLTP", "SPLTP", "timber harvesting", "wood cutting permit",
+        "timber extraction", "forest products", "logging rights", "legal timber", "tree cutting approval",
+        "wood utilization", "permit application", "private land trees", "forest land use", "logging clearance",
+        "authorization", "lumber approval", "forest utilization permit", "legal harvesting", "documentation"
+      ]
+    },
+
+    { 
+      name: "Special Land Use Permit (SLUP)", 
+      category: "Forestry", 
+      link: "/forestry/slup/",
+      keywords: [
+        "special land use permit", "SLUP", "forest land", "land allocation", "non-forest use",
+        "lease permit", "forest utilization", "temporary land use", "development project", "legal clearance",
+        "forest occupancy", "permit approval", "application", "land use conversion", "environmental compliance",
+        "land development", "forest land clearance", "authorization", "forest land approval", "legal document"
+      ]
+    },
+
+    { 
+      name: "Forest Land Allocation Agreement (FLAG)", 
+      category: "Forestry", 
+      link: "/forestry/flag/",
+      keywords: [
+        "forest land allocation agreement", "FLAG", "forest lease", "allocation", "forest management",
+        "forest land use", "concession", "forest tenure", "land stewardship", "legal agreement",
+        "forest land use right", "allocation permit", "forest development", "application", "management contract",
+        "forest allocation approval", "long-term use", "forest land contract", "documentation", "authorization"
+      ]
+    },
+
+    { 
+      name: "Lumber Dealer Permit", 
+      category: "Forestry", 
+      link: "/forestry/lumber_dealer/",
+      keywords: [
+        "lumber dealer permit", "timber sales", "lumber trade", "dealer license", "wood commerce",
+        "lumber shop", "timber store", "legal lumber dealer", "permit application", "wood selling",
+        "forest products trade", "lumber distributor", "wood business", "timber merchant", "dealer clearance",
+        "sales authorization", "timber supply", "legal trade", "documentation", "approval"
+      ]
+    },
+
+    { 
+      name: "Seedling Assistance", 
+      category: "Forestry", 
+      link: "/forestry/seedling_assist/",
+      keywords: [
+        "seedling assistance", "tree planting", "reforestation", "afforestation", "forest recovery",
+        "seedling distribution", "tree nursery", "planting support", "forest restoration", "green program",
+        "environmental rehabilitation", "forest planting", "tree growth support", "nursery assistance", "sapling supply",
+        "sustainable forest", "tree propagation", "environmental aid", "seedling program", "forest support"
+      ]
+    },
+
+    { 
+      name: "Wood Processing Plant (WPP) Permit", 
+      category: "Forestry", 
+      link: "/forestry/wpp_permit/",
+      keywords: [
+        "wood processing plant", "WPP permit", "sawmill", "timber processing", "wood industry",
+        "permit application", "legal operation", "wood manufacturing", "processing approval", "timber industry",
+        "wood cutting facility", "plant clearance", "logging products", "timber conversion", "factory permit",
+        "forest products industry", "wood utilization", "legal document", "authorization", "application"
+      ]
+    },
+
+
+
+  ];
+  
+  const input = document.getElementById('searchBox');
+  const results = document.getElementById('searchResults');
+  const searchBtn = document.getElementById('searchBtn');
+
+  function showResults(query) {
+    if (!query) {
+      results.style.display = "none";
+      return;
+    }
+
+    const matches = SERVICES.filter(s => {
+      const q = query.toLowerCase();
+      const inName = s.name.toLowerCase().includes(q);
+      const inKeywords = s.keywords && s.keywords.some(k => k.toLowerCase().includes(q));
+      return inName || inKeywords;
+    });
+
+    if (matches.length === 0) {
+      results.innerHTML = `<div style="padding:8px; color:#555;">No results found.</div>`;
+    } else {
+      results.innerHTML = matches.map(s =>
+        `<div style="padding:8px; cursor:pointer;" 
+              onclick="window.location='${s.link}'">
+          <strong>${s.name}</strong><br>
+          <small style="color:#666">${s.category}</small>
+        </div>`
+      ).join('');
+    }
+    results.style.display = "block";
+  }
+
+  input.addEventListener('input', () => {
+    showResults(input.value);
+  });
+
+  searchBtn.addEventListener('click', () => {
+    if (results.style.display === "block") return;
+    showResults(input.value);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-bar')) {
+      results.style.display = "none";
+    }
+  });
+
+
+</script>
+
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

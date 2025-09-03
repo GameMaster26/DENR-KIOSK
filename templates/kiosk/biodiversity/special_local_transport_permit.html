@@ -1,0 +1,320 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🚛 Special Local Transport Permit | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-services-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'biodiversity:biodiversity' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="container" style="max-height: 94vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🚛 Special Local Transport Permit(SLTP)</h1>
+
+    <section class="info card">
+      <h2>📘 What is Special Local Transport Permit?</h2>
+      <p>
+        A Special Local Transport Permit (SLTP) is issued by the DENR to authorize the local transport of wildlife species, by-products, or derivatives within the Philippines. This permit ensures that wildlife transport is regulated, traceable, and compliant with existing environmental laws. It is commonly required for exhibitions, educational events, transfers, or temporary relocation of wildlife within regions.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Example Requests</h2>
+      <ul>
+        <li>Transport of exotic animals for a school educational exhibit</li>
+        <li>Transfer of wildlife specimens between registered wildlife facilities</li>
+        <li>Local movement of animals for veterinary treatment or quarantine</li>
+        <li>Temporary relocation of wildlife for conservation or breeding purposes</li>
+      </ul>
+    </section>
+
+    <div class="container" >
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-B-05. ISSUANCE OF SPECIAL LOCAL TRANSPORT PERMIT (SLTP) (Wildlife)
+          </h2>
+          <h5>This permit authorizing any person or entity with a valid Wildlife Special Use Permit (WSUP) may  apply for a Special
+            Local Transport Permit (SLTP) for the in-coustry conveyance of accredited/registered wildlife, wildlife by-products and/or derivatives
+            therefrom for shows, exhibitions and educational purposes, such as training, teaching and similar learning events. An SLTP shall
+            authorize the multiple journey and round-trip transport of wildlife, wildlife by-products and/or derivatives specified therein from the
+            facility of origin to place/s of destination and vice-versa for a period not to exceed three (3) months. <br>
+            Note: Each transport shall be accompanied by the original copy of the WSUP, invitation or engagement letter, contract or written
+            agreement indicating the date and venue of the show, exhibition or educational event.
+          </h5>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <th style="text-align: left;background-color: #c2e1f8;">Office or Division</th>
+              <td>DENR PENRO Office</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8;">Classification</th>
+              <td>Simple to Complex</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; background-color: #c2e1f8;">Type of Transaction</th>
+              <td>
+                G2B - Government to Business<br>
+                G2C - Government to Citizen<br>
+                G2G - Government to Government
+              </td>
+            </tr>
+            <tr >
+              <th style="text-align: left; background-color: #c2e1f8;">Who may avail</th>
+              <td>Wildlife Farm Permit (WFP) / Certificate of Wildlife Registration (CWR) Holder</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>Duly accomplished application form</td>
+              <td>PENRO Office</td>
+            </tr>
+            <tr>
+              <td>Certified true copy of the WSUP and other document/s supporting the legal possession/acquisition of the wildlife species/specimen for WSUP</td>
+              <td>Regional Office</td>
+            </tr>
+            <tr>
+              <td>Copy of an invitation or engagement letter, contract or written agreement indicating the date and venue of the show, exhibition or educational event</td>
+              <td>The facilitator of the exhibit</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Submit request letter and supporting documents</td>
+                <td>1. Check completeness of request and supporting documents</td>
+                <td>None</td>
+                <td>30 mins</td>
+                <td>Technical Staff <br>Regulation and Permitting Section (RPS)</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>1.1. Receive application and forward to PENRO/CENRO</td>
+                <td>None</td>
+                <td>10 mins</td>
+                <td>Receiving/Releasing Clerk <br>PENRO Records Unit</td>
+              </tr>
+
+              <tr>
+                <td>2. Pay corresponding Fee</td>
+                <td>
+                  2. Prepare and issue Order of payment <br>
+                  Accept payment and issue OR
+                </td>
+                <td>
+                  Application and Processing Fee: <br>
+                  Php 300.00 <br>
+                  Inspection Fee:<br>
+                  Php 500.00<br>
+                  Permit Fee:<br>
+                  1 week or less: Php 200<br>
+                  2 weeks: Php 250<br>
+                  3 weeks: Php 300<br>
+                  1 month: Php 500<br>
+                  2 months: Php 750<br>
+                  3 months: Php 1,000.00
+                </td>
+                <td>30 mins</td>
+                <td>
+                  Staff Regulation and Permitting Section (RPS) <br>
+                  Bill collector/Cashier/Credit Officer
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>2.1. Review and refer the application to TSD/Chief, RPS</td>
+                <td>None</td>
+                <td>1 hour</td>
+                <td>PENR Officer</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  2.2. Receive and review the application, and assign inspection team to conduct site inspection
+                </td>
+                <td>None</td>
+                <td>30 mins</td>
+                <td>Chief, RPS</td>
+              </tr>
+
+              <tr>
+                <td>3. Guide/accompany the inspection team to the site</td>
+                <td>
+                  3. Conduct inspection/inventory of wildlife and submit inspection report to Chief, RPS. Prepare two (2) copies of SLTP (with complete requirements). Initial on the file copy
+                </td>
+                <td>None</td>
+                <td>3 days</td>
+                <td>Inspection Team</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  3.1. Receive and evaluate the inspection report/application, supporting documents. Initial on the file copy of SLTP.
+                </td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>Chief, RPS</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>3.2. Review the application, Initial on the SLTP file copy.</td>
+                <td>None</td>
+                <td>2 hours</td>
+                <td>TSD</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>3.3. Transmit the application together with the complete documents to the PENRO</td>
+                <td>None</td>
+                <td>1 day</td>
+                <td>CENRO Liaison Officer</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>3.4. Approve/sign the LTP</td>
+                <td>None</td>
+                <td>1 hour</td>
+                <td>PENRO / Implementing PENRO</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>3.5. Release the approved LTP. Copy furnished concerned Regional/Field Office(s)</td>
+                <td>None</td>
+                <td>30 mins</td>
+                <td>Receiving/Releasing Clerk <br>PENRO Records Unit</td>
+              </tr>
+
+              <tr>
+                <td>4. Release of approved SLTP</td>
+                <td>4. Release the approved SLTP to the client</td>
+                <td>None</td>
+                <td>5 mins</td>
+                <td>Releasing Clerk</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>4.1. Provide copy of Client Satisfaction Survey Form to be filled out by the client upon receipt of permit</td>
+                <td>None</td>
+                <td>0 min</td>
+                <td>Releasing Clerk</td>
+              </tr>
+
+              <tr>
+                <td colspan="2" style="background-color: #c2e1f8; text-align: end;"><strong>TOTAL:</strong></td>
+                <td style="background-color: #c2e1f8;"><strong></strong></td>
+                <td colspan="2" style="background-color: #c2e1f8; text-align: center;"><strong>4 days, 8 hours and 15 minutes</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+        <form action="#" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          
+
+          <button type="submit">📤 Submit Request</button>
+        </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">📊 Client Request Status</h2>
+        <p>Below is the current status of your submitted requests for SLTP.</p>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+          <tr>
+            <th>Reference No.</th>
+            <th>Client Name</th>
+            <th>Request Type</th>
+            <th>Status</th>
+            <th>Remarks</th>
+          </tr>
+          {% for permit in permits %}
+          <tr>
+            <td>SLTP-{{ permit.id|stringformat:"03d" }}</td>
+            <td>{{ permit.full_name }}</td>
+            <td>{{ permit.adaptation_type }}</td>
+            <td>{{ permit.status }}</td>
+            <td>{{ permit.remarks }}</td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="5">No requests submitted yet.</td></tr>
+          {% endfor %}
+        </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // Remove active class from all tabs
+  tabs.forEach(tab => tab.classList.remove('active'));
+  // Hide all contents
+  for (let key in contents) {
+    contents[key].style.display = 'none';
+  }
+
+  // Activate clicked tab
+  if (type === 'chart') tabs[0].classList.add('active');
+  if (type === 'form') tabs[1].classList.add('active');
+  if (type === 'status') tabs[2].classList.add('active');
+
+  // Show correct content
+  contents[type].style.display = 'block';
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔬 Research Clearance (Marine) | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/biodiversity-services-style.css' %}" />
+
+</head>
+<body>
+  <a href="{% url 'biodiversity:biodiversity' %}" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <div class="container" style="max-height: 94vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🔬 Research Clearance (Marine)</h1>
+
+    <section class="info card">
+      <h2>📘 What are Research Clearance (Marine)?</h2>
+      <p>
+        A Research Clearance (Marine) is an official permit issued by the Department of Environment and Natural Resources (DENR)
+        through its regional offices, allowing individuals or institutions to conduct scientific research and studies in coastal
+        and marine areas within protected zones. This clearance ensures that all research activities align with conservation
+        objectives and national environmental policies, while also monitoring the impact of such activities on marine biodiversity.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Example Requests</h2>
+      <ul>
+        <li>Marine biodiversity assessment in coral reef ecosystems within a Protected Area</li>
+        <li>Water quality monitoring and sampling in marine reserves</li>
+        <li>Tagging and tracking of marine species (e.g., sea turtles, reef fish) for population studies</li>
+      </ul>
+    </section>
+
+
+    <div class="container" >
+    <!-- <div class="header">Service</div> -->
+
+      <div class="options"> 
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER NO. R8-B-06. APPLICATION FOR PROTECTED AREA MANAGEMENT BOARD (PAMB) CLEARANCE FOR CONDUCT OF RESEARCH ON MARINE ECOSYSTEM/SPECIES DENSITY/SIGHTING </h2>
+          <h5>Description: This PAMB Clearance is made upon request of the proponents of Projects with in Protected Areas. The purpose for the request for PAMB Clearance is to confirm if the project will proceed or cancelled.</h5>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <td style="background-color: #c2e1f8;">Office or Division</td>
+              <td>Protected Area Management and Biodiversity Conservation Section,<br>
+                  Conservation and Development Division,<br>
+                  DENR-R8 Regional Office</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Classification</td>
+              <td>Simple to Complex</td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Type of Transaction</td>
+              <td>
+                G2B – Government to Business<br>
+                G2C – Government to Citizen<br>
+                G2G – Government to Government
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Who may avail</td>
+              <td>External: Proponents of Projects within the Protected Area</td>
+            </tr>
+          </table>
+
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+            <tr>
+              <td>1. Project proposal/Feasibility Study/Research Proposal (1 original)</td>
+              <td>Requesting Party</td>
+            </tr>
+            <tr>
+              <td>2. Request letter for PAMB Clearance (1 original)</td>
+              <td>Requesting Party</td>
+            </tr>
+            <tr>
+              <td><strong>Additional if from the Government Sector</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3. Official Letter Request (1 original)</td>
+              <td>Requesting Party</td>
+            </tr>
+            <tr>
+              <td><strong>Additional if Requesting Party is a representative</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4. SPA for representative (1 original, notarized)</td>
+              <td>Requesting Party, Private Lawyer or Notary Public</td>
+            </tr>
+          </table>
+
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Action</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Persons Responsible</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #c2fac5;">
+                <td colspan="5"><strong>Regional Office to PENRO</strong></td>
+              </tr>
+              <tr>
+                <td >1. Submission of project/research proposal and letter request for PAMB clearance by the proponent to DENR Receiving Clerk</td>
+                <td>1. Receive documents and forward to the Office of the Regional Executive Director</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving/Releasing Clerk – RO Records Section</td>
+              </tr>
+              <tr>
+                <td>1.1</td>
+                <td>1.1. Receive, and check the completeness of submitted requirements, stamp the date and time on documents and refer to RED for evaluation</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of the Regional Executive Director</td>
+              </tr>
+              <tr>
+                <td>1.2</td>
+                <td>1.2. Evaluates and refers to ARD-TS for evaluation and appropriate action</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Regional Executive Director – Regional Office</td>
+              </tr>
+              <tr>
+                <td>1.3</td>
+                <td>1.3. Records and forwards all documents to ARD-TS</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of the Regional Executive Director</td>
+              </tr>
+              <tr>
+                <td>1.4</td>
+                <td>1.4. Receives and records the document. Refers the documents to ARD-TS for evaluation</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of ARDTS</td>
+              </tr>
+              <tr>
+                <td>1.5</td>
+                <td>1.5. Evaluates and refers to CDD for evaluation and appropriate action</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Assistant Regional Executive Director for Technical Services</td>
+              </tr>
+              <tr>
+                <td>1.6</td>
+                <td>1.6. Forwards the request to CDD</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of ARDTS</td>
+              </tr>
+              <tr>
+                <td>1.7</td>
+                <td>1.7. Receives, records, and forwards the document to the CDD Chief</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving/Releasing Clerk – CDD</td>
+              </tr>
+              <tr>
+                <td>1.8</td>
+                <td>1.8. Evaluates the document and forwards to PAMBCS for necessary action</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Chief – Conservation and Development Division (CDD)</td>
+              </tr>
+              <tr>
+                <td>1.9</td>
+                <td>1.9. Reviews document and instructs PAMBCS staff to prepare memo for RED's approval</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Section Chief – Protected Area Management and Biodiversity Conservation Section (PAMBCS), CDD</td>
+              </tr>
+              <tr>
+                <td>1.10</td>
+                <td>1.10. Receives and records the memo and attached documents (Letter request, Project Proposal/ Feasibility Study)</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving/Releasing Clerk – CDD</td>
+              </tr>
+              <tr>
+                <td>1.11</td>
+                <td>1.11. Reviews and puts his initial on the memo</td>
+                <td>None</td>
+                <td>15 mins.</td>
+                <td>Chief – Conservation and Development Division (CDD)</td>
+              </tr>
+              <td>1.12</td>
+                <td>1.12. Forwards the memo and attached documents to ARD-TS</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving/Releasing Clerk (CDD)</td>
+              </tr>
+              <tr>
+                <td>1.13</td>
+                <td>1.13. Receives and records the document</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of ARDTS</td>
+              </tr>
+              <tr>
+                <td>1.14</td>
+                <td>1.14. Reviews the memo and attached documents (Letter request, Project Proposal/Feasibility Study) and endorses to RED's office for approval</td>
+                <td>None</td>
+                <td>15 mins.</td>
+                <td>Assistant Regional Director for Technical Services</td>
+              </tr>
+              <tr>
+                <td>1.15</td>
+                <td>1.15. Forwards the memo and attached documents to RED's office</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of ARDTS</td>
+              </tr>
+              <tr>
+                <td>1.16</td>
+                <td>1.16. Receives, records, and forwards to RED for approval</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of the Regional Executive Director</td>
+              </tr>
+              <tr>
+                <td>1.17</td>
+                <td>1.17. Evaluates attached documents and signs memo (Letter request, Project Proposal/Feasibility Study)</td>
+                <td>None</td>
+                <td>2 hrs.</td>
+                <td>Regional Executive Director – Regional Office</td>
+              </tr>
+              <tr>
+                <td>1.18</td>
+                <td>1.18. Forwards the signed memo and attached documents (Letter request, Project Proposal/Feasibility Study) to Records Office for release to PENRO</td>
+                <td>None</td>
+                <td>5 mins.</td>
+                <td>Receiving Clerk – Office of the Regional Executive Director</td>
+              </tr>
+              <tr>
+                <td>1.19</td>
+                <td>1.19. Records and releases the memo and attached documents</td>
+                <td>None</td>
+                <td>4 working days (calendar days of courier)</td>
+                <td>Receiving/Releasing Clerk – DENR RO8 Records Section</td>
+              </tr>
+              <tr style="font-weight: bold;background-color: #c2e1f8;">
+                <td></td>
+                <td>TOTAL</td>
+                <td></td>
+                <td>5 days, 3 hours and 15 minutes</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          
+
+          <button type="submit">📤 Submit Request</button>
+        </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">📊 Client Request Status</h2>
+        <p>Below is the current status of your submitted requests.</p>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+          <tr>
+            <th>Reference No.</th>
+            <th>Client Name</th>
+            <th>Request Type</th>
+            <th>Status</th>
+            <th>Remarks</th>
+          </tr>
+          {% for clearance in clearances %}
+          <tr>
+            <td>RCM-{{ clearance.id|stringformat:"03d" }}</td>
+            <td>{{ clearance.full_name }}</td>
+            <td>{{ clearance.support_type }}</td>
+            <td>{{ clearance.status }}</td>
+            <td>{{ clearance.remarks }}</td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="5">No requests submitted yet.</td></tr>
+          {% endfor %}
+        </table>
+      </div>
+
+  </div>
+
+
+  </div>
+
+<script>
+
+  function showContent(type) {
+  const tabs = document.querySelectorAll('.option');
+  const contents = {
+    chart: document.getElementById('chartContent'),
+    form: document.getElementById('formContent'),
+    status: document.getElementById('statusContent')
+  };
+
+  // alisin "active" sa lahat ng tabs
+  tabs.forEach(tab => tab.classList.remove('active'));
+  // itago lahat ng content
+  for (let key in contents) {
+    contents[key].style.display = 'none';
+  }
+
+  // activate selected tab
+  if (type === 'chart') tabs[0].classList.add('active');
+  if (type === 'form') tabs[1].classList.add('active');
+  if (type === 'status') tabs[2].classList.add('active');
+
+  // ipakita ang tamang content
+  contents[type].style.display = 'block';
+}
+
+
+</script>
+</body>
+</html>

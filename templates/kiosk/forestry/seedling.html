@@ -1,0 +1,278 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seedling Request & Technical Assistance| PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪵 Seedling Request & Technical Assistance</h1>
+
+
+    <section class="card">
+          <h2>📘 What is a Seedling Request & Technical Assistance</h2>
+          <p>
+              A Seedling Request & Technical Assistance is a service offered by the Department of Environment and Natural Resources (DENR) through the National Greening Program (NGP), which allows individuals, communities, or organizations to request seedlings for planting activities. In addition to the provision of planting materials, the service includes technical support such as site assessment, planning, and guidance on proper tree planting and maintenance practices to ensure the success of reforestation and greening initiatives.
+          </p>
+      </section>
+
+      <section class="card">
+          <h2>📄 Purpose of the Seedling Request & Technical Assistance</h2>
+          <ul>
+              <li>To provide free access to quality seedlings for environmental and community-based greening projects.</li>
+              <li>To assist stakeholders in properly identifying and preparing planting sites for reforestation or enhancement activities.</li>
+              <li>To promote sustainable forest management and increase community involvement in environmental conservation efforts.</li>
+          </ul>
+      </section>
+
+
+
+
+    <div class="container" >
+      <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent">
+
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">CITIZEN’S CHARTER No. R8-F-11. PROVISION FOR TECHNICAL ASSISTANCE IN RELATION TO SEEDLING REQUEST.</h2>
+        <h4>This Service is made upon request of the public to provide assistance conducted in relation to seedling request within Regional Office VIII.</h4>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+          <tr>
+            <th style="width: 30%; background-color: #c2e1f8;">Office or Division:</th>
+            <th>NGP Regional Coordinating Office, Conservation and Development Division, DENR- Region VIII</th>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Classification:</th>
+            <th>Complex</th>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Type of Transaction:</th>
+            <th>
+              G2B - Government to Business<br>
+              G2C - Government to Citizen<br>
+              G2G - Government to Government
+            </th>
+          </tr>
+          <tr>
+            <th style="background-color: #c2e1f8;">Who may avail:</th>
+            <th>Internal and External</th>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <th style="text-align: center;">CHECKLIST OF REQUIREMENTS</th>
+            <th style="text-align: center;">WHERE TO SECURE</th>
+          </tr>
+          <tr>
+            <th>1. Request letter</th>
+            <th>Requesting Party</th>
+          </tr>
+        </table>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+          <thead style="background-color: #c2e1f8;">
+            <tr>
+              <th>Client Steps</th>
+              <th>Agency Action</th>
+              <th>Fees to be Paid</th>
+              <th>Processing Time</th>
+              <th>Persons Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Submits letter request addressed to the Regional Executive Director of DENR-Region VIII thru the NGP Coordinating Office</td>
+              <td>1. Receives the letter and forwards to the Office of the Regional Executive Director for appropriate action.</td>
+              <td>None</td>
+              <td>10 Min.</td>
+              <td>Receiving/Releasing<br>Regional Office Records Section</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>2. Refers document for action to the Regional NGP Coordinator, National Greening Program.</td>
+              <td>None</td>
+              <td>15 Min.</td>
+              <td>Receiving/Releasing<br>Regional Office Records Section</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>3. Refers action to the assigned Action Officer for appropriate action.</td>
+              <td>None</td>
+              <td>15 Min.</td>
+              <td>NGP Coordinator</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>4. The Action Officer reviews and evaluates the document. Checks quantity of seedlings requested, availability in the nursery, and assesses the location of the proposed planting site.</td>
+              <td>None</td>
+              <td>30 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>5. Confirms if requesting party are private planters and seedlings are available, and proceed to step 8.</td>
+              <td>None</td>
+              <td>5 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>6. If technical assistance and site identification are required, refers to concerned CENROs.</td>
+              <td>None</td>
+              <td>15 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>7. Notifies the client that the request has been endorsed to the Field Office/CENRO.</td>
+              <td>None</td>
+              <td>10 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>8. Prepares Request and Issue Slip (RIS) – 3 copies or provision of seedlings.</td>
+              <td>None</td>
+              <td>20 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>9. Reviews and approves the Request and Issue Slip (RIS).</td>
+              <td>None</td>
+              <td>10 Min.</td>
+              <td>Regional/CENRO NGP Coordinator</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>10. Coordinates with the client for release of RIS, Tree Planting Activity Report Form (1 copy to be submitted after activity via email or hand-carry), and hauling of seedlings.</td>
+              <td>None</td>
+              <td>20 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td>2. Receive the Request and Issue Slip (RIS) and Tree Planting Activity Form at the Regional NGP Coordinating Office</td>
+              <td>11. Release of Request and Issue Slip (RIS) and Tree Planting Activity Form.</td>
+              <td>None</td>
+              <td>15 Min.</td>
+              <td>NGP Tech. Staff (Action Officer)</td>
+            </tr>
+            <tr>
+              <td>3. Get the requested seedlings at the Regional/Clonal Nursery</td>
+              <td>12. Release of seedling per Seedling Request and Issue Slip (RIS) received by the client and assist in the hauling from the Regional Office Nursery/Clonal Nursery</td>
+              <td>None</td>
+              <td>15 Min.</td>
+              <td>Nursery In-charge/ Farm Worker</td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: right; font-weight: bold;">TOTAL:</td>
+              <td style="text-align: center; font-weight: bold;">NONE</td>
+              <td colspan="2" style="text-align: right; font-weight: bold;">3 HOURS</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-weight: bold;">Note: Travel time from the Regional Office to the Regional Nurseries is not included. Also, time span in hauling of seedlings
+          which is dependent to pleasure of the requesting party to transport the req
+        </p>
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:seedling_assist' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit Seedling Request</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 Seedling Request Status</h2>
+          <p>Below is the list of submitted seedling requests and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Requester Name</th>
+                      <th>Species Requested</th>
+                      <th>Quantity</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for req in requests %}
+                  <tr>
+                      <td>{{ req.reference_no }}</td>
+                      <td>{{ req.fullname }}</td>
+                      <td>{{ req.species }}</td>
+                      <td>{{ req.quantity }}</td>
+                      <td class="status-{{ req.status|lower }}">{{ req.get_status_display }}</td>
+                      <td>{{ req.remarks }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6">No seedling requests found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+<script>
+  function showContent(type) {
+  const chartTab = document.querySelectorAll('.option')[0];
+  const formTab = document.querySelectorAll('.option')[1];
+  const statusTab = document.querySelectorAll('.option')[2];
+
+  const chartContent = document.getElementById('chartContent');
+  const formContent = document.getElementById('formContent');
+  const statusContent = document.getElementById('statusContent');
+
+  // reset tabs
+  document.querySelectorAll('.option').forEach(opt => opt.classList.remove('active'));
+  chartContent.style.display = 'none';
+  formContent.style.display = 'none';
+  statusContent.style.display = 'none';
+
+  if (type === 'chart') {
+    chartTab.classList.add('active');
+    chartContent.style.display = 'block';
+  } else if (type === 'form') {
+    formTab.classList.add('active');
+    formContent.style.display = 'block';
+  } else if (type === 'status') {
+    statusTab.classList.add('active');
+    statusContent.style.display = 'block';
+  }
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chainsaw Registration | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/forestry2-style.css' %}" />
+
+
+</head>
+<body>
+  <a href="{% url 'forestry:forestry' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 96vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1>🪚 Chainsaw Registration</h1>
+
+    <section class="card">
+      <h2>📘 Overview</h2>
+      <p>
+        Chainsaw registration is required under Republic Act No. 9175 to regulate the ownership, possession, and use of chainsaws. Individuals or entities must register chainsaws with the DENR through PENRO to ensure they are used legally and for authorized forestry purposes.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>✅ Requirements</h2>
+      <ul>
+        <li>Proof of Ownership (receipt or notarized affidavit)</li>
+        <li>Valid ID of owner</li>
+        <li>Barangay Clearance</li>
+        <li>Purpose of use (e.g., plantation harvesting, construction)</li>
+        <li>Photograph of the chainsaw (with visible serial number)</li>
+      </ul>
+    </section>
+
+    <div class="container">
+      <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+
+      <div class="content" id="chartContent" >
+        <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">Citizen’s Charter No. R8-F-04</h2>
+        <h3>Application for Chainsaw Registration</h3>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin-top: 10px; border-collapse: collapse;">
+          <tr >
+            <td style="background-color: #c2e1f8;">Office or Division</td>
+            <td>Regulation and Permitting Section, DENR Implementing PENR/CENR Office</td>
+          </tr>
+          <tr >
+            <td style="background-color: #c2e1f8;">Classification</td>
+            <td>Simple</td>
+          </tr>
+          <tr >
+            <td style="background-color: #c2e1f8;">Type of Transaction</td>
+            <td>G2B – Government to Business<br>G2C – Government to Citizen<br>G2G – Government to Government</td>
+          </tr>
+          <tr >
+            <td style="background-color: #c2e1f8;">Who may avail</td>
+            <td>
+              Holder of Timber License Agreement, Production Sharing Agreement, Co-production Sharing
+              Agreement, or a Private Land Timber Permit/Special Private Land Timber Permit, CBFMA, IFMA,
+              SIFMA, or other tenurial instruments; Orchard or tree farmer; Industrial tree farmer; Licensed wood
+              processor and the chainsaw shall be used for the cutting of timber that has been legally sold to
+              said applicant; Anyone who shows satisfactory proof that the possession and/or use of a chainsaw
+              is for a legal purpose; and Agencies of the government, GOCCs that use chainsaws in some
+              aspects of their functions (except for Palawan where the jurisdiction falls with PCSD); CTPO/PTPR
+              holders
+            </td>
+          </tr>
+        </table>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin-top: 50px; border-collapse: collapse;">
+          <tr style="background-color: #c2e1f8;">
+            <th>Checklist of Requirements</th>
+            <th>Where to Secure</th>
+          </tr>
+          <tr>
+            <td>1. Duly accomplished Application Form</td>
+            <td>Implementing PENR/CENR Office</td>
+          </tr>
+          <tr>
+            <td>2. Official Receipt of Chainsaw Purchase (1 certified copy and 1 original for verification) or Affidavit of Ownership in case the original copy is lost.</td>
+            <td>Requesting Party, Store or Dealer</td>
+          </tr>
+          <tr>
+            <td>3. SPA if the applicant is not the owner of the chainsaw</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr>
+            <td>4. Detailed Specifications of Chainsaw (brand, model, engine capacity, Serial Number.)</td>
+            <td>Requesting Party, Store or Dealer</td>
+          </tr>
+          <tr>
+            <td>5. Notarized Deed of Absolute Sale, if transfer of ownership (1 original)</td>
+            <td>Private Lawyer or Notary Public</td>
+          </tr>
+          <tr>
+            <td>6. Chainsaw to be registered</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>7. Additional Requirements</strong></td>
+            <td></td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><b>If Tenurial Instrument Holder</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Certified True Copy of Forest Tenure Agreement</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><b>If Business Owner</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Business Permit (1 photocopy)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>If Registered as Private Tree Plantation Owner</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Certificate of Registration</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>If the applicant shows satisfactory proof that the possession/use is for legal purpose</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Business Permit from LGU or Affidavit that chainsaw is needed for applicant's profession/work and will be used legally (1 photocopy)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>If Licensed Wood Processor</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Wood Processing Plant Permit (1 photocopy)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>If Government or GOCC</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Certification from Head of Office or authorized representative that chainsaws are owned and used for legal purposes (specify)</td>
+            <td>Requesting Party</td>
+          </tr>
+          <tr style="background-color: #c2e1f8;">
+            <td><strong>If Renewal of Registration</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Latest Certificate of Chainsaw Registration (1 photocopy)</td>
+            <td>Requesting Party</td>
+          </tr>
+        </table>
+
+        <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; margin-top: 50px; border-collapse: collapse;">
+          <thead>
+            <tr style="background-color: #c2e1f8;">
+              <th>Client Steps</th>
+              <th>Agency Actions</th>
+              <th>Fees to be Paid</th>
+              <th>Processing Time</th>
+              <th>Person Responsible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Submit application form and supporting documents to the Implementing PENR/CENR Office.</td>
+              <td>Check completeness of application and supporting documents, and receive, record (including scanning) and forward the application to PENR/CENR Officer/Deputy CENR Officer. Provide Requesting Party an acknowledgement receipt of the documents.</td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk CENRO/Implementing PENRO Records Unit<br>Technical Staff RPS/TSD</td>
+            </tr>
+            <tr>
+              <td>1.1. None </td>
+              <td>1.1. Receive and review
+application. Forward
+application to Technical
+Staff. Prep</td>
+              <td>None </td>
+              <td>30 mins</td>
+              <td>Chief RPS (CENRO)/Chief
+TSD (Implementing
+PENRO)
+</td>
+            </tr>
+            <tr>
+              <td>1.2 None </td>
+              <td>1.2. Approve Order of
+Payment.</td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>CENR Officer/Accountant
+for Implementing PENRO
+</td>
+            </tr>
+            <tr>
+              <td>2. Receive Order of
+Payment and pay
+corresponding fee.</td>
+              <td>2. Receive payment and issue
+Official Receipt (OR).
+</td>
+              <td>Php 500.00
+Registration
+Fee *</td>
+                <td>30 minutes </td>
+              <td>Bill Collector/
+Cashier</td>
+            </tr>
+            <tr>
+              <td>3. Receive OR.
+</td>
+              <td>3. Receive application. Conduct
+verification of supporting
+documents and inspection of
+chainsaw. Prepare Certification
+and initial on the duplicate
+copy.
+</td>
+              <td>None</td>
+              <td>1 day </td>
+              <td>Technical Staff
+RPS/TSD</td>
+            </tr>
+            <tr>
+              <td>3.1. None </td>
+              <td>3.1. Receive and review
+application. Affix initial on
+the duplicate copy. Forward
+to PENR/CENR Officer for
+approval</td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>Chief RPS (CENRO)/Chief
+TSD (Implementing
+PENRO)</td>
+            </tr>
+
+            <tr>
+              <td>3.2. None</td>
+              <td>3.2. Receive, review and
+approve Certificate of
+Registration.</td>
+              <td>None</td>
+              <td>1 day </td>
+              <td>PENR/CENR Officer</td>
+            </tr>
+            
+            <tr>
+              <td>4. Receive Certificate
+of Chainsaw
+Registration.
+</td>
+              <td>4. Record, assign control number
+and release Certification of
+Registration. </td>
+              <td>None</td>
+              <td>30 minutes</td>
+              <td>Receiving/Releasing Clerk
+CENRO/Implementing
+PENRO Records Unit</td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2"><strong>TOTAL</strong></td>
+              <td><strong>Php 500.00 Registration Fee</strong></td>
+              <td colspan="2"><strong>2 days, 4 hours & 30 min.</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="post" action="{% url 'forestry:chainsaw' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 30px;" type="submit" class="btn-submit">📤 Submit Request</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="section-title">📊 Chainsaw Registration Status</h2>
+          <p>Below is the list of submitted chainsaw registration applications and their current status.</p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Applicant Name</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                      <th>Date Submitted</th>
+                  </tr>
+              </thead>
+              <tbody class="center-stand">
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.fullname }}</td>
+                      <td class="status-{{ app.status|lower }}">{{ app.get_status_display }}</td>
+                      <td>{{ app.remarks }}</td>
+                      <td>{{ app.date_submitted|date:"Y-m-d H:i" }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="5">No applications found.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+
+      </div>
+
+
+
+    </div>
+
+    
+  </div>
+
+
+<script>
+  function showContent(type) {
+    const tabs = document.querySelectorAll('.option');
+    const contents = {
+      chart: document.getElementById('chartContent'),
+      form: document.getElementById('formContent'),
+      status: document.getElementById('statusContent')
+    };
+
+    // Remove active class from all tabs
+    tabs.forEach(tab => tab.classList.remove('active'));
+    // Hide all content sections
+    for (let key in contents) {
+      contents[key].style.display = 'none';
+    }
+
+    // Activate the clicked tab
+    if (type === 'chart') tabs[0].classList.add('active');
+    if (type === 'form') tabs[1].classList.add('active');
+    if (type === 'status') tabs[2].classList.add('active');
+
+    // Show the relevant content
+    contents[type].style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

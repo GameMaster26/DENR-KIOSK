@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PENRO Feedback</title>
+  <style>
+    /* DENR Color Scheme */
+    :root {
+      --denr-green: #006400;
+      --denr-light-green: #e6f4ea;
+      --denr-dark: #003300;
+      --text-color: #333;
+      --accent: #28a745;
+      --border-radius: 8px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--denr-light-green);
+      color: var(--text-color);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      background-color: var(--denr-green);
+      color: white;
+      padding: 10px 16px;
+      border-radius: var(--border-radius);
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-button:hover {
+      background-color: var(--accent);
+      transform: translateX(-3px);
+    }
+
+
+    .feedback-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-container h1 {
+      text-align: center;
+      color: var(--denr-dark);
+      margin-bottom: 10px;
+    }
+
+    .feedback-container p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .feedback-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .feedback-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--denr-green);
+    }
+
+    .feedback-form input,
+    .feedback-form select,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      background-color: #f9f9f9;
+    }
+
+    .feedback-form textarea {
+      resize: vertical;
+    }
+
+    .feedback-form button.submit-btn {
+      background-color: var(--denr-green);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .feedback-form button.submit-btn:hover {
+      background-color: var(--accent);
+    }
+
+    span {
+      color: red;
+    }
+
+    @media (max-width: 600px) {
+      .feedback-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="{% url 'index' %}" class="back-button" title="Back to Forestry Services">&#8592; Back</a>
+
+  <div class="feedback-container">
+    <h1>📄 Send Us Your Feedback</h1>
+    <p>We value your thoughts. Please fill out the form below.</p>
+
+    <form class="feedback-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Full Name <span>*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="category">Feedback Category <span>*</span></label>
+        <select id="category" name="category" required>
+          <option value="">Select category</option>
+          <option value="service">Service Feedback</option>
+          <option value="website">Website/Kiosk Feedback</option>
+          <option value="suggestion">Suggestions</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">📤 Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>

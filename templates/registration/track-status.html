@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Application Status</title>
+  <link rel="stylesheet" href="static/css/penro2-style.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <a href="user.html" class="back-button" title="Go Back">&#8592; Back</a>
+  <div class="panel">
+    <h2><i class="fas fa-search-location"></i> Track Application Status</h2>
+
+    <form class="status-form" id="trackForm">
+      <label for="trackingId">🔍 Enter Tracking ID or Full Name</label>
+      <input type="text" id="trackingId" name="trackingId" placeholder="e.g., 2025-123456 or Maria Santos" required />
+
+      <button class="btn" type="submit"><i class="fas fa-search"></i> Check Status</button>
+    </form>
+
+    <div id="trackResult" class="status-msg success" style="display:none;">
+      <!-- Example Output -->
+      ✅ <strong>Maria Santos</strong> - Your application is currently <strong>Approved</strong>.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('trackForm');
+    const resultBox = document.getElementById('trackResult');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = document.getElementById('trackingId').value.trim();
+
+      if (!input) return;
+
+      // Simulated result (in real case: use fetch/ajax here)
+      resultBox.innerHTML = `✅ <strong>${input}</strong> - Your application is currently <strong>Approved</strong>.`;
+      resultBox.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

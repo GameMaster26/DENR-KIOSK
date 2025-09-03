@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PENRO User Login</title>
+  <link rel="stylesheet" href="static/css/login-style.css" />
+</head>
+<body>
+  <a href="index.html" class="back-button" title="Return to Home">&#8592; Back</a>
+
+  <main class="login-container">
+    <section class="login-box">
+      <img src="static/img/logo.png" alt="PENRO Logo" class="login-logo" />
+      <h1>PENRO User Login</h1>
+      <p class="login-subtext">
+        Access your environmental permits, service requests, and application updates.
+      </p>
+
+      <form action="user.html" method="get" autocomplete="on">
+        <div class="form-group">
+          <label for="username">User ID or Email</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="e.g. juan@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="login-button">Login</button>
+
+        <p class="signup-link">
+          Don't have an account?
+          <a href="user-signup.html">Sign Up Here</a>
+        </p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,3321 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processing of Payment of Claims | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/payment.css' %}" />
+
+
+</head>
+<body>
+  <a href="{% url 'inExternal:inExternal' %}" class="back-button" title="Back to Urban Services">&#8592; Back</a>
+
+  <div class="container" style="max-height: 89vh;overflow-y: auto;padding: 20px;box-sizing: border-box;">
+    <h1> Processing of Payment of Claims</h1>
+
+    <section class="overview card">
+      <h2>📘 Overview</h2>
+      <p>
+        The Processing of Payment of Claims is a financial procedure that ensures the proper preparation, verification, and release of payments for obligations incurred by DENR offices. This includes handling Obligation Requests and Status (ORS), Budget Utilization Requests and Status (BURS), Disbursement Vouchers (DV), and the issuance of Checks/LDDAP-ADA along with corresponding advices. 
+      </p>
+      <p>
+        This process is designed to guarantee that payments to internal personnel, contractors, service providers, suppliers, and other beneficiaries are processed accurately, legally, and in compliance with applicable budgeting, accounting, and auditing regulations.
+      </p>
+    </section>
+
+    <section class="requirements card">
+      <h2>📋 Requirements</h2>
+      <ul>
+        <li>Completed Obligation Request and Status (ORS) or Budget Utilization Request and Status (BURS)</li>
+        <li>Approved Disbursement Voucher (DV)</li>
+        <li>Supporting documents for payment, such as official receipts, contracts, or service reports</li>
+        <li>Authorization and approval from the concerned Accounting, Budget, or Finance units</li>
+      </ul>
+    </section>
+
+
+
+
+    <div class="container" >
+      <!-- <div class="header">Service</div> -->
+
+      <div class="options">
+        <div class="option active" onclick="showContent('chart')" style="color: #1b5e20;">CITIZEN’S CHARTER</div>
+        <div class="option" onclick="showContent('form')" style="color: #1b5e20;">Registration Form</div>
+        <div class="option" onclick="showContent('status')" style="color: #1b5e20;">Status</div>
+      </div>
+
+      <div class="content" id="chartContent" >
+
+          <h2 style="color: rgba(40, 167, 69, 1); margin-bottom: 20px;">
+            CITIZEN’S CHARTER NO. R8-AF-05-06-07. PROCESSING OF PAYMENT OF CLAIMS
+          </h2>
+          
+          <h5 style="font-weight: normal;"> 
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  This process includes processing of Obligation Request and Status (ORS)/ Budget Utilization Request and Status (BURS) and Disbursement Voucher (DV), and preparation, processing and issuance of Checks/LDDAP-ADA and corresponding Advices. This process is used to pay an obligation to DENR employees, individuals, agencies or creditors for goods purchased and services rendered. The documentary requirements may be subject to change should there be subsequent issuance/s on budgeting, accounting and auditing laws, rules and regulations by governing bodies. <br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  The submission of complete supporting documents enumerated under each type of transaction does not preclude reasonable question on the funding, legality, regularity, necessity of economy of the expenditure or transaction, among others, and such questions may be raised by any of the signatories to the transaction. Item 3, 1st paragraph of COA Circular No. 92 389 dated November 3, 1992.
+          </h5>
+
+          <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+              <td style="background-color: #c2e1f8;">Office or Division</td>
+              <td>
+                Accounting, Budget and Cashier Units/Sections, Finance and Administrative
+                Section/Division, DENR CENR, PENR and Regional Offices
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Classification</td>
+              <td>
+                Complex <br>
+                Highly Technical
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Type of Transaction</td>
+              <td>
+                G2B - Government to Business <br>
+                G2C - Government to Citizen <br>
+                G2G - Government to Government
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #c2e1f8;">Who may avail</td>
+              <td>
+                Internal: Officers and Employees <br>
+                External: Personnel under Contract of Service, Job Order, Service Provider and Supplier
+              </td>
+            </tr>
+          </table>
+
+
+
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 50px; margin-bottom: 50px;">
+            
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+
+            <!-- General Requirement -->
+            <tr style="background-color: #e8f4ff;">
+              <td colspan="2"><strong>General Requirement</strong></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Disbursement Voucher (1 original, 2 duplicate copies)</td>
+              <td>Requesting Party or Originating Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Obligation Request and Status / Budget Utilization Request and Status (1 original, 2 duplicate copies)</td>
+              <td>Requesting Party or Originating Office or Budget Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● All supporting documents (1 original, 1 duplicate copy)</td>
+              <td>Requesting Party or Originating Office</td>
+            </tr>
+
+            <!-- Cash Advances -->
+            <tr style="background-color: #c2e1f8;">
+              <td colspan="2"><strong>1.0 Cash Advances</strong></td>
+            </tr>
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 20px;"><strong>1.1 Granting of Cash Advances</strong><br>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 30px;">For all types of cash advances except for travel cash advances</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Authority of the accountable officer issued by the Regional Executive Director indicating the maximum accountability and purpose of cash advance (for initial cash advance)</td>
+              <td>Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification from the Chief Accountant that previous cash advances have been fully liquidated and accounted for in the books</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved application for bond and/or Fidelity Bond for the year for cash accountability of P5,001 above or other minimum amount prescribed by the Bureau of the Treasury (upon set-up of new/renewed accountability)</td>
+              <td>Bureau of Treasury</td>
+            </tr>
+
+            <!-- Additional Documentary Requirements -->
+            <tr style="background-color: #c2e1f8; text-decoration: underline;">
+              <td  style="padding-left: 40px;" colspan="2">Additional Documentary Requirements for Specific Transactions</td>
+            </tr>
+            <!-- 1.1.1 Payroll Funds -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 30px;"><strong>1.1.1 Payroll Funds for Salaries, Allowances, Honoraria and Other Similar Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Contracts (for initial payment)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved payroll or list of payees indicating their net pay</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved authority (presidential directive or legislative enactment) or legal basis to pay allowances/salaries/honoraria/fringe benefits</td>
+              <td>Personnel Section/Unit or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Daily time records (DTR) approved by the supervisor</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 1.1.2 Petty Cash Fund -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 30px;"><strong>1.1.2 Petty Cash Fund (PCF)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved estimate of petty expenses for one month (initial set-up)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.1.3 Field/Activity COE -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 30px;"><strong>1.1.3 Field/Activity Current Operating Expenses (COE)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Budget for COE of the agency field office or agency activity in the field</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.1.4 Traveling Expenses -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 30px;"><strong>1.1.4 Traveling Expenses</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 1.1.4.1 Local Travel -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>1.1.4.1 Local Travel</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Duly approved Office Order/Travel Order</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Duly approved Itinerary of Travel</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Certification from the Chief Accountant that previous cash advances have been fully liquidated and accounted for in the books</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Letter of invitation of the host/sponsoring agency/organization (if applicable)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.1.4.2 Foreign Travel -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>1.1.4.2 Foreign Travel</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Duly approved Office Order/Travel Order/Travel Authority</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Duly approved Itinerary of Travel</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Certification from the Chief Accountant that previous cash advances have been fully liquidated and accounted for in the books</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Letter of invitation of the host/sponsoring country/agency/organization</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Flight itinerary issued by the airline ticketing office/travel agency</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Copy of the United Nations Development Programme (UNDP) rate for the daily subsistence allowance (DSA) for the country of destination for the computation of DSA to be claimed</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Document to show the dollar to peso exchange rate at the date of grant of cash advance</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Quotation of plane fare for similar dates, from at least three airline companies/travel agencies or its equivalent</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Where applicable, authority to claim representation expenses</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- Seminar/Training -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>In case of seminar/training:</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Acceptance of nominee/s as participant/s (issued by the host country)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Programme Agenda and Logistics Information</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.2 Replenishment of Petty Cash Fund -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 20px;"><strong>1.2 Replenishment of Petty Cash Fund</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Report on Paid Petty Cash Vouchers (RPPCV)</td>
+              <td>Petty Cash Custodian</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Petty Cash Vouchers (PCVs) duly accomplished, signed and approved</td>
+              <td>Petty Cash Custodian</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved purchase request with certificate of Emergency Purchase, if necessary</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Bills, receipts, sales invoices</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification of Expense not Requiring Receipt (CERR) (for expenses amounting to P300 or less) or Reimbursement Expense Receipts (RER) (for expenses amounting to more than P300 but not exceeding P1,000), pursuant to COA Circular No. 2017-001 dated June 19, 2017, as amended by COA Circular No. 2021-001 dated June 24, 2021, or other amount that may be prescribed in the future</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Inspection and Acceptance Report (IAR) or Certificate of Inspection and Acceptance</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Pre-/Post-Repair Inspection Report</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Waste Materials Report (WMR) in case of replacement/repair</td>
+              <td>Property Officer/General Services Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved trip ticket, for gasoline/fuel expenses</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Canvass from at least three suppliers for purchases involving P1,000 and above except for purchases made while on official travel</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Summary/Abstract of Canvass</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Inventory Custodian Slip (ICS) for semi-expendable items (if applicable)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;"><strong>For reimbursement of toll receipts:</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">• Toll Receipts</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">• Trip tickets</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Such other supporting documents that may be required and/or required under the company policy depending on the nature of expenses</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- Meals and snacks -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>For meals and snacks charged to PCF:</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Notice of meeting with agenda/meeting's purpose</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Minutes of Meeting with Photo Documentation</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Attendance Sheet</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.3 Reimbursement of Traveling Expenses -->
+            <tr style="background-color: #f5faff;">
+              <td style="padding-left: 20px;"><strong>1.3 Reimbursement of Traveling Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Duly approved Office Order/Travel Order</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Duly approved Itinerary of Travel</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Letter of invitation of the host/sponsoring agency/organization</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Certificate of Travel Completed</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Revised Itinerary of Travel, if the previously approved itinerary was not followed</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of previously approved Itinerary of Travel</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of Office Order and the Supplemental Office Order or any proof supporting the change of schedule</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certificate of Appearance or Attendance</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Liquidation Report (if actual expenses exceed the cash advance granted)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification from the Head of the Agency or any authorized approving official that: (a) the official missions/tasks cannot be performed by/or assigned to any other regular/permanent official and/or employee; and (b) the tasks/activities are necessary to fulfill the obligations as contained in his/her contract of service. The same certification shall also be required in official foreign travel as allowed in highly meritorious cases as specified in the general guidelines (for Job Order/Contract of Service per COA Resolution 2021-044)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.3.1 Local Travel -->
+            <tr>
+              <td style="padding-left: 30px;"><strong>1.3.1 Local Travel</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Paper/electronic plane, boat or bus/train tickets, terminal fee receipts, paper/electronic boarding passes or a passenger manifest certified by the concerned airline or shipping company</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 50px;">● Certification by the Head of Office as to the absolute necessity of the expenses together with the corresponding bills or receipts, if the expenses incurred for the official travel exceeded the prescribed rate per day (certification or affidavit of loss shall not be considered as an appropriate replacement for the required hotel/lodging bills and receipts)</td>
+              <td>Head of Office / Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● OR/eOR or CERR (for expenses amounting to P300 or less) or RER (for expenses amounting to more than P300 but not exceeding P1,000), pursuant to COA Circular No. 2017-001 dated June 19, 2017, as amended by COA Circular No. 2021-001 dated June 24, 2021, or other amount that may be prescribed in the future. In case of payment of toll fees, the CERR/RER shall be supported with the toll fee rates</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Hotel room/lodging bills with official receipts in the case of official travel to places within 50-kilometer radius from the Permanent Official Station, if the travel allowances being claimed include hotel room/lodging</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 1.3.2 Foreign Travel -->
+            <tr>
+              <td style="padding-left: 30px;"><strong>1.3.2 Foreign Travel</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Paper/electronic plane, boat or bus/train tickets, terminal fee receipts, paper/electronic boarding passes or a passenger manifest certified by the concerned airline or shipping company. In the absence thereof other documents such as, but not limited to, a certified true copy of the passport showing the dates of entry and exit, duly stamped by the Immigration Office of the country of destination as indicated in the approved travel authority and itinerary of travel; or a passenger manifest certified by the concerned airline or shipping company</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● For reimbursement of actual travel expenses in excess of the prescribed rate:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 70px;">• Approval by the President</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 70px;">• Certification from the Head of the Agency that it is absolutely necessary</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 70px;">• Hotel room with official receipts (certification or affidavit of loss shall not be considered as an appropriate replacement for the required bills and receipts)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 70px;">• Bills/receipts for non-commutable representation expenses approved by the President or authorized officials</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 50px;">● Narrative report on trip undertaken / Report on Participation</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+
+            <!-- 2.0 Fund Transfers to NGOs/POs/CSOs except NGP -->
+            <tr style="background-color: #c2e1f8;">
+              <td><strong>2.0 Fund Transfers to Non-Government Organization/People's Organizations/ Civil Society Organizations (NGOs/POs/CSOs) except NGP</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 2.1 Release of Funds -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>2.1 Release of Funds</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Summary of Budgetary Requirements detailing the items of expenditure/disbursement to be incurred in the program/project</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● List of priority projects which may be implemented by the NGO/PO/CSO posted in the PhilGEPS, agency website, bulletin board and the like</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Accreditation of the NGO/PO/CSO by the Bids and Awards Committee (BAC) of the grantee agency</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Result of evaluation of financial and technical capability of selected NGO/PO/CSO</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Performance security for infrastructure project</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of signed Memorandum of Agreement (MOA) executed by and between the Government Agency and the NGO/PO/CSO</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Document showing that the NGO/PO/CSO has equity equivalent to 20% of the total project cost, which shall be in the form of labor, land for the project site, facilities, equipment and the like, to be used in the project</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification from the Accountant of the source agency that the previous fund transfer had been liquidated and accounted for in the books (staggered release)</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● NGO/PO/CSO proposal or application for funding accompanied by:</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Certificate of Registration from Securities and Exchange Commission (SEC) or either Cooperative Development Authority (CDA) or Department of Labor Employment (DOLE) as the case may be</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Authenticated copy of the latest Articles of Incorporation or Articles of Cooperation, showing the original incorporators/organizers and the Secretary’s certificate for incumbent officers, together with the Certificate of Filing with the SEC/Certificate of Approval by the CDA</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Audited financial reports for the past three years preceding the date of project implementation. For NGO/PO which has been in operation for less than three years, financial reports for the years in operation and proof of previous implementation of similar projects</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Disclosure of other related business if any</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Work and Financial Plan (WFP), and sources and details of Proponent’s Equity Participation in the Project</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Complete project proposal approved/signed by officers</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- List and/or photographs of similar projects previously completed, if any, indicating the source of funds for implementation</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Sworn affidavit of the secretary of the NGO/PO that none of its incorporators, organizers, directors or officers is an agent of or related by consanguinity or affinity up to the fourth degree to the official of the agency authorized to process and/or approve proposed MOA, and release funds</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+
+            <!-- 2.2 Staggered Release of Funds to NGO/PO/CSO -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>2.2 Staggered Release of Funds to NGO/PO/CSO</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Duly approved Schedule of Fund Release to NGO/PO/CSO</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Interim Fund Utilization Report on the previous release certified by the NGO/PO/CSO Accountant, approved by its President/Chairman and verified by the internal auditor or equivalent official of the GO showing a summary of expenses and a status report of accomplishment evidenced by pictures</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● List of beneficiaries of previous releases with their signatories signifying their acceptance/acknowledgement of the project funds/goods/services</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+
+            <!-- 3.0 Fund Transfers -->
+            <tr style="background-color: #c2e1f8;">
+              <td><strong>3.0 Fund Transfers</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 3.1 Transfer of Fund to Implementing Agency -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>3.1 Transfer of Fund to Implementing Agency</strong></td>
+              <td>Source Agency</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of duly signed MOA/Trust Agreement or its equivalent</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of Approved Program of Work (for infrastructure project)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved Project Expenditures or Estimated Expenses indicating the project objective and expected output (for projects other than infrastructure)</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● For GOCCs/GFIs, Board Resolution ratifying the MOA or its equivalent in case of transfers not incorporated in the Corporate Operating Budget and/or beyond the signing authority of the Agency Head</td>
+              <td>Requesting Party or Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification by the Chief Accountant that funds previously transferred to the Implementing Agency (IA) have been liquidated and accounted for in the books</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of the OR/eOR or equivalent issued by the IA to the Source Agency acknowledging receipt of funds transferred (for post-audit activities)</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● OR/eOR or equivalent from IA, if transfer of funds is thru List of Due and Demandable Accounts Payable Advice to it Accounts (LDDAP-ADA)</td>
+              <td>Implementing Partner or Office</td>
+            </tr>
+
+            <!-- 3.2 From Trust Fund to the Bureau of Treasury/Source Agency -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>3.2 From Trust Fund to the Bureau of Treasury/Source Agency for unspent balance/excess amount</strong></td>
+              <td>Implementing Agency</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Report of Receipt, Disbursement and Fund Balance certified by the Chief Accountant and approved by the Head of the Office</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Contract, which may be a MOA, Trust Agreement or Memorandum of Understanding (MoU) governing the utilization of funds and disposition of any balance thereof after completion of the purpose the funds transferred</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Letter of IA to Source Agency to transfer the unexpended balance to the Bureau of Treasury/Source Agency duly approved by the Source Agency, if the disposition thereof has not been provided in the MOA, Trust Agreement or MoU</td>
+              <td>Office Concerned</td>
+            </tr>
+
+            <!-- 4.0 Salary -->
+            <tr style="background-color: #c2e1f8;">
+              <td><strong>4.0 Salary</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 4.1 Individual Claims -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>4.1 Individual Claims</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 4.1.1 First Salary -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.1 First Salary</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Regular Employees -->
+            <tr>
+              <td style="padding-left: 60px;"><em>For Regular Employees</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certified true copy of duly approved Appointment</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Assignment/Re-Assignment order, if applicable</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certified copy of Oath of Office</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certificate of Assumption</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Statement of Assets, Liabilities and Net Worth</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Approved Daily Time Record (DTR)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● TIN/Bureau of Internal Revenue (BIR) withholding certificate</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Payroll Information on New Employee (PINE) or equivalent</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Authority from claimant and valid ID if claimed by representative</td>
+              <td>Claimant</td>
+            </tr>
+
+            <!-- Additional requirements for transferees -->
+            <tr>
+              <td style="padding-left: 60px;"><em>Additional Requirements for Transferees</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Clearance from money, property, and legal accountabilities</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certified copy of last paid voucher or Certification by Chief Accountant</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certificate of available leave credits</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Service Records</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● BIR Certificate of Compensation Payment/Tax Withheld</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- For Contract of Service and Job Order Workers -->
+            <tr>
+              <td style="padding-left: 60px;"><em>For Contract of Service and Job Order Workers</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Approved Contract (certified true copy for 1st claim)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● BIR withholding certificate/Certificate of Registration</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Accomplishment Report</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 4.1.2 Salary (Deleted from Payroll) -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.2 Salary (if Deleted from Payroll)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Notice of Assumption</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved Leave Application + Medical Certificate (if 5+ days sick leave) or Clearance (if 30+ days leave)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 4.1.3 Salary of Casual/Contractual Personnel -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.3 Salary of Casual/Contractual Personnel (charged to PS)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;"><em>For accredited agencies by CSC</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certified copy of contract/appointment</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Report of Personnel Action (ROPA) received by CSC</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;"><em>For other agencies</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Certified copy of contract/appointment (CSC-received)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Accomplishment Report</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 4.1.4 Salary Differentials -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.4 Salary Differentials due to Promotion/Step Increment</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved Appointment or Notice of Salary Adjustment (NOSA)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of Assumption</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved DTR or certification of no leave without pay</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 4.1.5 Last Salary -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.5 Last Salary</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Clearance from money, property, and legal accountabilities</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 4.1.6 Salary due to Heirs -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.6 Salary due to Heirs of Deceased Employee</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Clearance from money, property, and legal accountabilities</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;"><em>Additional Requirements</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Death Certificate (PSA)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Marriage Certificate (PSA, if applicable)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Birth Certificate of legal heirs (PSA)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Waiver of right of children (18+ years old)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">● Designation of next-of-kin</td>
+              <td>Claimant</td>
+            </tr>
+
+            <!-- 4.1.7 Salary during Maternity Leave -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>4.1.7 Salary during Maternity Leave</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Approved Maternity Leave Application (certified true copy)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Maternity Leave Clearance (certified true copy)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Medical Certificate</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification as Solo Parent (for 15 days extra leave)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 4.2 General Claims through ATM -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>4.2 General Claims through ATM</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Salary Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Payroll Register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Letter to bank to credit employee accounts (with bank receipt)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Validated deposit slips/LDDAP-ADA (if applicable)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.0 Allowances, Honoraria and Other Forms of Compensation -->
+            <tr style="background-color: #c2e1f8;">
+              <td><strong>5.0 Allowances, Honoraria and Other Forms of Compensation</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 5.1 Clothing/Uniform Allowance -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.1 Clothing/Uniform Allowance</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Individual Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For Individual Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certified true copy of approved appointment of new employees</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of Assumption (for new employees and those on leave without pay)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of Non-payment from previous agency, for transferees</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- For General Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For General Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Clothing/Uniform Allowance Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Payroll Register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter to the bank to credit employees' account of their allowance</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Validated deposit slips/LDDAP-ADA, if applicable</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.2 Collective Negotiation Agreement (CNA) Incentive -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.2 Collective Negotiation Agreement (CNA) Incentive</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Resolution signed by both parties incorporating the guidelines/criteria for granting CNA incentive</td>
+              <td>DENREU/DENREA</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Copy of CNA</td>
+              <td>K4/DENREU/DENREA</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Comparative statement of DBM approved level of operating expenses and actual operating expenses</td>
+              <td>Budget Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification issued by the Head of Office on unencumbered savings generated from CNA cost-cutting measures</td>
+              <td>Budget Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Proof that planned programs/activities/projects were implemented and completed in accordance with targets</td>
+              <td>Planning and Management Division/Section</td>
+            </tr>
+
+            <!-- 5.3 Honoraria -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.3 Honoraria</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 5.3.1 Government Personnel in Procurement -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>5.3.1 Government Personnel Involved in Government Procurement</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Office Order creating and designating BAC compositions</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Minutes of BAC meetings</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Notices of Award to winning bidders</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification that the procurement involves competitive bidding</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Attendance sheet of BAC meetings</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification from Chief Accountant that honoraria does not exceed 25% of annual basic salary</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+
+            <!-- 5.3.2 Resource Person/Coordinator/Facilitator -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>5.3.2 Resource Person/Coordinator/Facilitator</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Office Order</td>
+              <td>Human Resource Development Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Coordinator’s report on lecture schedule</td>
+              <td>Human Resource Development Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Course Syllabus/Program of Lectures</td>
+              <td>Human Resource Development Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● DTR of coordinator/facilitators</td>
+              <td>Human Resource Development Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● PDS/CV or latest payslip</td>
+              <td>Human Resource Development Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification from Program Manager/s on no. of hours and compliance</td>
+              <td>Office Concerned</td>
+            </tr>
+
+            <!-- 5.3.3 Special Projects -->
+            <tr>
+              <td style="padding-left: 40px;"><strong>5.3.3 Special Projects</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Performance Evaluation Plan from project management</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Office Order designating members of project</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Special Project Plan</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Terms of Reference</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of Completion of deliverables</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Authority to collect honoraria</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of acceptance of deliverables by Head of Office</td>
+              <td>Office Concerned</td>
+            </tr>
+
+            <!-- 5.4 Longevity Pay -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.4 Longevity Pay</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Service Record</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification that claimant has not incurred more than 15 days of leave without pay</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 5.5 Loyalty Cash Award/Incentive/Service Recognition Award -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.5 Loyalty Cash Award/Incentive/Service Recognition Award</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Individual Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For Individual Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Service Record</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of non-payment from previous office (for transferee)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate from HRO/U that claimant has not incurred more than 50 days vacation leave w/o pay within 10 years or more than 25 days within 5 years</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- For General Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For General Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Loyalty Cash Award/Incentive/Service Recognition Award Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Payroll Register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter to the bank requesting credit to employees' account of their PIB claims</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Validated Deposit Slips/LDDAP-ADA, if applicable</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.6 Mid-Year/Year-End Bonus and Cash Gift -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.6 Mid-Year/Year-End Bonus (YEB) and Cash Gift (CG)</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Individual Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For Individual Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Clearance from money, property and legal accountabilities (retiree)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification from Head of Office that employee is qualified to receive YEB and CG benefits per DBM Budget Circular</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- For General Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For General Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Bonus and/or CG Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Payroll Register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter to the bank to credit employees' Bonus and/or CG claims</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Validated Deposit Slips/LDDAP-ADA, if applicable</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.7 Monetization of Leave Credits -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.7 Monetization of Leave Credits</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved leave application (10 days) with balance certified by HR Officer</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Request for monetization covering more than 10 days duly approved by Head of Office</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● For monetization of 50% or more:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Clinical abstract/medical procedures for health or hospital needs</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">- Barangay Certification in case of financial need due to calamities, typhoons, fire, etc.</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- 5.8 Overtime Pay -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.8 Overtime Pay</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Overtime authority stating necessity, names of personnel, purpose, period, outputs, and manner of compensation</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Overtime Work Program</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Quantified Overtime Accomplishment signed by employee and supervisor</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certificate of service or duly approved DTR</td>
+              <td>Office Concerned</td>
+            </tr>
+
+            <!-- 5.9 Personnel Economic Relief Allowance (PERA) -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.9 Personnel Economic Relief Allowance (PERA)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Same requirements as those for payment of salaries (4.1.1, 4.1.2, 4.1.5-7 & 4.2)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 5.10 Program on Awards and Incentives for Service Excellence (PRAISE) -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.10 Program on Awards and Incentives for Service Excellence (PRAISE)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Proof of eligibility to receive PRAISE award per CSC MC No. 01-2001 (and amendments)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 5.11 Productivity Enhancement Incentive (PEI) -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.11 Productivity Enhancement Incentive (PEI)</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Individual Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For Individual Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification that performance ratings for two semesters are at least satisfactory</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification from Legal Office that employee has no administrative charge</td>
+              <td>Legal Division</td>
+            </tr>
+
+            <!-- For General Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For General Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● PEI Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● List of personnel suspended preventively or as penalty (except reprimand)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● List of personnel dismissed within the year</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● List of personnel on AWOL</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification that performance ratings for two semesters are at least satisfactory</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Payroll register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter to bank to credit employees’ PEI claims</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Validated Deposit Slips/LDDAP-ADA, if applicable</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.12 Representation and Transportation Allowance (RATA) -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.12 Representation and Transportation Allowance (RATA)</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For Individual Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For Individual Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Copy of Appointment/Office Order (1st payment)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate of Assumption (1st payment)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certificate or evidence of service rendered / Approved DTR</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification that official/employee did not use government vehicle</td>
+              <td>General Services Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Certification on actual incurrence of RATA (for commutable allowance)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- For General Claims -->
+            <tr>
+              <td style="padding-left: 40px;"><em>For General Claims</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● RATA Payroll</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Payroll Register (hard and soft copy)</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter to bank to credit employees’ RATA claims (stamped "Received")</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Validated Deposit Slip/LDDAP-ADA, if applicable</td>
+              <td>Cashier Section/Unit</td>
+            </tr>
+
+            <!-- 5.13 Special Counsel Allowance -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.13 Special Counsel Allowance</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Deputation by OSG or authority by Head of Agency to assist OSG/prosecutors or provide representation</td>
+              <td>OSG / Head of Agency</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certificate of Appearance</td>
+              <td>Lower Courts</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification that cases handled are related to office function</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification by lawyer + Chief Accountant that claim is within GAA limits</td>
+              <td>Concerned Lawyer / Accounting Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Court Order Proceeding or Court Calendar</td>
+              <td>Lower Courts</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification case not due to motion for extension/postponement per GAA</td>
+              <td>Concerned Lawyer</td>
+            </tr>
+
+            <!-- 5.14 Terminal Leave Benefits -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.14 Terminal Leave Benefits</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Office Clearance from money, property, legal accountability (Central/Regional Office)</td>
+              <td>Personnel Section</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certified photocopy of leave card with computed balance as of last service day</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved leave application</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Complete service record</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Statement of Assets, Liabilities and Net Worth (SALN)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certified photocopy of appointment/NOSA showing highest salary received</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Computation of terminal benefits signed/certified by Chief Accountant</td>
+              <td>Accounting Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Applicant’s authorization (affidavit) to deduct financial obligations</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Affidavit of no pending criminal investigation/prosecution (RA 3019)</td>
+              <td>Personnel Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Employee’s resignation letter (if resigned)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● GSIS Clearance</td>
+              <td>Personnel Concerned</td>
+            </tr>
+
+            <!-- Additional requirements in case of death -->
+            <tr>
+              <td style="padding-left: 40px;"><em>Additional requirements (in case of death)</em></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Death certificate (PSA)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Marriage certificate (PSA)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Birth certificates of surviving heirs (PSA)</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Designation of next-of-kin</td>
+              <td>Claimant</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Waiver of rights of children 18+ years old, if applicable</td>
+              <td>Claimant</td>
+            </tr>
+
+            <!-- 5.15 Subsistence, Laundry and Quarters Allowances -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>5.15 Subsistence, Laundry and Quarters Allowances</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Payroll of personnel entitled to subsistence, laundry, quarters allowance</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Approved DTR</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Authority to collect (for initial claim)</td>
+              <td>Personnel Section/Unit</td>
+            </tr>
+
+            <!-- 6.0 Other Expenditures -->
+            <tr>
+              <td style="background-color: #c2e1f8;" ><strong>6.0 Other Expenditures</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 6.1 Utility Expenses -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>6.1 Utility Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Statement of Account/Bill</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Invoice/Official Receipt or machine validated statement of account/bill</td>
+              <td>Service Provider</td>
+            </tr>
+
+            <!-- 6.2 Telephone/Communication Expenses -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>6.2 Telephone/Communication Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Statement of Account/Bill</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Invoice/Official Receipt or machine validated statement of account/bill or collection and acknowledgement receipts</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Certification by Head of Office or his authorized representatives that all National Direct Dial (NDD), National Operator Assisted Calls and International Operator Assisted Calls are official calls</td>
+              <td>General Services Section</td>
+            </tr>
+
+            <!-- 7.0 Extraordinary and Miscellaneous Expenses -->
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>7.0 Extraordinary and Miscellaneous Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Receipt and/or other documents evidencing disbursement, if available, or in lieu thereof, certification executed by the official concerned that the expenses sought to be reimbursed have been incurred for any of the purposes contemplated under the provisions of the GAA in relation to or by reason of his position, in case of NGAs</td>
+              <td>Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Other supporting documents as are necessary depending on the nature of expense charged</td>
+              <td>Regional Executive Director</td>
+            </tr>
+
+            <!-- 8.0 Procurement of Goods, Consulting Services and Infrastructure Projects -->
+            <tr>
+              <td style="background-color: #c2e1f8;"><strong>8.0 Procurement of Goods, Consulting Services and Infrastructure Projects (Regardless of Mode of Procurement)</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- For all types of procurement -->
+            <tr>
+              <td style="padding-left: 20px;"><strong>For all types of procurement</strong></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 40px;">● Authenticated photocopy of the approved Annual Procurement Plan (APP) and any amendment thereto or Certification from the Procurement Office that the items procured are already included in the APP</td>
+              <td>BAC Secretariat</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 40px;">● Approved contract supported by the following documents which are required under COA Circular No. 2009-001 dated February 12, 2009 and COA Memorandum No. 2005-027 dated February 28, 2005 to be submitted to the Auditor’s Office within five days from the execution of the contract:</td>
+              <td>Procurement Section/Administrative Unit</td>
+            </tr>
+
+            <!-- Nested list under Approved contract -->
+            <tr>
+              <td style="padding-left: 60px;">• Invitation to Apply for Eligibility to Bid</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Letter of Intent</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Result of Eligibility Check/Screening</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Bidding Documents enumerated under Section 17.1 of the Revised IRR of RA No. 9184 which includes a complete set of approved plans/drawings and technical specifications for infrastructure projects, complete technical description of equipment, aircraft and accessories, scope, and Terms of Reference (TOR) for consultancy services</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Minutes of Pre-Bid Conference [Approved budget for Contract (ABC) Php 1.0 million and above]</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Agenda and/or Supplemental Bulletins, if any</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Bidders Technical and Financial Proposals</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Minutes of Bid Opening</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Abstract of Bids</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Post-Qualification Report of Technical Working Group</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• BAC Resolution declaring winning bidder</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Notice of Post Qualification</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• BAC Resolution recommending approval and approval by the Head of the Procuring Entity of the Resolution of the BAC recommending award of contract</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Notice of Award</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Performance Security</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Program of Work and Detailed Estimates</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Notice to Proceed, indicating the date of receipt by the contractor</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Detailed Breakdown of the BAC</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Copy of the Approved PERT/CPM Network Diagram and detailed computations of contract time</td>
+              <td></td>
+            </tr>
+
+            <!-- Nested inside breakdown of contract cost -->
+            <tr>
+              <td style="padding-left: 60px;">• Detailed Breakdown of the Contract Cost:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">- Including the detailed breakdown of estimates and/or unit cost analysis/derivation for each work item expressed in volume/area/lump-sum/lot for infrastructure projects</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">- Indicating the following, among others, for consultancy services:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 100px;">• Schedule of basic rates certified by the consultant with a sworn statement</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 100px;">• Derivation of the billing factor/multiplier certified by the consultant with a sworn statement</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 100px;">• Detailed breakdown of reimbursable costs based on agreed fixed rates and actual costs</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">- Indicating costs and dates of acquisition of the equipment, quantities and cost of materials, spare parts, and supplies furnished by the contractor for janitorial/security/maintenance services</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 80px;">- Indicating the monthly lease payment and period of lease for lease contracts</td>
+              <td></td>
+            </tr>
+
+            <!-- Advertisement of Invitation to Bid -->
+            <tr>
+              <td style="padding-left: 40px;">● Copy of Advertisement of Invitation to Bid/Request for Expression of Interest</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Print out copy of advertisement posted in PhilGEPS</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Certification from the Head of BAC Secretariat on the posting of advertisement at conspicuous places</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">• Print out copies of advertisement posted in agency website, if any</td>
+              <td></td>
+            </tr>
+
+            <!-- More requirements -->
+            <tr>
+              <td style="padding-left: 40px;">● Documentary requirements under Section 23.1 and 25.2.b for infrastructure projects, 23.1 and 15.2a for goods and 24.1 and 25.2c for consulting services, of the Revised IRR of RA No. 9184</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Minutes of Pre-procurement Conference for projects costing above Php 5.0 million for infrastructure, Php 2.0 million and above for goods, and Php 1.0 million and above for consulting services</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Bids Evaluation Report</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Ranking of short listed bidders for consulting services</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Post Qualification Evaluation Report</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Printout copy of posting of Notice of Award, Notice to Proceed and Contract of award in the PhilGEPS</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Evidence of invitation of three observers in all stages of the procurement process pursuant to Section 13.1 of the Revised IRR of RA No. 9184</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 40px;">● Request for purchase or requisition of supplies, materials and equipment duly approved by proper authorities</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+
+
+            
+
+            <!-- 8.1 -->
+            <tr>
+              <td style="padding-left:20px;"><strong>8.1 Infrastructure Projects </strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">Additional Documentary Requirements</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="padding-left:40px;">● Letter request from contractor for advance/progress/final payment or for substitution in case of release of retention money</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left:40px;">● Common to progress/final payment</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="padding-left:60px;">• SWA/Progress Billing</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Inspection Report by the Agency’s Authorized Engineer</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Result of Test Analysis, if applicable</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Statement of Time Elapsed</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Monthly Certificate of Payment</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Contractor’s Affidavit on payment of laborers and materials</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Pictures, before, during and after construction of items of work especially the embedded items</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Photocopy of vouchers of all previous payment</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Certificate of completion</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+
+            <!-- 8.1.1 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.1.1 Advance Payment for Mobilization Cost</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Irrevocable Standby Letter of Credit/Security Bond/Bank Guarantee</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>Requesting Party/Office Concerned</td>
+            </tr>
+
+            <!-- 8.1.2 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.1.2 Variation Order/Change Order/Extra Work Order</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Additional documents enumerated under Annex B of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted to the Office of the Auditor for the review/evaluation of the changes in the contract:</td>
+              <td>End User</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left:80px;">• Copy of Approved Change Order (CO)/Extra Work Order (EWO)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Copy of the approved original plans indicating the affected portion(s) of the project and duly revised plans and specifications, if applicable, indicating the changes made which shall be color coded</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Copy of the agency’s report establishing the necessity/justification(s) for the need of such CO and/or EWO which shall include: (a) the computation as to the quantities of the additional works involved per item indicating the specific stations where such work are needed; (b) the date of inspection conducted and the results of such inspection; (c) a detailed estimate of the unit cost of such items of work for new unit costs including those expressed in volume/area/lump-sum/lot</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Copy of the approved/revised PERT/CPM Network Diagram which shall be color coded, reflecting the effect of additional/deductive time on the contract period and the corresponding detailed computations for the additional/deductive time for the subject Change Order/Extra Work Order</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Copy of the approved detailed breakdown of contract cost for the variation order</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Copy of the COA Technical Evaluation Report for the original contract</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• If the Variation Order to be reviewed is not the last variation order, all of the above requirements for all previously approved variation orders, if not yet reviewed, otherwise, copy of the COA Technical Evaluation report for the previously approved variation orders</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Additional performance security in the prescribed form and amount if variation order exceeds 10 percent of the original contract cost</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">• Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>End User</td>
+            </tr>
+
+            <!-- 8.1.3 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.1.3 Progress Payments</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Statement of Work Accomplished (SWA)</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Progress Billing and corresponding request for progress payment for work accomplished</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Inspection Report by the Office Authorized Engineer/Inspectorate Team</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Results of Test Analysis, if applicable</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Pictures/Geotagged Photos, before, during and after construction of items of work especially the embedded items</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+
+            <!-- 8.1.4 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.1.4 Final Payment</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● As-Built Plans</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Final SWA</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Warranty Security</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Certificate of Completion</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of turn-over documents/transfer of project and facilities such as motor vehicles, laptops, and other equipment and furniture included in the contract to concerned government agency</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Certificate of Acceptance by the Office Head of Office</td>
+              <td>Head of Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Final Inspection Report of the Office authorized Engineers and/or Inspectorate Team</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Statement of Time Elapsed</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Pictures/Geotagged Photos before, during and after construction of items of work especially the embedded items</td>
+              <td>Office Authorized Engineer / Inspectorate Team</td>
+            </tr>
+
+            <!-- 8.1.5 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.1.5 Release of Retention Money</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Warranty security in form of cash, bank guarantee, irrevocable standby letter of credit from a commercial bank, GSIS or surety bond callable on demand</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Certification from the end-user that the project is completed, inspected and accepted</td>
+              <td>Head of Office</td>
+            </tr>
+
+            <!-- 8.2 -->
+            <tr>
+              <td style="padding-left:20px;"><strong>8.2 Consulting Services - Additional Documentary Requirements</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:40px;">● Additional documents under Annex D of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted to the Auditor’s Office within five days from the execution of the contract:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• If not in the Terms of Reference, appropriate approved documents indicating the expected outputs/deliverables</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Copy of the Approved Manning Schedule indicating the names and positions of the consultants and staff and the extent of their participation in the project</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Copy of the curriculum vitae of the consultants and staff</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:40px;">● Letter request for payment from the consultant</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:40px;">● Approved consultancy Progress/Final Reports, and/or output required under the contract</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:40px;">● Progress/Final Billing</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:40px;">● Contract of Infrastructure Projects subject of Project Management Consulting Services</td>
+              <td>End User</td>
+            </tr>
+
+            <!-- 8.3 -->
+            <tr>
+              <td style="padding-left:20px;"><strong>8.3 Goods - Additional Documentary Requirements</strong></td>
+              <td></td>
+            </tr>
+
+            <!-- 8.3.1 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.1 Supplies, Materials, Equipment and Motor Vehicles</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Original copy of Dealers/Suppliers' Invoices showing the quantity, description of the articles, unit and total value, duly signed by the dealer or his authorized representative and indicating receipt by the proper agency official of items delivered</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Results of Test Analysis, if applicable</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Tax receipts from the Bureau of Customs or the BIR indicating the exact specifications and/or serial number of the equipment procured by the government as proof of payment of all taxes and duties due on the same equipment, supplied or sold to the government (if applicable)</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Additional Documents required under Annexes F and S of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted within five days upon execution of the contract:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">● Certificate of Exclusive Distributorship, if applicable</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">● Sample and brochures/photographs, if applicable</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:80px;">● For imported items:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Consular Invoice/Pro-forma invoice of the foreign supplier with the corresponding details</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Home Consumption Value of the items</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Breakdown of the expenses incurred in the Importation</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Inspection and Acceptance Report prepared by the Office inspector and signed by the Head of Office or his authorized representative</td>
+              <td>Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Property Acknowledgement Receipt (PAR) for equipment, Inventory Custodian Slip (ICS) for semi-expendables</td>
+              <td>General Service Section / Property Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Warranty Security for a minimum period of three months, in the case of expendable supplies, or a minimum period of one year in the case of semi-/non-expendable supplies, after acceptance by the procuring entity of the delivered supplies (optional for emergency cases and small value procurement)</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Authority to purchase, in case of motor vehicles</td>
+              <td>DBM</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● For Procurement of drugs and medicines</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Certificate of product registration from Food and Drug Administration (FDA)</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Certificate of good manufacturing practices from FDA</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Batch release certificate from FDA</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- If the supplier is not the manufacturer, certification from the manufacturer that the supplier is an authorized distributor/dealer of the product/items</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- License to Operate from FDA with List of Sources (whether it is a manufacturer, importer, seller or distributor)</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Certification by the Medical Officer that medicines and drugs requisitioned is included in the PNDF Current Edition</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Delivery Receipt/Invoice bearing Lot Nos. and Expiry Dates of the drugs and medicines</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>Requesting Party / Office Concerned</td>
+            </tr>
+
+
+            <!-- 8.3.2 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.2 For Procurements of Fuel, Oil, and Lubricants</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Billing/Statement of Account</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Vehicle Trip Ticket</td>
+              <td>Driver on Duty</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Fuel/Lubricants Requisition and Issue Slip</td>
+              <td>Requesting Party or Originating Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Fuel Consumption Report, if applicable</td>
+              <td>General Services Section / Administrative Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Monthly Report of Official Travels, if applicable</td>
+              <td>General Services Section / Administrative Unit / Drivers</td>
+            </tr>
+
+            <!-- 8.3.3 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.3 For Procurement of Meals, Snacks, Accommodations for Meeting/Seminar/Training/Workshop/Orientation</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Special Order with Activity Design or Notice of Meeting</td>
+              <td>Requesting Party or Originating Office, Regional Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• BAC Resolution</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• PHILGEPS Bids Notice Abstract – RFQ (above 50k)</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• 3 Quotations</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Abstract of Quotation</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Billing or Statement of Account</td>
+              <td>Service Provider, Requesting Party or Originating Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Attendance</td>
+              <td>Requesting Party or Originating Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Activity report / minutes of meeting with photo documentation</td>
+              <td>Requesting Party or Originating Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">• Inspection and Acceptance Report</td>
+              <td>Inspectorate Team</td>
+            </tr>
+
+            <!-- 8.3.4 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.4 General Support Services (janitorial, security, maintenance, garbage collection and disposal and similar services)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Additional documents under Annex H to K and P of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted to the Auditor’s Office within five days from the execution of the contract:</td>
+              <td></td>
+            </tr>
+
+            <!-- Janitorial/Security/Maintenance -->
+            <tr>
+              <td style="padding-left:60px;">● For Janitorial/Security/Maintenance Services</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Appropriate approved documents indicating the following:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:120px;">▪ The number of personnel involved and their corresponding rates/salary</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:120px;">▪ Schedule of work and places of assignment or station/visits indicating, among others, the number of hours per visit</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:120px;">▪ The type and number of equipment to be served (in case of visitorial maintenance service)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The scaled floor plans of the building and other area/s covered by the service contract (for janitorial services)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The group classification of personnel to determine the Equivalent Equipment Monthly Statutory Minimum Wage Rate in accordance with the applicable Rules implementing RA No. 6727</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Approved documents indicating the minimum requirements of the agency on the number of security personnel to be involved in the project (for security service contract)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The population of the agency where the services are rendered (for security services controls)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Detailed description of the maintenance services to be rendered or activities to be performed (for maintenance service contracts)</td>
+              <td>End User</td>
+            </tr>
+
+            <!-- Garbage Collection -->
+            <tr>
+              <td style="padding-left:60px;">● For Garbage Collection and Disposal</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Complete description/specifications (brand name, model, make/country of origin, hp, piston displacement, capacity) and number of units of dump trucks to be used</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Complete descriptions/specifications (age, condition, brand, etc.) and number of units of all other equipment to be rented/used</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Appropriate approved documents containing the terms and conditions, whether operated or bare rental for heavy equipment, whether per trip or package deal; and other relevant condition</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The designated dumpsite/location of dumpsite (if provided in a separate document)</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The Measurement in kilometers of the total distance covered by one complete route for all the required routes to be traveled</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Estimated volume in cubic meters of garbage to be hauled from area of operation, including the basis for such estimates</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- In case where the type of contract differs from the usual per trip contract basis, sufficient justification and comparative analysis between the type of contract adopted against the basic per trip type of contract</td>
+              <td>End User</td>
+            </tr>
+
+            <!-- Forwarding/Shipping -->
+            <tr>
+              <td style="padding-left:60px;">● For forwarding/shipping/hauling contract</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The type/kind and technical description of the mode of transportation used</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The point of origin and description including the estimated distance/s if transported by land</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- The estimated weight and volume of cargoes involved</td>
+              <td>End User</td>
+            </tr>
+
+            <!-- Other docs -->
+            <tr>
+              <td style="padding-left:60px;">● Performance Appraisal Report</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Statement of Account or Contractor's Bill</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Certificate of Acceptance</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Record of Attendance/Service</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Proof of remittance to concerned government agencies [BIR/Social Security System (SSS)/ECC/Pag-ibig/PhilHealth]</td>
+              <td>Service Provider</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>Requesting Party / Office Concerned</td>
+            </tr>
+
+            <!-- 8.3.5 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.5 Rental Contracts for Property</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● List of prevailing comparable property within the vicinity (for first claim)</td>
+              <td>Administrative Division / Management Services Division</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Vicinity map (for first claim)</td>
+              <td>Administrative Division / Management Services Division</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Cost benefits analysis</td>
+              <td>End User / Unit concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Request for payment</td>
+              <td>End User / Unit concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Additional documents under Annex L, N and O of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted to the Auditor’s Office within five days from the execution of the contract</td>
+              <td></td>
+            </tr>
+
+            <!-- Privately-owned office/building -->
+            <tr>
+              <td style="padding-left:60px;">● For Privately-owned office/building</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Complete copy of the building floor plans indicating in shaded colors the rentable space</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Copy of the Certificate of Occupancy of the building or appropriate approved documents showing the date the building was constructed or age of the building</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Complete description of the building as to type, kind and class including its component parts and equipment facilities such as, but not limited to, parking areas, elevators, air-conditioning systems, firefighting equipment, etc.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Copy of the Master Deed Declaration and Restrictions in case of lease/rental of office condominiums</td>
+              <td></td>
+            </tr>
+
+            <!-- Equipment rental/lease/purchase -->
+            <tr>
+              <td style="padding-left:60px;">● For equipment rental/lease/purchase contract</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Agency evaluation of equipment utilization</td>
+              <td>End User / Unit concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:100px;">- Pertinent data of area of operation</td>
+              <td>End User / Unit concerned</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left:60px;">● Market study (for new contracts)</td>
+              <td>End User / Unit concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Bills / Invoices</td>
+              <td>Contractor</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>Requesting Party / Office Concerned</td>
+            </tr>
+
+            <!-- 8.3.6 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.6 Repair and Maintenance of Aircrafts, Watercrafts, Equipment and Motor Vehicles</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Additional documents under Annex Q and R of COA Memorandum No. 2005-027 dated February 28, 2005 required to be submitted to the Auditor’s Office within five days from the execution of the contract</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of the pre-repair evaluation report and approved detailed plans by the agency showing in sufficient detail the scope of work/extent of repair to be done</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of the latest service bulletin, in case of aircraft</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Report of waste materials</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of document indicating the history of repair</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Bills / Invoices</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Pre-Repair Inspection Report</td>
+              <td>Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Post-Repair Inspection Report</td>
+              <td>Inspectorate Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Warranty Certificate</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Certificate of Acceptance</td>
+              <td>End User</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Such other documents peculiar to the contract and/or to the mode of procurement and considered necessary in the auditorial review and in the technical evaluation thereof</td>
+              <td>Requesting Party / Office Concerned</td>
+            </tr>
+
+            <!-- 8.3.7 -->
+            <tr>
+              <td style="padding-left:40px;"><strong>8.3.7 Advertising Expenses</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Bill / Statement of Account</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of newspaper clippings evidencing publication and/or CD/DVD in case of TV/Radio commercial</td>
+              <td>Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left:60px;">● Copy of Approved Office Media Plan, if any</td>
+              <td>Requesting Party</td>
+            </tr>
+
+            <!-- 9.0 -->
+            <tr>
+              <td ><strong>9.0 Cultural and Athletic Activities</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Budget estimates approved by the Head of Office</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Office Order</td>
+              <td>Regional Executive Director</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Same requirements under procurement depending on the nature of expense and the mode of procurement adopted</td>
+              <td></td>
+            </tr>
+
+            <!-- 10.0 -->
+            <tr>
+              <td ><strong>10.0 Human Resource Development and Training Program</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Budget Estimates Approved by the Head of Office</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Schedule of Training Approved by the Head of Office</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Training Design</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Statements of Account / Bills / Invoices</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Official Receipts</td>
+              <td>Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Office Order / Terms of Reference</td>
+              <td>Office Concerned</td>
+            </tr>
+            <tr>
+              <td style="padding-left:20px;">● Training Report with photo documentation</td>
+              <td>Office Concerned</td>
+            </tr>
+
+          </table>
+
+
+          <span><strong>If eNGP/CBFM Contracts</strong></span>
+
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse;">
+            
+            <tr style="background-color: #c2e1f8;">
+              <th>Checklist of Requirements</th>
+              <th>Where to Secure</th>
+            </tr>
+
+            <tr style="background-color: #96bfdf;">
+              <td ><strong>A. Obligation of eNGP/CBFM Contract</strong></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 10px;">General Requirements</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 20px;">● Certified Copy of Annual Procurement Plan (APP)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Notarized MOA/Contract with WFP, Mode of Payment & GIS Map</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Site Development Plan </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Purchase Request </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Notice of Award received by Service Provider</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Notice to Proceed received by Service Provider</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Philgeps Posting of Award/Contract/Proceed </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Performance Security</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 25px; text-decoration: underline;">Additional Documentary Requirements</td>
+              <td></td>
+            </tr>
+            <tr style="background-color: #c2e1f8;">
+              <td style="padding-left: 40px;"><strong>For Public Bidding</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● BAC Resolution – Mode of Procurement (if there’s a change in mode of procurement) </td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Copy of Transmittal of Bidding Documents stamped received by COA</td>
+              <td>BAC Secretariat</td>
+            </tr>
+
+            <!-- COMMUNITY PARTICIPATION -->
+            <tr style="background-color: #c2e1f8;">
+              <td style="padding-left: 40px;"><strong>For Community Participation</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Endorsement Memorandum for payment from CENRO/Implementing PENRO</td>
+              <td>Concerned Office / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Letter of Intent</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Proof of Posting of RFQ at 3 conspicuous places</td>
+              <td>BAC Secretariat</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Quotations</td>
+              <td>Procurement Section / Administrative Unit</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 60px;">● Abstract of Quotations</td>
+              <td>Procurement Section / Administrative Unit</td>
+            </tr>
+
+            <!-- LEGAL REQUIREMENTS -->
+            <tr>
+              <td style="padding-left: 60px;">● LEGAL REQUIREMENTS <br>
+                a. Certificate of Registration from SEC/CDA/DOLE <br>
+                b. Certification from the service provider that none of its incorporators, organizers, directors or officials is an agent or related by consanguinity or affinity up to the 4th civil degree to the HOPE, members of BAC or other authorized officials <br>
+                c. Disclosure of related business, if any, and extent of ownership therein
+              </td>
+              <td>BAC Secretariat</td>
+            </tr>
+
+            <!-- TECHNICAL REQUIREMENTS -->
+            <tr>
+              <td style="padding-left: 60px;">● TECHNICAL REQUIREMENTS <br>
+                a. List of completed contracts similar to the procurement
+              </td>
+              <td>BAC Secretariat</td>
+            </tr>
+
+            <!-- FINANCIAL REQUIREMENTS -->
+            <tr>
+              <td style="padding-left: 60px;">● FINANCIAL REQUIREMENTS <br>
+                a. Certificate that the service provider has an existing bank account / photocopy of Bank Book <br>
+                b. Updated Audited Financial Statements <br>
+                c. Certification that it has a financial management system that maintains sets of book of accounts
+              </td>
+              <td>BAC Secretariat</td>
+            </tr>
+
+            <!-- SECTION B -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>B. Payment of 15% Mobilization Fee</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter Request for release of 15% Mobilization Fee</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Copy of MOA/Contract with WFP</td>
+              <td>Concerned Office / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Irrevocable Standby Letter of Credit / Security Bond / Bank Guarantee</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            
+
+            <!-- SECTION C -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>C. Progress Billing</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● PO Request for Inspection/Validation and Payment</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Statement of Work Accomplished</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Endorsement/Memorandum for payment from CENRO/Implementing PENRO</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter Request to the COA Resident Auditor for validation of the accomplishment</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● List of Beneficiaries</td>
+              <td>Concerned Office (NGP Coordinator / Site Team Leader)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Parceliarized Plantation Map</td>
+              <td>Concerned Office (GIS Team / eNGP Unit)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Certificate of Completion</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Copy of MOA/Contract with WFP</td>
+              <td>Concerned Office / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Inspection Report with Geotagged Photos</td>
+              <td>Inspectorate Team</td>
+            </tr>
+
+            <!-- SECTION D -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>D. Final Payment</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Request for Inspection and Final Payment</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Final Statement of Work Accomplished</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Endorsement/Memorandum for payment from CENRO/Implementing PENRO</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter Request to the COA Resident Auditor for validation of the accomplishment</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● List of Beneficiaries</td>
+              <td>Concerned Office (NGP Coordinator / Site Team Leader)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Parceliarized Plantation Map</td>
+              <td>Concerned Office (GIS Team / eNGP Unit)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Certificate of Completion and Acceptance</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Copy of MOA/Contract with WFP</td>
+              <td>Concerned Office / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Final Inspection Report with Geotagged Photos</td>
+              <td>Inspectorate Team</td>
+            </tr>
+
+            <!-- SECTION E -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>E. Release of Retention Fee</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter Request for Release of Retention Fee</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Endorsement/Memorandum for payment from CENRO/Implementing PENRO</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Evaluation Report that the PO Plantation attained at least 85% Survival Rate</td>
+              <td>Concerned Office</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Certificate of Final Acceptance</td>
+              <td>Head of Procuring Entity</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Affidavit of Completion</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Project Completion Report</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter of Final Turn Over (after 3rd year Protection and Maintenance of Established Plantation - PMEP)</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Certificate of Site Development</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+
+            <!-- SECTION F -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>F. Progress Payment for Seedling Production (non-Comprehensive Site Development - CSD)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● PO Request for Inspection/Validation and Payment</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Endorsement/Memorandum for payment from CENRO/Implementing PENRO</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Statement of Work Accomplishment</td>
+              <td>People’s Organization / Requesting Party</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Letter Request to the COA Resident Auditor for validation of the accomplishment</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Inspection Report with Nursery Tally Sheet and Geotagged Photos</td>
+              <td>Composite Inspection Team</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Copy of MOA/Contract with WFP</td>
+              <td>Concerned Office (Technical-eNGP)</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Same requirements under procurement depending on the nature of expense and the mode of procurement adopted</td>
+              <td></td>
+            </tr>
+
+            <!-- SECTION G -->
+            <tr style="background-color: #96bfdf;">
+              <td><strong>G. Additional Requirements for Seedling Procurement (non-CSD)</strong></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Delivery Receipt / Seedlings Acknowledgement Receipt</td>
+              <td>Seedling Supplier</td>
+            </tr>
+            <tr>
+              <td style="padding-left: 20px;">● Same requirements under procurement depending on the nature of expense and the mode of procurement adopted</td>
+              <td></td>
+            </tr>
+
+          </table>
+
+
+          <!-- CLIENT STEPS AGENCY ACTION FEES TO BE PAID PROCESSING TIME PERSONS RESPONSIBLE -->
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 50px;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th>Client Steps</th>
+                <th>Agency Actions</th>
+                <th>Fees to be Paid</th>
+                <th>Processing Time</th>
+                <th>Person Responsible</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>1. Submit ORS/BURS with DV and complete supporting documents to Budget Unit/Section.</td>
+              <td>1. Review completeness of documents, receive and record in Logbook/electronic tracking system the ORS/BURS, and forward documents to the concerned Processor.</td>
+              <td>None</td>
+              <td>30 min.</td>
+              <td>Receiving/Releasing Clerk<br>Budget Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.1. None</td>
+              <td>1.1. Review, check fund availability and allotment, record and assign number in the ORS/BURS Control Book/RAOD, and affix initial on ORS/BURS. Forward to Chief Budget Officer.</td>
+              <td>None</td>
+              <td>2 hours (Complex)<br>4 hours (Highly technical)</td>
+              <td>Budget Staff<br>Budget Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.2. None</td>
+              <td>1.2. Review documents and sign Box B of ORS/BURS.</td>
+              <td>None</td>
+              <td>2 hours (Complex)<br>4 hours (Highly technical)</td>
+              <td>Chief Budget Officer<br>Budget Unit/Section or Designated OIC</td>
+            </tr>
+
+            <tr>
+              <td>1.3. None</td>
+              <td>1.3. Update record in Logbook/electronic tracking and forward the documents to Accounting Unit/Section/Concerned Office.</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk<br>Budget Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.4. None</td>
+              <td>1.4. Check completeness of supporting documents, receive, record in Logbook/electronic tracking system, assign DV number and forward to concerned Accounting Staff.</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk<br>Accounting Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.5. None</td>
+              <td>
+                1.5. Process DV as to completeness of supporting documents, cash availability, and amount claimed proper. <br>
+                Compute and deduct applicable taxes. <br>
+                Prepare Certificate of Tax Withheld and record particulars of DV in Individual Index Card. <br>
+                Prepare Journal Entry (Box B) and affix initial in DV. <br>
+                Forward to Chief Accountant for review and approval.
+              </td>
+              <td>None</td>
+              <td>1 day 4 hours (Complex)<br>3 days (Highly technical)</td>
+              <td>Accounting Staff<br>Accounting Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.6. None</td>
+              <td>1.6. Review DV and sign Box C of DV, and forward to Receiving/Releasing Clerk.</td>
+              <td>None</td>
+              <td>1 day (Complex)<br>2 days (Highly technical)</td>
+              <td>Accountant III or Accountant II or Accountant I<br>or Designated OIC</td>
+            </tr>
+
+            <tr>
+              <td>1.7. None</td>
+              <td>1.7. Release DV and other documents to approving authority based on Manual of Authorities.</td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>Receiving/Releasing Clerk<br>Accounting Unit/Section</td>
+            </tr>
+
+            <tr>
+              <td>1.8.</td>
+              <td>
+                Receive and batch up ORS/BURS, DV and supporting documents.<br>
+                Sign Box D of the DV.<br>
+                Forward to Receiving/Releasing Clerk.<br><br> <hr>
+
+                <strong>Regional Office</strong><br> 
+                Personnel Services<br> <hr>
+                MOOE and CO (Up to P500k and PS Remittances regardless of amount)<br><hr>
+                MOOE Remittances regardless of amount<br><hr>
+                MOOE and CO (Up to P5M)<br><hr>
+                MOOE and CO (Above P5M)<br><br><hr>
+
+                <strong>PENRO</strong><br>
+                Personnel Services, MOOE and CO<br>
+                PS and MOOE Remittances
+              </td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>
+                DC FD or ARD MS or RED or ARD TS or Designated OIC<br><hr>
+                DC FD or DC AD or Designated OIC<br><hr>
+                DC FD or ARD MS or ARD TS or Designated OIC<br><hr>
+                ARD MS or RED or ARD TS or Designated OIC<br><hr>
+                RED or ARD MS or ARD TS or Designated OIC<br><hr>
+                DC MSD or DC TSD or PENRO or Designated OIC<br><hr>
+                DC MSD or PENRO or Designated OIC
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>1.9. None</td>
+              <td>
+                1.9. Receive documents and forward to Cashier or Accounting Unit/Section.
+              </td>
+              <td>None</td>
+              <td>30 min.</td>
+              <td>Receiving/Releasing Clerk<br>Office of Approving Authority</td>
+            </tr>
+
+            <tr>
+              <td>1.10. None</td>
+              <td>
+                Receive DV, ORS/BURS and other supporting documents,<br>
+                review and record in logbook/Electronic tracking system
+              </td>
+              <td>None</td>
+              <td>30 min.</td>
+              <td>
+                Receiving/Releasing Clerk – Cashier Section/Unit<br>
+                Receiving/Releasing Clerk – Accounting Section/Unit
+              </td>
+            </tr>
+
+            <tr>
+              <td>1.11. None</td>
+              <td>
+                Batch-up DVs into batch/folder.<br>
+                Forward to assigned/concerned staff.
+              </td>
+              <td>None</td>
+              <td>1 hour</td>
+              <td>
+                Receiving/Releasing Clerk – Cashier Section/Unit<br>
+                Receiving/Releasing Clerk – Accounting Section/Unit
+              </td>
+            </tr>
+            <tr>
+              <td>1.12. None</td>
+              <td>
+               1.12. Prepare Checks,
+ACIC or LDDAP-ADA.
+Forward to Chief
+Accountant or Head of
+Cashier
+              </td>
+              <td>None</td>
+              <td>4 hours</td>
+              <td>
+                Accounting Staff AccountingUnit/Section<br>
+               Cashier Staff Cashier Section/Unit
+              </td>
+            </tr>
+
+
+            <tr style="text-align: center;">
+              <td>1.13.</td>
+              <td>
+                Check completeness of signature on DV and the amount on the check and ACIC
+                and/or LDDAP-ADA.<br>
+                Sign/Certify/Countersign/Approve check and ACIC and/or LDDAP-ADA.<br><br>
+                (The signing, certifying, countersigning, and approving authority in the
+                Regional and PENR Office may sign simultaneously to ensure timely payment of
+                transactions.)<br><br>
+
+                <strong>FOR SIGNING / CERTIFYING AUTHORITY</strong><br>
+                <hr>
+                <strong>FOR CHECKS, ACIC AND ADA</strong> (PS, MOOE and CO – regardless of amount)<br>
+                <u>REGIONAL OFFICE</u><br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                <strong>FOR LDDAP</strong> (PS, MOOE and CO – regardless of amount)<br>
+                <u>REGIONAL OFFICE</u><br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                <strong>FOR COUNTERSIGNING / APPROVING AUTHORITY</strong><br>
+                <hr>
+                <strong>FOR CHECKS AND ADA</strong> (PS – regardless of amount)<br>
+                <u>REGIONAL OFFICE</u><br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                <strong>FOR ACIC</strong><br>
+                <u>REGIONAL OFFICE</u><br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – Up to Php 5M<br>
+                <u>REGIONAL OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – Above Php 5M<br>
+                <u>REGIONAL OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – regardless of amount<br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                <strong>FOR LDDAP</strong> (PS – regardless of amount)<br>
+                <u>REGIONAL OFFICE</u><br>
+                <u>PENR OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – Up to Php 5M<br>
+                <u>REGIONAL OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – Above Php 5M<br>
+                <u>REGIONAL OFFICE</u><br>
+                <hr>
+
+                MOOE/CO – regardless of amount<br>
+                <u>PENR OFFICE</u>
+              </td>
+              <td>None</td>
+              <td>1 day</td>
+              <td>
+                Cashier III or
+                Cashier II or<br>
+                Cashier I
+                Cashier or<br>
+                Designated Cashier<br>
+                <hr>
+
+                Accountant III or
+                Accountant II or
+                Accountant I or
+                Designated OIC<br>
+                <hr>
+
+                Accountant or<br>
+                Designated OIC<br>
+                <hr>
+
+                ARD MS or
+                RED or
+                Designated OIC<br>
+                <hr>
+
+                PENR Officer or
+                Designated OIC<br>
+                <hr>
+
+                DC AD or<br>
+                ARD MS or<br>
+                Designated OIC<br>
+                <hr>
+
+                DC MSD or<br>
+                PENRO or<br>
+                Designated OIC<br>
+                <hr>
+
+                ARD MS or<br>
+                ARD TS or<br>
+                RED or<br>
+                Designated OIC<br>
+                <hr>
+
+                RED or
+                ARD MS or
+                ARD TS or
+                Designated OIC<br>
+                <hr>
+
+                PENR Officer or
+                DC MSD or
+                DC TSD or
+                Designated OIC<br>
+                <hr>
+
+                DC FD or
+                ARD MS or
+                RED or
+                Designated OIC<br>
+                <hr>
+
+                DC MSD or
+                DC TSD or
+                PENR Officer or
+                Designated OIC<br>
+                <hr>
+
+                DC FD or<br>
+                ARD MS or<br>
+                RED or<br>
+                Designated OIC<br>
+                <hr>
+
+                ARD MS or
+                ARD TS or
+                RED or
+                Designated OIC<br>
+                <hr>
+
+                DC MSD or<br>
+                DC TSD or<br>
+                PENR Officer or<br>
+                Designated OIC
+              </td>
+            </tr>
+
+
+            <tr >
+              <td>1.14.</td>
+              <td>
+                Forward to Cashier.
+              </td>
+              <td>None</td>
+              <td>15 min.</td>
+              <td>
+                Receiving/Releasing Clerk<br>
+                Office of Approving Authorities
+              </td>
+            </tr>
+
+            <tr >
+              <td>1.15.</td>
+              <td>
+                Receive and record signed Check/ADA and ACIC,<br>
+                and forward to cashier staff.
+              </td>
+              <td>None</td>
+              <td>15 min.</td>
+              <td>
+                Receiving/Releasing Clerk<br>
+                Cashier Section/Unit
+              </td>
+            </tr>
+
+            <tr >
+              <td>1.16.</td>
+              <td>
+                Record particulars in Checks and Advices to Debit Account<br>
+                Disbursement Record, Report of Checks Issued and Cancelled (RCIC)
+                Report of ADA Issued (RADAI).<br><br>
+                Inform the clientele if the check is ready for pick-up, or<br>
+                the ADA was already prepared for them to issue OR upon crediting payment to their account.
+              </td>
+              <td>None</td>
+              <td>2 hours</td>
+              <td>
+                Cashier Staff<br>
+                Cashier Section/Unit
+              </td>
+            </tr>
+
+            <tr >
+              <td>1.17.  Proceed to Cashier Unit/Section and present necessary documents<br>to claim the check and/or validated ADA and issue Official Receipt, if applicable.</td>
+              <td>
+                Release Check/ADA to customer/bank with tax certificate<br>
+                (supplier) if applicable.
+              </td>
+              <td>None</td>
+              <td>30 min.</td>
+              <td>
+                Cashier<br>
+                Cashier Section/Unit
+              </td>
+            </tr>
+            <tr class="left-side">
+              <td rowspan="2" colspan="2">TOTAL:</td>
+              <td rowspan="2">None</td>
+              <td>Complex</td>
+              <td>6 days, 4 hours and 30 mins</td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">Highly Technical</td>
+              <td style="text-align: center;">9 days, 5 hours and 30 mins</td>
+            </tr>
+
+
+
+
+          </table>
+
+
+          
+          
+          <!-- Notes outside the table -->
+          <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; margin-top: 10px;">
+            <p><em>
+              *All documents are assumed to be from or submitted to the Administrative Division/Section/Unit considering that this process <br>flow starts with the payment, and that the Administrative Division has its separate processes for procurement.
+            </em></p>
+          </div>
+
+          <table border="1" cellpadding="5" style="width: 100%; border-collapse: collapse; margin-top: 20px; border: 1px solid black; text-align: left;">
+            <thead>
+              <tr style="background-color: #c2e1f8;">
+                <th style="width: 50%;"><strong>Complex</strong></th>
+                <th style="width: 50%;"><strong>Highly Technical</strong></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td style="vertical-align: top; padding-left: 20px;">
+                  ● Cash Advances<br>
+                  ● Salary<br>
+                  ● Allowances, Honoraria and Other Forms of Compensations<br>
+                  ● Other expenditures<br>
+                  ● Extraordinary and Miscellaneous Expenses<br>
+                  ● Cultural and Athletic Activities<br>
+                  ● Human Resource Development and Training Program
+                </td>
+                <td style="vertical-align: top; padding-left: 20px;">
+                  ● Fund Transfers to Non-Government Organization/People's Organizations/ Civil Society Organizations (NGOs/POs/CSOs) except NGP<br><br>
+                  ● Fund Transfers to Implementing Agency<br>
+                  ● Procurement of Goods, Consulting Services and Infrastructure Projects (Regardless of Mode of Procurement)<br>
+                  ● eNGP/CBFM Contracts
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Rule VII Note -->
+          <div style="margin-top: 15px; font-size: 14px; text-align: justify;">
+            <strong>Rule VII, Section 2(b) of the Joint Memorandum Circular No. 2019-001</strong> or the Implementing Rules and Regulations (IRR) of
+            Republic Act (RA) No. 11032 states that:<br><br>
+            <em>“xxx<br><br>
+            The Government office or agency shall not process deficient or incomplete applications or request, and shall only process an
+            application or request if it is complete. In case the application or requests is deficient, the processing time as provided under
+            the Act and these Rules shall only commence once the applicant or requesting party has rectified the deficiency.<br><br>
+            For processes that involve several stages with corresponding prescribed requirements, the processing time for each stage
+            commences on the date/time that the applicant has satisfactorily completed the requirements for the previous stage and has
+            submitted all the requirements for the subsequent stage being applied for.”</em>
+          </div>
+
+
+
+      </div>
+
+      <div class="content" id="formContent" style="display: none;">
+          <form method="POST" enctype="multipart/form-data" class="application-form">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button style="margin-top: 20px;" type="submit" class="submit-btn">📤 Submit Application</button>
+          </form>
+      </div>
+
+      <div class="content" id="statusContent" style="display: none;">
+          <h2 class="status-title">📊 Construction Application Status</h2>
+          <p class="status-description">
+              Below is the list of submitted applications and their current status.
+          </p>
+
+          <table class="status-table">
+              <thead>
+                  <tr>
+                      <th>Reference No.</th>
+                      <th>Owner Name</th>
+                      <th>Project Name</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for app in applications %}
+                  <tr>
+                      <td>{{ app.reference_no }}</td>
+                      <td>{{ app.owner_name }}</td>
+                      <td>{{ app.project_name }}</td>
+                      <td>{{ app.get_construction_type_display }}</td>
+                      <td class="status-{{ app.status|lower }}">
+                          {{ app.get_status_display }}
+                      </td>
+                      <td>{{ app.remarks|default:"—" }}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>
+                      <td colspan="6" style="text-align:center;">No applications yet.</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
+<script>
+
+  function showContent(type) {
+    const chartTab = document.querySelectorAll('.option')[0];
+    const formTab = document.querySelectorAll('.option')[1];
+    const statusTab = document.querySelectorAll('.option')[2];
+    const chartContent = document.getElementById('chartContent');
+    const formContent = document.getElementById('formContent');
+    const statusContent = document.getElementById('statusContent');
+
+    if (type === 'chart') {
+      chartTab.classList.add('active');
+      formTab.classList.remove('active');
+      statusTab.classList.remove('active');
+      chartContent.style.display = 'block';
+      formContent.style.display = 'none';
+      statusContent.style.display = 'none';
+    } else if (type === 'form') {
+      formTab.classList.add('active');
+      chartTab.classList.remove('active');
+      statusTab.classList.remove('active');
+      formContent.style.display = 'block';
+      chartContent.style.display = 'none';
+      statusContent.style.display = 'none';
+    } else if (type === 'status') {
+      statusTab.classList.add('active');
+      chartTab.classList.remove('active');
+      formTab.classList.remove('active');
+      statusContent.style.display = 'block';
+      chartContent.style.display = 'none';
+      formContent.style.display = 'none';
+    }
+  }
+
+</script>
+
+</body>
+</html>

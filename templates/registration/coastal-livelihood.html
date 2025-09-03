@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coastal Livelihood Support | PENRO</title>
+  <link rel="stylesheet" href="fish-style.css" />
+</head>
+<body>
+  <a href="fishery.html" class="back-button" title="Back to Coastal Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>🌱 Coastal Livelihood Support Application</h1>
+
+    <section class="info card">
+      <h2>📘 What is Coastal Livelihood Support?</h2>
+      <p>
+        PENRO supports coastal and marine environmental protection by promoting community-based livelihood projects that align with sustainable practices. These include alternative income sources that reduce pressure on marine ecosystems, especially in coastal and protected areas.
+      </p>
+      <p>
+        While the Bureau of Fisheries and Aquatic Resources (BFAR) oversees fisheries management, PENRO collaborates through coastal resource programs, reforestation, and inter-agency support to improve the socio-economic resilience of fisherfolk and coastal residents.
+      </p>
+    </section>
+
+    <section class="form card">
+      <h2>📝 Submit Your Application</h2>
+      <form>
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="group">Organization / Community Group (if any):</label>
+          <input type="text" id="group" name="group" placeholder="e.g., Coastal Barangay Association">
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Number:</label>
+          <input type="text" id="contact" name="contact" placeholder="e.g., 09123456789" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="e.g., juan@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Project Location / Barangay:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Brgy. Lico, Naval" required>
+        </div>
+
+        <div class="form-group">
+          <label for="support-type">Type of Support Needed:</label>
+          <select id="support-type" name="support-type" required>
+            <option value="">-- Select --</option>
+            <option value="training">Environmental Training & Capacity Building</option>
+            <option value="planting">Mangrove or Coastal Reforestation Assistance</option>
+            <option value="equipment">Tools/Materials for Sustainable Livelihoods</option>
+            <option value="market-linkage">Market Linkage & Eco-product Support</option>
+            <option value="alternative-livelihood">Alternative Livelihood Proposals</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Brief Description of Request:</label>
+          <textarea id="description" name="description" rows="4" placeholder="Describe your proposed eco-livelihood project or assistance request..." required></textarea>
+        </div>
+
+        <button type="submit">📤 Submit Application</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

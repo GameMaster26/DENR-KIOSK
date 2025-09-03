@@ -1,0 +1,86 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hazard & Risk Maps | PENRO</title>
+  <link rel="stylesheet" href="{% static 'css/map-form-style.css' %}" />
+</head>
+<body>
+  <a href="{% url 'map:map' %}" class="back-button" title="Back to Map Services">&#8592; Back</a>
+
+  <div class="container">
+    <h1>⚠️ Hazard & Risk Maps</h1>
+
+    <section class="card">
+      <h2>📘 Overview</h2>
+      <p>
+        Hazard and Risk Maps identify areas vulnerable to natural hazards such as landslides, floods, and earthquakes. These maps are essential tools for disaster risk reduction and planning, often coordinated with DENR and other government agencies.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🌋 Common Hazard Types</h2>
+      <ul>
+        <li>Flood-Prone Areas</li>
+        <li>Landslide Susceptibility</li>
+        <li>Earthquake Fault Zones</li>
+        <li>Typhoon and Storm Surge Paths</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>📝 Request a Hazard or Risk Map</h2>
+      <form>
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g., Juan Dela Cruz" required>
+        </div>
+
+        <div class="form-group">
+          <label for="affiliation">Organization / Institution:</label>
+          <input type="text" id="affiliation" name="affiliation" placeholder="e.g., MDRRMO or Biliran Province State University" required>
+        </div>
+
+        <div class="form-group">
+          <label for="area">Area of Concern:</label>
+          <input type="text" id="area" name="area" placeholder="e.g., Brgy. Locsoon, Naval, Biliran" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hazard-type">Type of Hazard Map:</label>
+          <select id="hazard-type" name="hazard-type" required>
+            <option value="">-- Select Hazard Type --</option>
+            <option value="flood">Flood Risk</option>
+            <option value="landslide">Landslide Risk</option>
+            <option value="earthquake">Earthquake Zones</option>
+            <option value="storm">Storm Surge Areas</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred Format:</label>
+          <select id="format" name="format" required>
+            <option value="">-- Select Format --</option>
+            <option value="pdf">PDF</option>
+            <option value="shapefile">GIS Shapefile</option>
+            <option value="image">High-Resolution Image</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose of Request:</label>
+          <textarea id="purpose" name="purpose" rows="4" placeholder="e.g., For Disaster Planning, LGU Documentation, School Research..." required></textarea>
+        </div>
+
+        <button type="submit">📤 Submit Request</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

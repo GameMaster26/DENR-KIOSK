@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Reports</title>
+  <link rel="stylesheet" href="static/css/penro2-style.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="admin.html" class="back-button" title="Go Back">&#8592; Back</a>
+
+  <!-- Main Panel -->
+  <main class="panel">
+    <h2><i class="fas fa-chart-bar"></i> Feedback Reports</h2>
+    <ul class="feedback-list" id="feedbackList">
+      <!-- Feedback will be dynamically loaded here -->
+    </ul>
+  </main>
+
+  <!-- Modal Structure -->
+  <div class="modal" id="modalBox" role="dialog" aria-modal="true" aria-labelledby="modalMessage" style="display: none;">
+    <div class="modal-content">
+      <p id="modalMessage">Are you sure?</p>
+      <textarea id="responseBox" placeholder="Type your response here..." style="display: none;"></textarea>
+      <div class="modal-actions">
+        <button id="modalConfirm" class="btn">Confirm</button>
+        <button id="modalCancel" class="btn admin-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div id="confirmationBox" class="status-msg success" style="display: none;"></div>
+
+  <!-- Script -->
+  <script src="static/js/feedback-script.js"></script>
+
+</body>
+</html>
